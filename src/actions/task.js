@@ -1,7 +1,16 @@
-const addTask = ({ id, name, description, status }) => ({
+import { v4 as uuidv4 } from 'uuid';
+
+
+const addTask = ({ 
+    proyectId = '', 
+    name = '', 
+    description = '', 
+    status = '' 
+}) => ({
     type: 'task/addTask',
     payload: {
-        id,
+        id: uuidv4(),
+        proyectId,
         name,
         description,
         status

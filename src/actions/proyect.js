@@ -1,11 +1,18 @@
-const addProyect = ({ id, title, description, status, invoiced }) => ({
+import { v4 as uuidv4 } from 'uuid';
+
+const addProyect = ({ 
+    name = '', 
+    description = '', 
+    status = '', 
+    invoice = undefined
+}) => ({
     type: 'proyect/addProyect',
     payload: {
-        id,
-        title,
+        id: uuidv4(),
+        name,
         description,
         status,
-        invoiced
+        invoice
     }
 })
 
