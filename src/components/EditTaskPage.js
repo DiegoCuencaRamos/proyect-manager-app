@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Title from './Title'
-import { editTask } from '../actions/task'
+import { startEditTask } from '../actions/task'
 import ItemForm from './ItemForm'
 
-const EditProyectPage = () => {
+const EditTaskPage = () => {
     const tasks = useSelector(state => state.tasks)
     const proyectId = useSelector(state => state.ids.proyectId)
     const { taskId } = useParams()
@@ -14,14 +14,14 @@ const EditProyectPage = () => {
     const dispatch = useDispatch()
 
     const onParentFormSubmit = (updates) => {
-        dispatch(editTask(taskId, updates))
+        dispatch(startEditTask(taskId, updates))
     }
 
     return(
         <section>
             <Title
-                title={'Edit proyect'}
-                description={'Edit your current proyect'}
+                title={'Edit task'}
+                description={'Edit your current task'}
             />
 
             <ItemForm
@@ -33,4 +33,4 @@ const EditProyectPage = () => {
     )
 }
 
-export default EditProyectPage
+export default EditTaskPage

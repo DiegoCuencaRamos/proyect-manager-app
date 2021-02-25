@@ -4,8 +4,8 @@ import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import getVisibleProyects from '../selectors/proyects'
 import getVisibleTasks from '../selectors/tasks'
-import { removeProyect } from '../actions/proyect'
-import { removeTask } from '../actions/task'
+import { startRemoveProyect } from '../actions/proyect'
+import { startRemoveTask } from '../actions/task'
 import { setProyectId } from '../actions/id'
 
 
@@ -28,7 +28,7 @@ const IemList = ({ isProyect }) => {
 
     const onRemoveButtonClicked = (e) => {
         const id = e.target.dataset.id
-        dispatch(isProyect ? removeProyect(id) : removeTask(id))
+        dispatch(isProyect ? startRemoveProyect(id) : startRemoveTask(id))
     }
 
     const onItemClicked = isProyect 

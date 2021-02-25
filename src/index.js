@@ -4,6 +4,8 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import AppRouter from './routers/AppRouter'
+import { startSetProyects } from './actions/proyect'
+import { startSetTasks } from './actions/task'
 
 const app = (
     <React.StrictMode>
@@ -13,4 +15,14 @@ const app = (
     </React.StrictMode>
 )
 
-ReactDOM.render(app, document.querySelector('#root'))
+const renderApp = () => {
+    ReactDOM.render(app, document.querySelector('#root'))
+}
+
+store.dispatch(startSetProyects())
+    .then(() => {
+        store.dispatch(startSetTasks())
+    })
+    .then(() => {
+        renderApp()
+    })

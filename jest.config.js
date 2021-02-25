@@ -2,8 +2,9 @@ const {defaults} = require('jest-config');
 
 module.exports = {
     setupFilesAfterEnv: [
-        "<rootDir>src/tests/setupTest.js"
+        "<rootDir>src/tests/setupTests.js"
     ],
+    // To make shapshots working
     snapshotSerializers: [
         "enzyme-to-json/serializer"
     ],
@@ -12,12 +13,4 @@ module.exports = {
          'ts',
           'tsx'
     ],
-    moduleDirectories: [
-        "node_modules",
-         "src"
-    ],
-    moduleNameMapper: {
-        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-        "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    }
 };

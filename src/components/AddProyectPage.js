@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addProyect } from '../actions/proyect'
+import { startAddProyect } from '../actions/proyect'
 import Title from './Title'
 import ItemForm from './ItemForm'
 
@@ -8,7 +8,7 @@ const AddProyectPage = () => {
     const dispatch = useDispatch()
 
     const onParentFormSubmit = (proyect) => {
-        dispatch(addProyect(proyect))
+        dispatch(startAddProyect(proyect))
     } 
 
     return (

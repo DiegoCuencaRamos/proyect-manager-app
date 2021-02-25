@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Title from './Title'
-import { addTask } from '../actions/task'
+import { startAddTask } from '../actions/task'
 import ItemForm from './ItemForm'
 
 const AddTaskPage = () => {
@@ -9,7 +9,7 @@ const AddTaskPage = () => {
     const dispatch = useDispatch()
 
     const onParentFormSubmit = (task) => {
-        dispatch(addTask(task))        
+        dispatch(startAddTask(task))        
     } 
 
     return (

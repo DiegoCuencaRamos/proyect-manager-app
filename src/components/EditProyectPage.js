@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { editProyect } from '../actions/proyect'
+import { startEditProyect } from '../actions/proyect'
 import Title from './Title'
 import ItemForm from './ItemForm'
 
@@ -13,7 +13,7 @@ const EditProyectPage = () => {
     const dispatch = useDispatch()
 
     const onParentFormSubmit = (updates) => {
-        dispatch(editProyect(proyectId, updates))
+        dispatch(startEditProyect(proyectId, updates))
     }
 
     return (

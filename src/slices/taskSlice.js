@@ -3,13 +3,12 @@ const inicialState = []
 const taskReducer = (state = inicialState, action) => {
     switch (action.type) {
         case 'task/addTask':
-            
             return [
                 ...state,
                 { ...action.payload }
             ]
-        case 'task/editTask':
 
+        case 'task/editTask':
             return state.map((task) => {
                 if (task.id !== action.payload.id) {
                     return task
@@ -20,9 +19,13 @@ const taskReducer = (state = inicialState, action) => {
                     }
                 }
             })
-        case 'task/removeTask':
 
+        case 'task/removeTask':
             return state.filter((task) => task.id !== action.payload)
+
+        case 'task/setTasks':
+            return action.payload
+            
         default:
             return state
     }

@@ -10,6 +10,7 @@ import EditProyectPage from '../components/EditProyectPage'
 import AddTaskPage from '../components/AddTaskPage'
 import EditTaskPage from '../components/EditTaskPage'
 import ReadTaskPage from '../components/ReadTaskPage'
+import NotFoundPage from '../components/NotFoundPage'
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -26,6 +27,8 @@ const AppRouter = () => (
             <Route path='/add-task'><AddTaskPage /></Route>
             <Route path='/edit-task/:taskId'><EditTaskPage /></Route>
             <Route path='/task/:taskId'><ReadTaskPage /></Route>
+            
+            <Route><NotFoundPage /></Route>
         </Switch>
     </BrowserRouter>
 )

@@ -1,6 +1,6 @@
 const getVisibleTasks = (proyectId, tasks, { searchText, sortBy }) => {
     return tasks
-        // Get tasks by proyect
+        // Get filtered tasks by proyect
         .filter(task => task.proyectId === proyectId)
         // Get filtered tasks by searchText
         .filter(task => task.name.toLowerCase().includes(searchText.toLowerCase()))

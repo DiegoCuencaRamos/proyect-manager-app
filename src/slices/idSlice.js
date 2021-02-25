@@ -3,7 +3,7 @@ const initialState = {
     taskId: ''
 }
 
-const idSlice = (state = initialState, action) => {
+const idReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'id/setProyectId':
             return {
@@ -20,4 +20,4 @@ const idSlice = (state = initialState, action) => {
     }
 }
 
-export default idSlice
+export default idReducer
