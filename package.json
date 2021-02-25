@@ -43,7 +43,6 @@
   "dependencies": {
     "core-js": "^3.8.1",
     "firebase": "^8.2.9",
-    "history": "^4.10.1",
     "normalize.css": "^8.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
