@@ -1,4 +1,5 @@
 import database from '../firebase'
+import proyectReducer from '../slices/proyectSlice'
 
 // 1. Add task
 const addTask = (task) => ({
@@ -8,6 +9,7 @@ const addTask = (task) => ({
 
 const startAddTask = (taskData = {}) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
         const {
             proyectId = '', 
             name = '', 
@@ -16,7 +18,7 @@ const startAddTask = (taskData = {}) => {
         } = taskData
         const task = { proyectId, name, description, status }
 
-        return database.ref('/tasks').push(task)
+        return database.ref(`/users/${uid}/tasks`).push(task)
             .then(ref => {
                 dispatch(addTask({
                     id: ref.key,
@@ -37,8 +39,9 @@ const editTask = (id, updates) => ({
 
 const startEditTask = (id, updates) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/tasks/${id}`).update(updates)
+        return database.ref(`/users/${uid}/tasks/${id}`).update(updates)
             .then(() => {
                 dispatch(editTask(id, updates))
             })
@@ -53,15 +56,41 @@ const removeTask = (id) => ({
 
 const startRemoveTask = (id) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/tasks/${id}`).remove()
+        return database.ref(`/users/${uid}/tasks/${id}`).remove()
             .then(() => {
                 dispatch(removeTask(id))
             })
     }
 }
 
-// 4. Set tasks
+// 4. Remove all proyect tasks
+const removeProyectTasks = (proyectId) => ({
+    type: 'task/removeProyectTasks',
+    payload: proyectId
+})
+
+const startRemoveProyectTasks = (proyectId) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid
+
+        return database.ref(`/users/${uid}/tasks`).once('value')
+            .then(dataSnapshot => {
+                dataSnapshot.forEach(childDataSnapshot => {
+                    const data = childDataSnapshot.val()
+
+                    if(proyectId === data.proyectId) {
+                        childDataSnapshot.ref.remove()
+                    }
+                })
+
+                dispatch(removeProyectTasks(proyectId))
+            }) 
+    }
+} 
+
+// 5. Set tasks
 const setTasks = (tasks) => ({
     type: 'task/setTasks',
     payload: tasks
@@ -69,8 +98,9 @@ const setTasks = (tasks) => ({
 
 const startSetTasks = () => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/tasks`).once('value')
+        return database.ref(`/users/${uid}/tasks`).once('value')
             .then(dataSnapshot => {
                 const tasks = []
 
@@ -93,6 +123,8 @@ export {
     startEditTask,
     removeTask,
     startRemoveTask,
+    removeProyectTasks,
+    startRemoveProyectTasks,
     setTasks,
     startSetTasks
 }

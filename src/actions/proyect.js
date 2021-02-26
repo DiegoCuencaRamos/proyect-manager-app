@@ -8,6 +8,7 @@ const addProyect = (proyect) => ({
 
 const startAddProyect = (proyectData = {}) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
         const {
             name = '', 
             description = '', 
@@ -16,7 +17,7 @@ const startAddProyect = (proyectData = {}) => {
         } = proyectData
         const proyect = { name, description, status, invoice }
 
-        return database.ref('/proyects').push(proyect)
+        return database.ref(`/users/${uid}/proyects`).push(proyect)
             .then(ref => {
                 dispatch(addProyect({
                     id: ref.key,
@@ -37,8 +38,9 @@ const editProyect = (id, updates) => ({
 
 const startEditProyect = (id, updates) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/proyects/${id}`).update(updates)
+        return database.ref(`/users/${uid}/proyects/${id}`).update(updates)
             .then(() => {
                 dispatch(editProyect(id, updates))
             })
@@ -53,8 +55,9 @@ const removeProyect = (id) => ({
 
 const startRemoveProyect = (id) => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/proyects/${id}`).remove()
+        return database.ref(`/users/${uid}/proyects/${id}`).remove()
             .then(() => {
                 dispatch(removeProyect(id))
             })
@@ -69,8 +72,9 @@ const setProyects = (proyects) => ({
 
 const startSetProyects = () => {
     return (dispatch, getState) => {
+        const uid = getState().auth.uid
 
-        return database.ref(`/proyects`).once('value')
+        return database.ref(`/users/${uid}/proyects`).once('value')
             .then(dataSnapshot => {
                 const proyects = []
 

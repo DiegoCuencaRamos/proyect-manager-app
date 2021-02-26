@@ -9,7 +9,7 @@ const taskReducer = (state = inicialState, action) => {
             ]
 
         case 'task/editTask':
-            return state.map((task) => {
+            return state.map(task => {
                 if (task.id !== action.payload.id) {
                     return task
                 } else {
@@ -21,7 +21,10 @@ const taskReducer = (state = inicialState, action) => {
             })
 
         case 'task/removeTask':
-            return state.filter((task) => task.id !== action.payload)
+            return state.filter(task => task.id !== action.payload)
+
+        case 'task/removeProyectTasks':
+            return state.filter(task => task.proyectId !== action.payload)
 
         case 'task/setTasks':
             return action.payload
