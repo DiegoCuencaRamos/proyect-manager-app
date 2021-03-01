@@ -11,6 +11,16 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
 
+// Is the same
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(publicPath, 'index.html'), function(err) {
+//         if (err) {
+//             res.status(500).send(err)
+//         }
+//     })
+// })
+
 app.listen(port, () => {
     console.log('Server is up!');
 });
+
