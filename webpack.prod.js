@@ -13,7 +13,7 @@ module.exports = merge(common, {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        // Is required so that the loader can find the publicPath
+                        // Is required so that the loader can find the publicPath in the browser
                         options: { publicPath: '/' }
                     },
                     'css-loader',
@@ -45,7 +45,6 @@ module.exports = merge(common, {
         minimizer: [
             `...`, // To extend existing minimizers (i.e. `terser-webpack-plugin`)
             new CssMinimizerPlugin(),
-            new TerserPlugin()
         ],
       },
     devtool: 'source-map',

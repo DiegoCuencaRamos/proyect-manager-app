@@ -2,7 +2,6 @@ node_modules/
 playground/
 public/
 src/tests/
-src/firebase.js
 .env.test
 .env.development
 .firebase.rules

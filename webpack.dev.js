@@ -22,10 +22,8 @@ module.exports = merge(common, {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
-        
-        // Enable HTML5 History API: when reloading, page is served instead of 404.
+        // Enable HTML5 History API: when reloading, page is served instead of 404 error.
         historyApiFallback: true,
-
         publicPath: '/'
     }
 });
