@@ -10,6 +10,9 @@ import { startSetProyects } from './actions/proyect'
 import { startSetTasks } from './actions/task'
 import LoadingPage from './components/LoadingPage'
 
+import '../node_modules/normalize.css/normalize.css'
+import './styles/styles.scss';
+
 const app = (
     <React.StrictMode>
         <Provider store={store}>

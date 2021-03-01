@@ -10,6 +10,11 @@
     padding: settings.$s-size 0;
 }
 
+.header__title {
+    font-size: settings.$m-size;
+    font-weight: 200;
+}
+
 .header__content a {
     color: #fff;
 }

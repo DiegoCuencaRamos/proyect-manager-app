@@ -38,43 +38,59 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
     }
     // Render
     return (
-        <React.Fragment>
+        <div className="container">
             {errorMessage && <p>{errorMessage}</p>}
 
-            <form onSubmit={onChildFromSubmit}>
-                <input 
-                    type="text"
-                    value={name}
-                    placeholder="Name"
-                    onChange={e => setName(e.target.value)}
-                />
-                <input 
-                    type="text" 
-                    value={description}
-                    placeholder="Description"
-                    onChange={e => setDescription(e.target.value)}
-                />
-                <select 
-                    value={status}
-                    onChange={e => setStatus(e.target.value)}
-                >
-                    <option defaultValue value="">Select status</option>
-                    <option value="todo">To do</option>
-                    <option value="doing">Doing</option>
-                    <option value="done">Done</option>
-                </select>
-                {
-                    isProyect &&
+            <form 
+                className="form"    
+                onSubmit={onChildFromSubmit}
+            >
+                <div className="form__item-wrapper--title">
                     <input 
-                        type="number"
-                        value={invoice}
-                        placeholder="Invoice"
-                        onChange={e => setInvoice(e.target.value)}
+                        className="form__item--title"
+                        type="text"
+                        value={name}
+                        placeholder="Name"
+                        onChange={e => setName(e.target.value)}
                     />
-                }               
-                <button>Save proyect</button>
+                </div>
+                <div className="form__flex-wrapper">
+                    <div className={`${isProyect ? 'form__item-wrapper--inline-input' : 'form__item-wrapper--inline-task'}`}>
+                        <select 
+                            className="form__item--normal"
+                            value={status}
+                            onChange={e => setStatus(e.target.value)}
+                        >
+                            <option defaultValue value="">Select status</option>
+                            <option value="todo">To do</option>
+                            <option value="doing">Doing</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                    
+                    {isProyect &&
+                        <div className="form__item-wrapper--inline-input">
+                                <input 
+                                    className="form__item--normal"
+                                    type="number"
+                                    value={invoice}
+                                    placeholder="Invoice"
+                                    onChange={e => setInvoice(e.target.value)}
+                                />
+                        </div>
+                    }
+                </div>
+                <div className="form__item-wrapper--normal">
+                    <textarea 
+                        className="form__item--textarea"
+                        value={description}
+                        placeholder="Description"
+                        onChange={e => setDescription(e.target.value)}
+                    />
+                </div>             
+                <button className="button">Save proyect</button>
             </form>
-        </React.Fragment>
+        </div>
     )
 }
 

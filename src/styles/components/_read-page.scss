@@ -1,0 +1,22 @@
+@use '../base/settings';
+
+.read-page {
+    margin-top: settings.$xl-size;
+}
+
+.read-page__title {
+    margin-bottom: settings.$l-size;
+}
+
+.read-page__status {
+    background-color: red;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 0 16px;
+}
+
+.read-page__text {
+    font-size: settings.$text-small;
+}

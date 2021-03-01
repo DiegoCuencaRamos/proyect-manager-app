@@ -19,37 +19,48 @@ const KanbanBoard = ({ isProyect }) => {
     // Rendering
     return (
         <section className="kanban">
-            {
-                statuses.map((status, index) => (
-                    <div 
-                        key={index}
-                        className="kanban__board"
-                    >
-                        <div className="kanban__thead">
-                            <h2>{status}</h2>
+            <div className="container">
+                {
+                    statuses.map((status, index) => (
+                        <div 
+                            key={index}
+                            className={`kanban__board--${status}`}
+                        >
+                            <div className="kanban__thead">
+                                <h3>{status}</h3>
+                            </div>
+                            <div className="kanban__tbody">
+                                <Link 
+                                    key={index}
+                                    to={isProyect ? `/add-proyect` : `/add-task`}
+                                    className="kanban__item"
+                                >
+                                    <p className="kanban__add-plus">+</p>
+                                    <p className="kanban__add-text">{`Create new ${isProyect ? 'proyect' : 'task'} here`}</p>
+                                </Link>
+
+                                    {
+                                        items
+                                            .filter(item => item.status === status)
+                                            .map(({ id, name, description, invoice = undefined }) => (
+                                                <Link 
+                                                    key={id}
+                                                    to={isProyect ? `/proyect/${id}` : `/task/${id}`}
+                                                    className="kanban__item"
+                                                    data-id={id}
+                                                    onClick={onItemClicked}
+                                                >
+                                                    <p className="kanban__item__title">{name}</p>
+                                                    <p className="kanban__item__description">{description}</p>
+                                                    <p className="kanban__item__invoice">{invoice}</p>
+                                                </Link>
+                                            ))
+                                    }
+                            </div>
                         </div>
-                        <div className="kanban__tbody">
-                                {
-                                    items
-                                        .filter(item => item.status === status)
-                                        .map(({ id, name, description, invoice = undefined }) => (
-                                            <Link 
-                                                key={id}
-                                                to={isProyect ? `/proyect/${id}` : `/task/${id}`}
-                                                className="kanban__item"
-                                                data-id={id}
-                                                onClick={onItemClicked}
-                                            >
-                                                <p>{name}</p>
-                                                <p>{description}</p>
-                                                <p>{invoice}</p>
-                                            </Link>
-                                        ))
-                                }
-                        </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </div>
         </section>
         
     )

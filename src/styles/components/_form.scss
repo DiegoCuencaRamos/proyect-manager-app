@@ -15,10 +15,24 @@ button, input, optgroup, select, textarea {
     box-shadow: settings.$box-shadow;
 }
 
+.form__flex-wrapper {
+    @include settings.flex(wrap, stretch, space-between);
+}
+
 .form__item-wrapper--title {
     @extend %form__item-wrapper;
     @extend %gradient-background;
     padding-bottom: 3px;
+}
+
+.form__item-wrapper--inline-input {
+    @extend %form__item-wrapper;
+    width: 49%;
+}
+
+.form__item-wrapper--inline-task {
+    @extend %form__item-wrapper;
+    width: 100%; 
 }
 
 .form__item-wrapper--normal {
@@ -27,21 +41,28 @@ button, input, optgroup, select, textarea {
 
 // Elements
 %form__item {
-    border-top-left-radius: settings.$border-radius;
-    border-top-right-radius: settings.$border-radius;
     border-width: 0;
     outline: none;
     padding: settings.$s-size settings.$m-size;
     width: 100%;
 }
 
+.form__item--title {
+    @extend %form__item;
+    border-top-left-radius: settings.$border-radius;
+    border-top-right-radius: settings.$border-radius;
+    height: settings.$xl-size;
+}
+
 .form__item--normal {
     @extend %form__item;
+    border-radius: settings.$border-radius;
     height: settings.$xl-size;
 }
 
 .form__item--textarea {
     @extend %form__item;
+    border-radius: settings.$border-radius;
     height: 27rem;
 }
 

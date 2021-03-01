@@ -1,13 +1,14 @@
 @use './base/base';
 @use './base/fonts';
 
-@use './features/container';
-@use './features/header';
-@use './features/button';
-@use './features/filters';
-@use './features/list';
-@use './features/form';
-@use './features/page-header';
-@use './features/read-page';
-@use './features/box-layout';
-@use './features/loader'
+@use './components/container';
+@use './components/header';
+@use './components/button';
+@use './components/filters';
+@use './components/list';
+@use './components/form';
+@use './components/page-header';
+@use './components/read-page';
+@use './components/login-layout';
+@use './components/loader';
+@use './components//kanban-board';

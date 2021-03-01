@@ -1,0 +1,4 @@
+background-image: linear-gradient(to right, #e65c00, #ef7c00, #f59a00, #f8b700, #f9d423);
+background-image: linear-gradient(to right, #02aab0, #00b3b2, #00bcb1, #00c5b0, #00cdac);
+background-image: linear-gradient(to right, #2193b0, #37a3bf, #4ab3ce, #5cc4de, #6dd5ed);
+background-image: linear-gradient(to right, #aa076b, #980369, #860267, #730363, #61045f);

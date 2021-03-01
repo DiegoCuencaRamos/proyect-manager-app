@@ -22,17 +22,11 @@ const DashboardTasktPage = () => {
 
     return (
         <section>
-            <div className="page-title">
-                <Title 
-                    title={'Task Dashboard'} 
-                    description={'From here you will be able to visualize your task with in the chosen proyect'}
-                />
-                <Link to="/add-task" >Add task</Link>
-            </div>
-            <br />
-            <hr />
-            <br />
-
+            <Title 
+                title={'Task Dashboard'} 
+                description={'From here you will be able to visualize your task with in the chosen proyect'}
+                isDashboard={true}
+            />
             <FiltersList />
             {itemsLayout}
         </section>

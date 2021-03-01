@@ -16,10 +16,6 @@
     }
 }
 
-.filters__content {
-    @include settings.flex(wrap, stretch, $justify-content: false);
-}
-
 // Items
 .filters__item {
     border: 0px;

@@ -8,10 +8,12 @@ const ReadTaskPage = () => {
     const task = tasks.find(task => task.id === taskId)
 
     return (
-        <section>
-            <h1>{task.name}</h1>
-            <p>{task.status}</p>
-            <p>{task.description}</p>
+        <section className="read-page">
+            <div className="container">
+                <h1 className="read-page__title">{task.name}</h1>
+                <p className="read-page__status">{task.status}</p>
+                <p className="read-page__text">{task.description}</p>
+            </div>
         </section>
 )}
 

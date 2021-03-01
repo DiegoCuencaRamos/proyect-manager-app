@@ -21,17 +21,12 @@ const DashboardProyectPage = () => {
 
     return (
         <section>
-            <div className="page-title">
-                <Title 
-                    title={'Proyect Dashboard'} 
-                    description={'From here you will be able to visualice all your proyects'}
-                />
-                <Link to='/add-proyect' >Add proyect</Link>
-            </div>
-            <br />
-            <hr />
-            <br />
-
+            <Title 
+                title={'Proyect Dashboard'} 
+                description={'From here you will be able to visualice all your proyects'}
+                isDashboard={true}
+                isProyect={true}
+            />
             <FiltersList />
             {itemsLayout}
         </section>

@@ -5,6 +5,10 @@
     margin-bottom: settings.$m-size;
 }
 
+.page-header__wrapper {
+    @include settings.flex(wrap, flex-end, space-between)
+}
+
 .page-header__title {
     margin-bottom: settings.$xs-size;
 }

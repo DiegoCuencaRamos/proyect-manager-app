@@ -7,17 +7,19 @@ const Header = () => {
     const dispatch = useDispatch()
     
     return (
-        <div>
-            <Link to={'/'}>
-                <span>Proyect Manager</span>
-            </Link>
-            <button 
-                onClick={() => dispatch(startLogout())}
-            >Logout</button>
-            <br />
-            <br />
-            <hr />
-        </div>
+        <header className="header">
+            <div className="container">
+                <div className="header__content">
+                    <Link to={'/dashboard'}>
+                        <span className="header__title">Proyect Manager</span>
+                    </Link>
+                    <button
+                        className="button--link"
+                        onClick={() => dispatch(startLogout())}
+                    >Logout</button>
+                </div>
+            </div>
+        </header>
 )}
 
 export default Header
