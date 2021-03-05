@@ -23,7 +23,7 @@ module.exports = merge(common, {
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         // Enable HTML5 History API: 
-        // when reloading, we redirect to index.html
+        // when reloading, it redirects all URLs to index.html
         // and react-router takes care of routing to serve the page.
         historyApiFallback: true,
         publicPath: '/'

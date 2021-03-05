@@ -6,6 +6,7 @@ import Title from './Title'
 import FiltersList from './FiltersList'
 import ItemList from './ItemList'
 import KanbanBoard from './KanbanBoard'
+import Calendar from './Calendar'
 
 
 const DashboardTasktPage = () => {
@@ -16,8 +17,8 @@ const DashboardTasktPage = () => {
         itemsLayout = <ItemList />
     } else if (visualizeMode === 'kanban') {
         itemsLayout = <KanbanBoard />
-    } else if (visualizeMode === 'schedule') {
-        
+    } else if (visualizeMode === 'scheduler') {
+        itemsLayout = <Calendar />
     }
 
     return (

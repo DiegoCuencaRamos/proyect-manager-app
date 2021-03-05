@@ -7,6 +7,7 @@ import getVisibleTasks from '../selectors/tasks'
 import { startRemoveProyect } from '../actions/proyect'
 import { startRemoveProyectTasks, startRemoveTask } from '../actions/task'
 import { setProyectId } from '../actions/id'
+import Pagination from './Pagination'
 
 
 
@@ -19,6 +20,8 @@ const IemList = ({ isProyect }) => {
     const filters = useSelector(state => state.filters)
     const proyectId = isProyect ? undefined : useSelector(state => state.ids.proyectId)
     const filteredItems = isProyect ? getVisibleProyects(items, filters) : getVisibleTasks(proyectId, items, filters)
+    // Pagination 
+    const [ currentItems, setCurrentItems ] = useState([]) 
 
     // Events
     const onChangeDropdownVisibility = (e) => {
@@ -51,7 +54,20 @@ const IemList = ({ isProyect }) => {
         ) : (
             undefined
         )
-    
+        
+
+    // Pagination
+    const onPageChange = (data) => {
+        const { currentPage, pageLimit } = data
+        const startItem = (currentPage - 1) * pageLimit
+        const endItem = currentPage * pageLimit
+        const currentItems = filteredItems.slice(startItem, endItem)
+
+        setCurrentItems(currentItems)
+    }
+
+
+
     // Rendering
     return (
         <div className="list">
@@ -68,11 +84,13 @@ const IemList = ({ isProyect }) => {
                     </div>                    
                     <div className="list__body">
                         {
-                            filteredItems
-                                .map(({ id, name, description, status, invoice = undefined }) => (
+                            currentItems
+                                .map(({ id, name, status, invoice = undefined }) => (
                                     <div key={id} className="list__body-item">
 
-                                        <p className="list__logo">Logo</p>
+                                        {isProyect && 
+                                            <p className="list__logo">Logo</p>
+                                        }
 
                                         <Link 
                                             className="list__name"
@@ -91,8 +109,7 @@ const IemList = ({ isProyect }) => {
 
                                         <div 
                                             className="list__dropdown"
-                                            onMouseEnter ={onChangeDropdownVisibility}
-                                            onMouseLeave ={onChangeDropdownVisibility}
+                                            onClick ={onChangeDropdownVisibility}
                                         >
                                             <button ><i>Icon</i></button>
                                             <div className="list__dropdown-content">
@@ -120,6 +137,12 @@ const IemList = ({ isProyect }) => {
                         }
                     </div>
                 </div>
+                <Pagination 
+                        totalItems={filteredItems.length} 
+                        pageLimit={3} 
+                        onPageChange={onPageChange}
+                        pageNeighbours={1}
+                    />
             </div>
         </div>
     )

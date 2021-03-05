@@ -6,6 +6,7 @@ import Title from './Title'
 import FiltersList from './FiltersList'
 import ItemList from './ItemList'
 import KanbanBoard from './KanbanBoard'
+import Calendar from './Calendar'
 
 const DashboardProyectPage = () => {
     const visualizeMode = useSelector(state => state.filters.visualizeMode)
@@ -15,8 +16,8 @@ const DashboardProyectPage = () => {
         itemsLayout = <ItemList isProyect={true} />
     } else if (visualizeMode === 'kanban') {
         itemsLayout = <KanbanBoard isProyect={true}/>
-    } else if (visualizeMode === 'schedule') {
-        
+    } else if (visualizeMode === 'scheduler') {
+        itemsLayout = <Calendar />
     }
 
     return (

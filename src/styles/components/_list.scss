@@ -109,6 +109,22 @@
     padding-bottom: settings.$xs-size;
 }
 
+// Pagination
+.list-pagination ul {
+    list-style: none;
+}
+
+.list-pagination li {
+    display: inline-block;
+}
+
+.list-pagination a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 35px;
+}
+
 
 
     

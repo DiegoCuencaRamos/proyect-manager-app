@@ -1,4 +1,5 @@
 import database from '../firebase'
+import moment from 'moment'
 
 // 1. Add proyect
 const addProyect = (proyect) => ({
@@ -13,9 +14,12 @@ const startAddProyect = (proyectData = {}) => {
             name = '', 
             description = '', 
             status = '', 
-            invoice = undefined
+            invoice = undefined,
+            startDate = moment().startOf('month'),
+            endDate = moment().endOf('month')
+
         } = proyectData
-        const proyect = { name, description, status, invoice }
+        const proyect = { name, description, status, invoice, startDate, endDate }
 
         return database.ref(`/users/${uid}/proyects`).push(proyect)
             .then(ref => {
