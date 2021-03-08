@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Title from './Title'
 import { startEditTask } from '../actions/task'
-import ItemForm from './ItemForm'
+import ItemForm from './Form'
 
 const EditTaskPage = () => {
     const tasks = useSelector(state => state.tasks)

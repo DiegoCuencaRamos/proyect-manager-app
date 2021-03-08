@@ -1,26 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-
+import React, { useState } from 'react'
 import Title from './Title'
-import FiltersList from './FiltersList'
-import ItemList from './ItemList'
-import KanbanBoard from './KanbanBoard'
-import Calendar from './Calendar'
-
+import LayoutSelectors from './LayoutSelectors'
+import ItemsLayout from './ItemsLayout'
 
 const DashboardTasktPage = () => {
-    const visualizeMode = useSelector(state => state.filters.visualizeMode)
-    let itemsLayout = <ItemList />
+    // State
+    const [ layout, setLayout ] = useState('')
 
-    if (visualizeMode === 'list') {
-        itemsLayout = <ItemList />
-    } else if (visualizeMode === 'kanban') {
-        itemsLayout = <KanbanBoard />
-    } else if (visualizeMode === 'scheduler') {
-        itemsLayout = <Calendar />
+    // Events
+    const handleLayoutChange = currentLayout => {
+        setLayout(currentLayout)
     }
 
+    // Render
     return (
         <section>
             <Title 
@@ -28,8 +20,8 @@ const DashboardTasktPage = () => {
                 description={'From here you will be able to visualize your task with in the chosen proyect'}
                 isDashboard={true}
             />
-            <FiltersList />
-            {itemsLayout}
+            <LayoutSelectors handleLayoutChange={handleLayoutChange} />
+            <ItemsLayout layout={layout} />
         </section>
 )}
 

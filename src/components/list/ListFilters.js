@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchFilterChanged, sortByFilterChanged, visualizeModeFilterChanged } from '../actions/filter'
+import { searchFilterChanged, sortByFilterChanged } from '../../actions/filter'
 
-const FiltersList = () => {
-    const { searchText, sortBy, visualizeMode } = useSelector(state => state.filters)
+const ListFilters = () => {
+    const { searchText, sortBy } = useSelector(state => state.filters)
     const dispatch = useDispatch()
 
     return (
@@ -25,26 +25,14 @@ const FiltersList = () => {
                         >
                             <option value="" disabled>Sort by</option>
                             <option value="name">Name</option>
-                            <option value="date">Date</option>
+                            <option value="invoiced">Invoiced</option>
+                            <option value="start-date">Start date</option>
                         </select>
-                    </div>
-                    <div className="filters__content">
-                        <select 
-                            className="filters__item"
-                            value={visualizeMode}
-                            onChange={e => dispatch(visualizeModeFilterChanged(e.target.value))}
-                        >
-                            <option value="" disabled>Visualize mode</option>
-                            <option value="list">List</option>
-                            <option value="scheduler">Scheduler</option>
-                            <option value="kanban">Kanban</option>
-                        </select>
-                    </div>
-                        
+                    </div>                        
                 </div>
             </div>
         </section>
     )
 }
 
-export default FiltersList
+export default ListFilters

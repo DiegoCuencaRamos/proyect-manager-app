@@ -1,7 +1,6 @@
 const inicialState = {
     searchText: '',
-    sortBy: '',
-    visualizeMode: ''
+    sortBy: ''
 }
 
 const filterReducer = (state = inicialState, action) => {
@@ -15,11 +14,6 @@ const filterReducer = (state = inicialState, action) => {
             return {
                 ...state,
                 sortBy: action.payload
-            }
-        case 'filter/visualizeModeFilterChanged':
-            return {
-                ...state,
-                visualizeMode: action.payload
             }
         default:
             return state

@@ -8,9 +8,4 @@ const sortByFilterChanged = (sortBy) => ({
     payload: sortBy
 })
 
-const visualizeModeFilterChanged = (visualizeMode = 'list') => ({
-    type: 'filter/visualizeModeFilterChanged',
-    payload: visualizeMode
-})
-
-export { searchFilterChanged, sortByFilterChanged, visualizeModeFilterChanged }
+export { searchFilterChanged, sortByFilterChanged }

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { startEditProyect } from '../actions/proyect'
 import Title from './Title'
-import ItemForm from './ItemForm'
+import ItemForm from './Form'
 
 const EditProyectPage = () => {
     const proyects = useSelector(state => state.proyects)

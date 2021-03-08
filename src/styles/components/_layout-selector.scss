@@ -1,0 +1,25 @@
+@use '../base/settings';
+
+// Containers
+.layout-selector {
+    margin-bottom: settings.$m-size;
+}
+
+.layout-selector__wrapper {
+    border-radius: settings.$border-radius;
+    box-shadow: settings.$box-shadow;
+    padding: 0 settings.$xs-size;
+    @media screen and (min-width: settings.$tablet-breakpoint) {
+        @include settings.flex(wrap, stretch);
+    }
+}
+
+// Items
+.layout-selector__item {
+    border-right: 1px solid settings.$light-gray;
+    padding: settings.$s-size settings.$m-size;
+    width: 100%;
+    @media screen and (min-width: settings.$tablet-breakpoint) {
+        width: auto;
+    }
+}

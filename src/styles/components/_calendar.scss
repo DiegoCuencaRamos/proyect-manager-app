@@ -112,6 +112,7 @@ cursor: pointer;
 
 .calendar .body .cell {
     position: relative;
+    // height: 10rem;
     border-right: 1px solid var(--border-color);
     overflow: hidden;
     cursor: pointer;

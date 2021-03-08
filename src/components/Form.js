@@ -6,28 +6,43 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
+    // Variables
+    const history = useHistory()
     // State
     const [name, setName] = useState(item ? item.name : '')
     const [description, setDescription] = useState(item ? item.description : '')
     const [status, setStatus] = useState(item ? item.status : '')
     const [invoice, setInvoice] = useState(item ? item.invoice : '')
-    // Range picker
-    const [ startDate, setStartDate ] = useState(null)
-    const [ endDate, setEndDate ] = useState(null)
+    const [ startDate, setStartDate ] = useState(item ? moment(item.startDate) : null)
+    const [ endDate, setEndDate ] = useState(item ? moment(item.endDate) : null)
     const [ calendarFocused, setCalendarFocused ] = useState(null)
-    // Error message
     const [errorMessage, setErrorMessage] = useState('')
-    const history = useHistory()
 
     // Events
-    const onDatesChange = (({ startDate, endDate }) => {
+    const onNameChange = (e) => {
+        setName(e.target.value)
+    }
+
+    const onStatusChange = (e) => {
+        setStatus(e.target.value)
+    }
+
+    const onIvoiceChange = (e) => {
+        setInvoice(e.target.value)
+    }
+
+    const onDescriptionChange = (e) => {
+        setDescription(e.target.value)
+    }
+
+    const onDatesChange = ({ startDate, endDate }) => {
         setStartDate(startDate)
         setEndDate(endDate)
-    })
+    }
 
-    const onFocusChange = (calendarFocused => {
+    const onFocusChange = calendarFocused => {
         setCalendarFocused(calendarFocused)
-    }) 
+    }
 
     const onChildFromSubmit = (e) => {
         e.preventDefault()
@@ -40,9 +55,7 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
             endDate: endDate.startOf('day').valueOf()
         }
 
-        console.log(commonItem)
-
-        if (name && status) {
+        if (name && status && startDate && endDate) {
             onParentFormSubmit((
                 isProyect 
                 ? {
@@ -53,10 +66,9 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                     proyectId
                 }
             )) 
-
             history.push(isProyect ? '/dashboard' : `/proyect/${proyectId}`)
         } else {
-            setErrorMessage('Please provide title and status for your proyect')
+            setErrorMessage('Please provide title, status and dates for your proyect')
         }
     }
 
@@ -65,17 +77,14 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
         <div className="container">
             {errorMessage && <p>{errorMessage}</p>}
 
-            <form 
-                className="form"    
-                onSubmit={onChildFromSubmit}
-            >
+            <form className="form" onSubmit={onChildFromSubmit}>
                 <div className="form__item-wrapper--title">
                     <input 
                         className="form__item--title"
                         type="text"
                         value={name}
                         placeholder="Name"
-                        onChange={e => setName(e.target.value)}
+                        onChange={onNameChange}
                     />
                 </div>
                 <div className="form__flex-wrapper">
@@ -83,7 +92,7 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                         <select 
                             className="form__item--normal"
                             value={status}
-                            onChange={e => setStatus(e.target.value)}
+                            onChange={onStatusChange}
                         >
                             <option defaultValue value="">Select status</option>
                             <option value="todo">To do</option>
@@ -92,17 +101,15 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                         </select>
                     </div>
                     
-                    {isProyect &&
-                        <div className="form__item-wrapper--inline-input">
-                                <input 
-                                    className="form__item--normal"
-                                    type="number"
-                                    value={invoice}
-                                    placeholder="Invoice"
-                                    onChange={e => setInvoice(e.target.value)}
-                                />
-                        </div>
-                    }
+                    {isProyect && <div className="form__item-wrapper--inline-input">
+                        <input 
+                            className="form__item--normal"
+                            type="number"
+                            value={invoice}
+                            placeholder="Invoice"
+                            onChange={onIvoiceChange}
+                        />
+                    </div>}
                 </div>
 
                 <div className="form__item-wrapper--normal">
@@ -125,7 +132,7 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                         className="form__item--textarea"
                         value={description}
                         placeholder="Description"
-                        onChange={e => setDescription(e.target.value)}
+                        onChange={onDescriptionChange}
                     />
                 </div>             
                 <button className="button">Save proyect</button>

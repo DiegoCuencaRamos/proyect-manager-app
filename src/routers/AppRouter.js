@@ -19,10 +19,10 @@ const AppRouter = () => (
             <PublicRoute exact path="/" component={LoginPage} />
             
             <PrivateRoute path='/dashboard' component={DashboardProyectPage}></PrivateRoute>
-            <PrivateRoute path='/proyect/:proyectId' component={DashboardTaskPage}></PrivateRoute>
             <PrivateRoute path='/add-proyect' component={AddProyectPage}></PrivateRoute>
             <PrivateRoute path='/edit-proyect/:proyectId' component={EditProyectPage}></PrivateRoute>
-
+            <PrivateRoute path='/proyect/:proyectId' component={DashboardTaskPage}></PrivateRoute>
+            
             <PrivateRoute path='/add-task' component={AddTaskPage}></PrivateRoute>
             <PrivateRoute path='/edit-task/:taskId' component={EditTaskPage}></PrivateRoute>
             <PrivateRoute path='/task/:taskId' component={ReadTaskPage}></PrivateRoute>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { startAddProyect } from '../actions/proyect'
 import Title from './Title'
-import ItemForm from './ItemForm'
+import ItemForm from './Form'
 
 const AddProyectPage = () => {
     const dispatch = useDispatch()

@@ -1,36 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-
+import React, { useState } from 'react'
 import Title from './Title'
-import FiltersList from './FiltersList'
-import ItemList from './ItemList'
-import KanbanBoard from './KanbanBoard'
-import Calendar from './Calendar'
+import ItemsLayout from './ItemsLayout'
+import DashboardContext from '../contexts/dashboard-context'
+import LayoutSelectors from './LayoutSelectors'
 
 const DashboardProyectPage = () => {
-    const visualizeMode = useSelector(state => state.filters.visualizeMode)
-    let itemsLayout = <ItemList isProyect={true} />
+    // Variables
+    const isProyect = true
+    const [ layout, setLayout ] = useState('')
 
-    if (visualizeMode === 'list') {
-        itemsLayout = <ItemList isProyect={true} />
-    } else if (visualizeMode === 'kanban') {
-        itemsLayout = <KanbanBoard isProyect={true}/>
-    } else if (visualizeMode === 'scheduler') {
-        itemsLayout = <Calendar />
+    // Events
+    const handleLayoutChange = currentLayout => {
+        setLayout(currentLayout)
     }
 
+    // Render
     return (
-        <section>
-            <Title 
-                title={'Proyect Dashboard'} 
-                description={'From here you will be able to visualice all your proyects'}
-                isDashboard={true}
-                isProyect={true}
-            />
-            <FiltersList />
-            {itemsLayout}
-        </section>
+        <DashboardContext.Provider value={{ isProyect }}>
+            <section>
+                <Title 
+                    title={'Proyect Dashboard'} 
+                    description={'From here you will be able to visualice all your proyects'}
+                    isDashboard={true}
+                />
+                <LayoutSelectors handleLayoutChange={handleLayoutChange} />
+                <ItemsLayout layout={layout} />
+            </section>
+        </DashboardContext.Provider>
     )
 }
 
