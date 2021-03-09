@@ -1,5 +1,4 @@
-import database from '../firebase'
-import proyectReducer from '../slices/proyectSlice'
+import database from '../firebaseSDK'
 
 // 1. Add task
 const addTask = (task) => ({

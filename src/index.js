@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import AppRouter from './routers/AppRouter'
-import { firebase } from './firebase'
+import { auth } from './firebaseSDK'
 import { login, logout } from './actions/auth'
 import { startSetProyects } from './actions/proyect'
 import { startSetTasks } from './actions/task'
@@ -30,9 +30,10 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.querySelector('#root'))
 
-firebase.auth().onAuthStateChanged(user => {
-    if(user) {
-        store.dispatch(login(user.uid))
+auth.onAuthStateChanged(firebaseUser => {
+    if(firebaseUser) {
+        // TODO: check and prevent for same users login with diferent methods
+        store.dispatch(login(firebaseUser.uid))
         store.dispatch(startSetProyects())
             .then(() => {
                 store.dispatch(startSetTasks())
@@ -45,3 +46,4 @@ firebase.auth().onAuthStateChanged(user => {
         renderApp()
     }
 })
+
