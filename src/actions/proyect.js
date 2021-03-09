@@ -1,4 +1,4 @@
-import database from '../firebaseSDK'
+import database from '../firebase'
 import moment from 'moment'
 
 // 1. Add proyect

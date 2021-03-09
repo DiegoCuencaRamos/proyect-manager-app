@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
 import LoginPage from '../components/LoginPage'
+import LoginEmailPage from '../components/LoginEmailPage'
 import DashboardProyectPage from '../components/DashboardProyectPage'
 import DashboardTaskPage from '../components/DashboardTaskPage'
 import AddProyectPage from '../components/AddProyectPage'
@@ -17,6 +18,7 @@ const AppRouter = () => (
     <BrowserRouter>
         <Switch>
             <PublicRoute exact path="/" component={LoginPage} />
+            <PublicRoute exact path="/email-login" component={LoginEmailPage} />
             
             <PrivateRoute path='/dashboard' component={DashboardProyectPage}></PrivateRoute>
             <PrivateRoute path='/add-proyect' component={AddProyectPage}></PrivateRoute>

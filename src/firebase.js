@@ -22,7 +22,7 @@ const auth = firebase.auth()
 const GoogleAuthProvider = new firebase.auth.GoogleAuthProvider()
 const FacebookAuthProvider = new firebase.auth.FacebookAuthProvider()
 const TwitterAuthProvider = new firebase.auth.TwitterAuthProvider()
-const GithubAuthProvider = new firebase.auth.GithubAuthProvider()
+const GithubAuthProvider = new firebase.auth.GithubAuthProvider() 
 
 export { 
     database as default,

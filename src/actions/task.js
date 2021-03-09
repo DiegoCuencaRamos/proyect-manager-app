@@ -1,4 +1,4 @@
-import database from '../firebaseSDK'
+import database from '../firebase'
 
 // 1. Add task
 const addTask = (task) => ({

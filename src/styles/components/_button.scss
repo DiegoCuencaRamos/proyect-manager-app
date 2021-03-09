@@ -40,6 +40,51 @@
     background-color: settings.$purple;
 }
 
+// Social button
+%social-btn {
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: settings.$box-shadow;
+    display: inline-block;
+    font-weight: 700;
+    line-height: settings.$xl-size;
+    margin-bottom: settings.$s-size;
+    text-align: center;
+    width: 250px;
+}
+
+.btn--google {
+    @extend %social-btn;
+    color: #757575;
+    background-color: #fff;
+}
+
+.btn--facebook {
+    @extend %social-btn;
+    color: #fff;
+    background-color: #3A5997;
+}
+
+.btn--twitter {
+    @extend %social-btn;
+    color: #fff;
+    background-color: #56ACEE;
+}
+
+.btn--github {
+    @extend %social-btn;
+    color: #fff;
+    background-color: #333333;
+}
+
+.btn--emial {
+    @extend %social-btn;
+    color: #fff;
+    background-color: #DB4437;
+}
+
+
+
 // Links
 .link {
     color: deeppink;

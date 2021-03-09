@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import AppRouter from './routers/AppRouter'
-import { auth } from './firebaseSDK'
+import { auth } from './firebase'
 import { login, logout } from './actions/auth'
 import { startSetProyects } from './actions/proyect'
 import { startSetTasks } from './actions/task'
