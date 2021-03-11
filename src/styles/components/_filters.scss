@@ -19,7 +19,7 @@
 // Items
 .filters__item {
     border: 0px;
-    border-bottom: 1px solid settings.$light-gray;
+    border-bottom: 1px solid settings.$gray;
     display: inline-block;
     height: settings.$xl-size;
     line-height: settings.$xl-size;
@@ -39,7 +39,7 @@
 
 .filters__item::placeholder,
 select.filters__item {
-    color: settings.$gray;
+    color: #000000;
 }
 
 .filters__item:focus {

@@ -7,7 +7,7 @@ import CalendarWeekRow from './CalendarWeekRow'
 
 const CellsList = ({ moment, currentMonth }) => {
     // State
-    const [ selectedDate , setSelectedDate ] = useState(new Date())
+    // const [ selectedDate , setSelectedDate ] = useState(new Date())
     const proyects = useSelector(state => state.proyects)
 
     // Varialbes
@@ -29,7 +29,7 @@ const CellsList = ({ moment, currentMonth }) => {
             moment(proyect.startDate).isBetween(weekStart, weekEnd)
             || moment(proyect.endDate).isBetween(weekStart, weekEnd)
         )
-        const cellsHeight = weekItems.length <= 1 ? 80 : (weekItems.length + 1) * 32
+        const cellsHeight = weekItems.length <= 1 ? 96 : (weekItems.length + 1) * 32
         let items = []
         let spaceCountWeekData = []
 
@@ -97,7 +97,7 @@ const CellsList = ({ moment, currentMonth }) => {
         days = []
     }
 
-    return <div className="body">{rows}</div>
+    return <div className="calendar__body">{rows}</div>
 }
 
 export default CellsList

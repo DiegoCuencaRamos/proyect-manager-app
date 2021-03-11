@@ -5,8 +5,11 @@ import { setProyectId } from '../../actions/id'
 import DashboardContext from '../../contexts/dashboard-context'
 
 const KanbanItem = ({ id, name, description, invoice = undefined }) => {
-    // Context
+
+    console.log(description.length)
+    // Variables
     const isProyect = useContext(DashboardContext)
+    const itemDescription = description.length <= 55 ? description : description.slice(0, 55) + '...'
     
     // Events
     let onItemClicked
@@ -27,7 +30,7 @@ const KanbanItem = ({ id, name, description, invoice = undefined }) => {
             onClick={onItemClicked}
         >
             <p className="kanban__item__title">{name}</p>
-            <p className="kanban__item__description">{description}</p>
+            <p className="kanban__item__description">{itemDescription}</p>
             <p className="kanban__item__invoice">{invoice}</p>
         </Link>
     )

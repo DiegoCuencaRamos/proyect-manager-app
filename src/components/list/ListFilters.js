@@ -9,26 +9,14 @@ const ListFilters = () => {
     return (
         <section className="filters">
             <div className="container">
-                <div className="filters__wrapper">
-                    <div className="filters__content">
-                        <input 
-                            className="filters__item"
-                            type="text"
-                            placeholder="Serach"
-                            value={searchText}
-                            onChange={e => dispatch(searchFilterChanged(e.target.value))}
-                        />
-                        <select 
-                            className="filters__item"
-                            value={sortBy}
-                            onChange={e => dispatch(sortByFilterChanged(e.target.value))}
-                        >
-                            <option value="" disabled>Sort by</option>
-                            <option value="name">Name</option>
-                            <option value="invoiced">Invoiced</option>
-                            <option value="start-date">Start date</option>
-                        </select>
-                    </div>                        
+                <div className="filters__content">
+                    <input 
+                        className="filters__item"
+                        type="text"
+                        placeholder="Search"
+                        value={searchText}
+                        onChange={e => dispatch(searchFilterChanged(e.target.value))}
+                    />                       
                 </div>
             </div>
         </section>

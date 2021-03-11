@@ -9,11 +9,16 @@ import { login, logout } from './actions/auth'
 import { startSetProyects } from './actions/proyect'
 import { startSetTasks } from './actions/task'
 import LoadingPage from './components/LoadingPage'
-
 // React dates
 import 'react-dates/initialize' // JS
 import 'react-dates/lib/css/_datepicker.css' // CSS
+// Font awesome
+import '../node_modules/@fortawesome/fontawesome-free/js/brands'
+import '../node_modules/@fortawesome/fontawesome-free/js/solid'
+import '../node_modules/@fortawesome/fontawesome-free/js/fontawesome'
+// Normalice CSS
 import '../node_modules/normalize.css/normalize.css'
+// My custom SCSS
 import './styles/styles.scss'
 
 const app = (

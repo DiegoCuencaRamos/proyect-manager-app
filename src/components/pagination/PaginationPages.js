@@ -25,10 +25,10 @@ const PaginationPages = ({ pages, currentPage, setCurrentPage, pageLimit, totalP
     return (
         <nav className="pagination__pages">
             <ul>
-                <PaginationLeftArrow 
+                {false /*<PaginationLeftArrow 
                     currentPage={currentPage}
                     goToPage={goToPage}
-                />
+                />*/}
                 {pages.map(page => (
                     <PaginationPageItem 
                         key={page}
@@ -39,11 +39,11 @@ const PaginationPages = ({ pages, currentPage, setCurrentPage, pageLimit, totalP
                         goToPage={goToPage}
                     />
                 ))}
-                <PaginationRightArrow 
+                {false /*<PaginationRightArrow 
                     totalPages={totalPages}
                     currentPage={currentPage}
                     goToPage={goToPage}
-                />
+                />*/}
             </ul> 
         </nav>
     )

@@ -12,14 +12,14 @@ const startAddProyect = (proyectData = {}) => {
         const uid = getState().auth.uid
         const {
             name = '', 
-            description = '', 
             status = '', 
             invoice = undefined,
             startDate = moment().startOf('month'),
-            endDate = moment().endOf('month')
-
+            endDate = moment().endOf('month'),
+            color = '',
+            description = '', 
         } = proyectData
-        const proyect = { name, description, status, invoice, startDate, endDate }
+        const proyect = { name, status, invoice, startDate, endDate, color, description }
 
         return database.ref(`/users/${uid}/proyects`).push(proyect)
             .then(ref => {

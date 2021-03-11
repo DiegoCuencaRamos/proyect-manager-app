@@ -1,0 +1,41 @@
+@use '../base/settings';
+
+.pagination {
+    @include settings.flex(wrap, center, space-between);
+    padding: settings.$s-size settings.$m-size;
+}
+
+.pagination__limit,
+.pagination__pages {
+    padding: 0 settings.$xs-size;
+}
+
+.pagination__pages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination__pages li {
+    display: inline-block;
+}
+
+.pagination__pages a {
+    display: inline-block;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    width: settings.$l-size;
+}
+
+.pagination__active-page {
+    background-color: purple;
+    border-radius: 100px;
+    box-shadow: settings.$box-shadow;
+    color: white;
+}
+
+.pagination__page {
+    border-radius: 100px;
+    box-shadow: settings.$box-shadow;
+}

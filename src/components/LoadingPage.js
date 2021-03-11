@@ -1,12 +1,12 @@
 import React from 'react'
+import loader from '../assets/images/loader.gif'
 
 const LoadingPage = () => (
     <div className="loader">
         <img
             className="loader__image" 
-            src={'Loader'}
+            src={loader}
         />
-        Loading page
     </div>
 )
 

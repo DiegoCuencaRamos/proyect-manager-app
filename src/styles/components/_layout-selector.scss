@@ -8,7 +8,6 @@
 .layout-selector__wrapper {
     border-radius: settings.$border-radius;
     box-shadow: settings.$box-shadow;
-    padding: 0 settings.$xs-size;
     @media screen and (min-width: settings.$tablet-breakpoint) {
         @include settings.flex(wrap, stretch);
     }
@@ -17,9 +16,27 @@
 // Items
 .layout-selector__item {
     border-right: 1px solid settings.$light-gray;
+    cursor: pointer;
     padding: settings.$s-size settings.$m-size;
+    transition: 0.2s background ease-in;
     width: 100%;
     @media screen and (min-width: settings.$tablet-breakpoint) {
         width: auto;
     }
+
+    &:hover {
+        background-color: settings.$light-gray;
+    }
+
+    * {
+        pointer-events: none;
+    }
+
+    svg {
+        margin-right: 10px;
+    }
+}
+
+.layout-selector__item--selected {
+    border-bottom: 2px solid settings.$purple;
 }

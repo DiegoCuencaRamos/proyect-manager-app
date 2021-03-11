@@ -69,6 +69,12 @@ const Pagination = ({ totalItems = null, pageLimit, onPageLimitChange, pageNeigh
     // Render
     return (
         <div className="pagination">
+            <PaginationSelect 
+                pageLimit={pageLimit}
+                onPageLimitChange={onPageLimitChange}
+                totalItems={totalItems}
+                totalPages={totalPages}
+            />
             <PaginationPages 
                 pages={pages} 
                 currentPage={currentPage}
@@ -77,12 +83,6 @@ const Pagination = ({ totalItems = null, pageLimit, onPageLimitChange, pageNeigh
                 totalPages={totalPages}
                 pageNeighbours={pageNeighbours}
                 onItemsChange={onItemsChange}
-            />
-            <PaginationSelect 
-                pageLimit={pageLimit}
-                onPageLimitChange={onPageLimitChange}
-                totalItems={totalItems}
-                totalPages={totalPages}
             />
         </div>
 

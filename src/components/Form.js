@@ -9,14 +9,20 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
     // Variables
     const history = useHistory()
     // State
-    const [name, setName] = useState(item ? item.name : '')
-    const [description, setDescription] = useState(item ? item.description : '')
-    const [status, setStatus] = useState(item ? item.status : '')
-    const [invoice, setInvoice] = useState(item ? item.invoice : '')
-    const [ startDate, setStartDate ] = useState(item ? moment(item.startDate) : null)
-    const [ endDate, setEndDate ] = useState(item ? moment(item.endDate) : null)
+    const [ name, setName ] = useState(item ? item.name : '')
+    const [ status, setStatus ] = useState(item ? item.status : '')
+    const [ invoice, setInvoice ] = useState(item ? item.invoice : '')
+    const [ startDate, setStartDate ] = useState(item ? moment(item.startDate) : moment())
+    const [ endDate, setEndDate ] = useState(item ? moment(item.endDate) : moment())
+    const [ color, setColor ] = useState(item ? item.color : '')
+    const [ description, setDescription ] = useState(item ? item.description : '')
     const [ calendarFocused, setCalendarFocused ] = useState(null)
-    const [errorMessage, setErrorMessage] = useState('')
+    const [ errorMessage, setErrorMessage ] = useState('')
+
+    const statusStyle = { 
+        flexBasis: isProyect ? '48%' : '100%',
+        marginRight: isProyect ? '4%' : '0',
+    }
 
     // Events
     const onNameChange = (e) => {
@@ -31,10 +37,6 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
         setInvoice(e.target.value)
     }
 
-    const onDescriptionChange = (e) => {
-        setDescription(e.target.value)
-    }
-
     const onDatesChange = ({ startDate, endDate }) => {
         setStartDate(startDate)
         setEndDate(endDate)
@@ -44,18 +46,27 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
         setCalendarFocused(calendarFocused)
     }
 
+    const onColorChange = (e) => {
+        setColor(e.target.value)
+    }
+
+    const onDescriptionChange = (e) => {
+        setDescription(e.target.value)
+    }
+
     const onChildFromSubmit = (e) => {
         e.preventDefault()
 
         const commonItem = {
             name,
-            description,
             status,
             startDate: startDate.startOf('day').valueOf(),
-            endDate: endDate.startOf('day').valueOf()
+            endDate: endDate.startOf('day').valueOf(),
+            color,
+            description,
         }
-
-        if (name && status && startDate && endDate) {
+        
+        if (name && status && startDate && endDate && color) {
             onParentFormSubmit((
                 isProyect 
                 ? {
@@ -68,17 +79,19 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
             )) 
             history.push(isProyect ? '/dashboard' : `/proyect/${proyectId}`)
         } else {
-            setErrorMessage('Please provide title, status and dates for your proyect')
+            setErrorMessage('Please provide title, status, dates and color for your proyect')
         }
+
+        console.log(errorMessage)
     }
 
     // Render
     return (
         <div className="container">
-            {errorMessage && <p>{errorMessage}</p>}
+            {errorMessage && <p className="error-massage">{errorMessage}</p>}
 
             <form className="form" onSubmit={onChildFromSubmit}>
-                <div className="form__item-wrapper--title">
+                <div className="form__wrapper">
                     <input 
                         className="form__item--title"
                         type="text"
@@ -86,33 +99,29 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                         placeholder="Name"
                         onChange={onNameChange}
                     />
-                </div>
-                <div className="form__flex-wrapper">
-                    <div className={`${isProyect ? 'form__item-wrapper--inline-input' : 'form__item-wrapper--inline-task'}`}>
-                        <select 
-                            className="form__item--normal"
-                            value={status}
-                            onChange={onStatusChange}
-                        >
-                            <option defaultValue value="">Select status</option>
-                            <option value="todo">To do</option>
-                            <option value="doing">Doing</option>
-                            <option value="done">Done</option>
-                        </select>
-                    </div>
-                    
-                    {isProyect && <div className="form__item-wrapper--inline-input">
+
+                    <select 
+                        className="form__item--status"
+                        style={statusStyle}
+                        value={status}
+                        onChange={onStatusChange}
+                    >
+                        <option defaultValue value="">Select status</option>
+                        <option value="todo">To do</option>
+                        <option value="doing">Doing</option>
+                        <option value="done">Done</option>
+                    </select>
+
+                    {isProyect && 
                         <input 
-                            className="form__item--normal"
+                            className="form__item--invoice"
                             type="number"
                             value={invoice}
                             placeholder="Invoice"
                             onChange={onIvoiceChange}
                         />
-                    </div>}
-                </div>
-
-                <div className="form__item-wrapper--normal">
+                    }
+                    
                     <DateRangePicker 
                         startDate={startDate}
                         startDateId={uuidv4()}
@@ -122,20 +131,32 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                         focusedInput={calendarFocused}
                         onFocusChange={onFocusChange}
                         showClearDates={true}
-                        // numberOfMonths={1}
+                        numberOfMonths={1}
                         isOutsideRange={() => false}
                     />
-                </div>
 
-                <div className="form__item-wrapper--normal">
+                    <label className="form__item--color"> 
+                        {isProyect ? 'Proyect' : 'Task'} color:
+                        <input 
+                            type="color" 
+                            value={color}
+                            onChange={onColorChange}
+                        />
+                    </label>
+
                     <textarea 
-                        className="form__item--textarea"
+                        className="form__item--description"
                         value={description}
                         placeholder="Description"
                         onChange={onDescriptionChange}
                     />
+
+                    <input 
+                        className="form__item--submit button"
+                        type="submit"
+                        value={`Save ${isProyect ? 'proyect' : 'task'}`}
+                    />
                 </div>             
-                <button className="button">Save proyect</button>
             </form>
         </div>
     )

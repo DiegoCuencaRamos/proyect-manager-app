@@ -13,7 +13,7 @@ const CalendarWeekDays = ({ moment, currentMonth }) => {
         )
     }
 
-    return <div className="days row">{days}</div>
+    return <div className="calendar__week row">{days}</div>
 }
 
 export default CalendarWeekDays

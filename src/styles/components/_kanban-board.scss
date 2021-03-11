@@ -44,6 +44,12 @@
     padding: 12px;
 }
 
+.kanban__item__title,
+.kanban__item__description,
+.kanban__item__invoice {
+    word-break: break-all;
+}
+
 .kanban__tbody a > * {
     margin: 0;
 }

@@ -30,9 +30,14 @@ $tablet-breakpoint: 600px;
 // Colors
 $purple: #61045f;
 $blue: #157d97;
-$dark-gray: #939393;
-$gray: #a1a1a1;
-$light-gray: #d3d3d3;
+$red: #f00000;
+$orange: #f8b700;
+$green: #00c5b0;
+
+$dark-gray: lighten(black, 50%);
+$gray: lighten(black, 75%);
+$light-gray: lighten(black, 90%);
+
 %gradient-background {
     background-color: $purple;
     background-image: -webkit-linear-gradient(to right, #aa076b, #980369, #860267, #730363, #61045f);

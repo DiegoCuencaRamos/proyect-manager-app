@@ -15,7 +15,7 @@ const CalendarHeader = ({ moment, currentMonth, setCurrentMonth }) => {
     
     // Render    
     return (
-        <div className="header row flex-middle">
+        <div className="calendar__header row flex-middle">
             <div className="col col-start">
                 <div className="icon" onClick={prevMonth}>
                     {'<'}

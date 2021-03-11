@@ -14,9 +14,19 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
     const history = useHistory()
 
     // Events
+    const onItemClicked = isProyect 
+        ?  (
+            (e) => {
+                const id = e.target.dataset.id
+                dispatch(setProyectId(id))
+            }
+        ) : (
+            undefined
+        )
+
     const onChangeDropdownVisibility = (e) => {
-        const dropdownContent = document.querySelector('.list__dropdown-content')
-        dropdownContent.classList.toggle('list__dropdown-content--visible')
+        const dropdownContent = e.target.nextSibling
+        dropdownContent.classList.toggle('visible')
     }
 
     const onEditButtonClicked = (e) => {
@@ -35,22 +45,9 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
         }
     }
 
-    const onItemClicked = isProyect 
-        ?  (
-            (e) => {
-                const id = e.target.dataset.id
-                dispatch(setProyectId(id))
-            }
-        ) : (
-            undefined
-        )
-
     return (
         <div key={id} className="list__body-item">
-            {isProyect && 
-                <p className="list__logo">Logo</p>
-            }
-
+            
             <Link 
                 className="list__name"
                 to={isProyect ? `/proyect/${id}` : `/task/${id}`}
@@ -60,17 +57,21 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
                 {name}
             </Link>
 
-            <p className="list__status">{status}</p>
+            { isProyect && <p className={`list__status list__status--${status}`}>{status}</p> }
 
-            {isProyect && 
-                <p className="list__invoice">{invoice}</p>
-            }
+            { isProyect && <p className="list__invoice">{invoice}</p> }
 
-            <div 
-                className="list__dropdown"
-                onClick ={onChangeDropdownVisibility}
-            >
-                <button ><i>Icon</i></button>
+            <div className="list__dropdown">
+
+                <div 
+                    className="list__dropdown-button" 
+                    onMouseEnter={onChangeDropdownVisibility}
+                    /*onMouseLeave={onChangeDropdownVisibility}*/
+                >
+                    <i className="fas fa-sliders-h"></i>
+                    <i className="fas fa-sort-down"></i>
+                </div>    
+
                 <div className="list__dropdown-content">
                     <ul>
                         <li 

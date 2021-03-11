@@ -1,57 +1,96 @@
 @use '../base/settings';
 
 // Denormalize
-button, input, optgroup, select, textarea {
+/*button, input, optgroup, select, textarea {
     line-height: 2.7rem;
-}
+}*/
 
 // Wrappers
 .form > * {
     margin-bottom: settings.$s-size;
 }
 
-%form__item-wrapper {
-    border-radius: settings.$border-radius;
-    box-shadow: settings.$box-shadow;
-}
-
-.form__flex-wrapper {
+.form__wrapper {
     @include settings.flex(wrap, stretch, space-between);
-}
-
-.form__item-wrapper--title {
-    @extend %form__item-wrapper;
-    @extend %gradient-background;
-    padding-bottom: 3px;
-}
-
-.form__item-wrapper--inline-input {
-    @extend %form__item-wrapper;
-    width: 49%;
-}
-
-.form__item-wrapper--inline-task {
-    @extend %form__item-wrapper;
-    width: 100%; 
-}
-
-.form__item-wrapper--normal {
-    @extend %form__item-wrapper;
+    // border-radius: settings.$border-radius;
+    // box-shadow: settings.$box-shadow;
+    // padding: settings.$s-size settings.$m-size;
 }
 
 // Elements
 %form__item {
-    border-width: 0;
+    border-bottom: 1px solid settings.$light-gray;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     outline: none;
-    padding: settings.$s-size settings.$m-size;
-    width: 100%;
+    height: settings.$xl-size;
+    margin-bottom: 1.6rem;
+    padding: settings.$xs-size 0;
 }
+
+// Login form ------------
+.email-form__wrapper {
+    @include settings.flex(wrap, stretch, space-between);
+}
+
+.form__item--emial, 
+.form__item--password {
+    @extend %form__item;
+    flex-basis: 100%;
+    margin-right: 4%;
+}
+
+.form__buttom-wrpper button:first-child {
+    margin-right: settings.$s-size;
+}
+
+.form__buttom-wrpper button {
+    box-shadow: settings.$box-shadow;
+}
+// -----------------------
 
 .form__item--title {
     @extend %form__item;
     border-top-left-radius: settings.$border-radius;
     border-top-right-radius: settings.$border-radius;
-    height: settings.$xl-size;
+    flex-basis: 100%;
+}
+
+.form__item--status {
+    @extend %form__item;
+}
+
+.form__item--invoice {
+    @extend %form__item;
+    flex-basis: 48%;
+}
+
+.DateRangePicker {
+    @extend %form__item;
+    flex-basis: 48%;
+}
+
+.DateRangePickerInput {
+    border: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.DateInput_input {
+    font-size: settings.$text-normal;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.form__item--color {
+    @extend %form__item;
+    flex-basis: 48%;
+}
+
+.form__item--description {
+    @extend %form__item;
+    flex-basis: 100%;
 }
 
 .form__item--normal {
@@ -60,17 +99,26 @@ button, input, optgroup, select, textarea {
     height: settings.$xl-size;
 }
 
-.form__item--textarea {
+.form__item--description {
     @extend %form__item;
-    border-radius: settings.$border-radius;
-    height: 27rem;
+    height: 20rem;
 }
 
-textarea {
-    font-size: settings.$text-small;
+.form__item--submit {
+    box-shadow: settings.$box-shadow;
 }
 
+// Login email page
 .form__buttons-wrapper .button {
     margin-right: settings.$s-size;
     margin-bottom: settings.$s-size;
+}
+
+// Error message
+.error-massage {
+    background-color: lighten(#b7190e, 52%);
+    border-radius: 5px;
+    border-left: 5px solid #b7190e;
+    // box-shadow: settings.$box-shadow;
+    padding: 1.2rem 2.3rem;
 }

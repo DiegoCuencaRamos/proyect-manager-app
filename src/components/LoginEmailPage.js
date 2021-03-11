@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { startEmailLogin, startEmailSignUp } from '../actions/auth'
 
@@ -42,29 +42,41 @@ const LoginEmailPage = () => {
     }
 
     return (
-        <Fragment>
-            {errorMessage && <p className="error-massage">{errorMessage}</p>}
-            <form>
-                <input
-                    id="txtEmail" 
-                    type="text"
-                    value={email}
-                    onChange={onEmailChange}
-                />
-                <input 
-                    id="txtPassword"
-                    type="password"
-                    value={password}
-                    onChange={onPasswordChange}
-                />
-                <button 
-                    onClick={onEmailLogin}
-                >Login</button>
-                <button 
-                    onClick={onEmailSingUp}
-                >Sign Up</button>
-            </form>
-        </Fragment>
+        <section className="email-login-page">
+            <div className="container">
+                <h1>Login with your email</h1>
+                <h5>Please provide email and password</h5>
+                {errorMessage && <p className="error-massage">{errorMessage}</p>}
+                <form className="email-form__wrapper">
+                    <input
+                        id="txtEmail" 
+                        className="form__item--emial"
+                        type="text"
+                        value={email}
+                        placeholder="Email"
+                        onChange={onEmailChange}
+                    />
+                    <input 
+                        id="txtPassword"
+                        className="form__item--password"
+                        type="password"
+                        value={password}
+                        placeholder="Password"
+                        onChange={onPasswordChange}
+                    />
+                    <div className="form__buttom-wrpper">
+                        <button 
+                            className="button"
+                            onClick={onEmailLogin}
+                        >Login</button>
+                        <button 
+                            className="button--remove"
+                            onClick={onEmailSingUp}
+                        >Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     )
 }
 

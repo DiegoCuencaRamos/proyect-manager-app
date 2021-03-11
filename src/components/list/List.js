@@ -47,15 +47,15 @@ const List = () => {
                 <ListFilters />
                 <div className="list__table">
                     <ListHeader />
-                    <ListBody currentItems={currentItems} />                    
+                    <ListBody currentItems={currentItems} />  
+                    <Pagination 
+                        totalItems={filteredItems.length} 
+                        pageLimit={pageLimit}
+                        onPageLimitChange={onPageLimitChange}
+                        onItemsChange={onItemsChange}
+                        pageNeighbours={1}
+                    />                  
                 </div>
-                <Pagination 
-                    totalItems={filteredItems.length} 
-                    pageLimit={pageLimit}
-                    onPageLimitChange={onPageLimitChange}
-                    onItemsChange={onItemsChange}
-                    pageNeighbours={1}
-                />
             </div>
         </div>
     )

@@ -14,12 +14,11 @@ const PaginationSelect = ({ pageLimit, onPageLimitChange, totalItems }) => {
     // Render
     return (
         <div className="pagination__limit">
-            <span>Items per page:</span>
-            <select value={pageLimit} onChange={onSelectChange}>
-                <option value="2">2</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="all">All</option>
+            <select className="filters__item" value={pageLimit} onChange={onSelectChange}>
+                <option value="2">2 rows</option>
+                <option value="5">5 rows</option>
+                <option value="10">10 rows</option>
+                <option value="all">All rows</option>
             </select>
         </div>
     )

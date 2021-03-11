@@ -2,25 +2,60 @@ import React from 'react'
 
 const LayoutSelectors = ({ handleLayoutChange }) => {
     
+    const onAddClass = (e) => {
+        const target = e.target
+        const layoutSelectorItems = document.querySelectorAll('.layout-selector__item')
+        const selectedClass = 'layout-selector__item--selected'
+        
+        layoutSelectorItems.forEach(item => {
+            if(
+                item === target 
+                && !item.classList.contains(selectedClass)
+            ) {
+                item.classList.add(selectedClass)
+            } else if (
+                item === target 
+                && item.classList.contains(selectedClass)
+            ) {
+                // Do nothing
+            } else {
+                item.classList.remove(selectedClass)
+            }
+        })
+    }
+
     const onLayoutChange = e => {
-        handleLayoutChange(e.target.dataset.layout)
+        const layoutData = e.target.dataset.layout
+        handleLayoutChange(layoutData)
     }
 
     return (
         <section className="layout-selector">
             <div className="container">
-                <div className="layout-selector__wrapper">
-                    <div className="layout-selector__item">
-                        <i>{'>'}</i>
-                        <span data-layout="list" onClick={onLayoutChange}>List</span>
+                <div className="layout-selector__wrapper" onClick={onAddClass}>
+                    <div 
+                        className="layout-selector__item" 
+                        onClick={onLayoutChange}
+                        data-layout="list"
+                    >
+                        <i className="fas fa-list-ul"></i>
+                        <span>List</span>
                     </div>
-                    <div className="layout-selector__item">
-                        <i>{'>'}</i>
-                        <span data-layout="calendar" onClick={onLayoutChange}>Calendar</span>
+                    <div 
+                        className="layout-selector__item" 
+                        onClick={onLayoutChange}
+                        data-layout="calendar"
+                    >
+                        <i className="fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
                     </div>
-                    <div className="layout-selector__item">
-                        <i>{'>'}</i>
-                        <span data-layout="kanban" onClick={onLayoutChange}>Kanban</span>
+                    <div 
+                        className="layout-selector__item" 
+                        onClick={onLayoutChange}
+                        data-layout="kanban"
+                    >
+                        <i className="fas fa-columns"></i>
+                        <span>Kanban</span>
                     </div>                       
                 </div>
             </div>

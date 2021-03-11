@@ -42,15 +42,24 @@
 
 // Social button
 %social-btn {
+    @include settings.flex(wrap, center);
     border-radius: 2px;
     border-width: 0;
     box-shadow: settings.$box-shadow;
-    display: inline-block;
+    cursor: pointer;
     font-weight: 700;
     line-height: settings.$xl-size;
     margin-bottom: settings.$s-size;
-    text-align: center;
-    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 270px;
+
+    svg {
+        font-size: settings.$m-size;
+        line-height: settings.$m-size;
+        margin-left: settings.$l-size;
+        margin-right: settings.$m-size;
+    }
 }
 
 .btn--google {

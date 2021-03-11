@@ -28,12 +28,13 @@
 %list__item {
     @include settings.flex($align-items: center);
     flex-direction: row;
-    padding: settings.$s-size settings.$xs-size;
+    padding: settings.$xs-size;
 }
 
 .list__body-item {
     @extend %list__item;
     color: #000000;
+    font-size: 14px;
 }
 
 .list__header-item {
@@ -41,8 +42,9 @@
     color: #ffffff;
 }
 
-.list__body-item:not(:last-child) {
+.list__body-item {
     border-bottom: 1px solid settings.$light-gray;
+    color: settings.$dark-gray;
 }
 
 // Text
@@ -51,21 +53,44 @@
     margin: 0;
 }
 
-.list__logo {
-    width: 10%;
+.list__header .list__name,
+.list__header .list__invoice {
+    cursor: pointer;
+}
+
+.list__header .list__name span,
+.list__header .list__invoice span {
+    margin-right: 10px;
 }
 
 .list__name {
-    width: 40%;
+    width: 50%;
 }
 
-.list__status {    
-    background-color: #19849f;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
+a.list__name {
+    color: settings.$dark-gray;
+}
+
+a.list__name,
+a.list__invoide {
+    word-break: break-all;
+}
+
+.list__status {
     width: 20%;
 }
+
+/*.list__status--todo {
+    color: lighten(settings.$red, 0%);
+}
+
+.list__status--doing {
+    color: lighten(settings.$orange, 0%);
+}
+
+.list__status--done {
+    color: lighten(settings.$green, 0%);
+}*/
 
 .list__invoice {
     width: 15%;
@@ -77,52 +102,69 @@
     text-align: center;
 }
 
-
-
-.list__body-item:hover p {
+.list__body .list__name:hover {
+    color: #000000;
     text-decoration: underline;
 }
 
 // Dropdown
-.list__dropdown {
+.list__dropdown-button {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: settings.$border-radius;
+    box-shadow: settings.$box-shadow;
+}
 
+.list__dropdown-button svg:nth-child(1) {
+    margin-right: 5px;
 }
 
 .list__dropdown-content {
     display: none;
+    border-radius: settings.$border-radius;
+    box-shadow: settings.$box-shadow;
+    text-align: left;
 }
 
-.list__dropdown-content--visible {
-    background-color: #000000;
-    color: #ffffff;
+.visible {
+    background-color: #fff;
+    color: #000;
     display: block;
     position: absolute;
     z-index: 1000;  
 }
 
 .list__dropdown-content ul {
-    padding: 0 settings.$s-size;
+    margin: 0;
+    padding: 0;
 }
 
-.list__dropdown-content li {
+%li-dropdown {
     list-style: none;
-    padding-bottom: settings.$xs-size;
+    cursor: pointer;
+
+    &:hover {
+        background-color: settings.$light-gray;
+    }
 }
 
-// Pagination
-.list-pagination ul {
-    list-style: none;
+
+
+.list__dropdown-content li:first-child {
+    @extend %li-dropdown;
+    padding: settings.$s-size settings.$l-size 0.8rem;
 }
 
-.list-pagination li {
-    display: inline-block;
+.list__dropdown-content li:not(:first-child):not(:last-child) {
+    @extend %li-dropdown;
+    padding: 0.8rem settings.$l-size 0.8rem;
 }
 
-.list-pagination a {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin-right: 35px;
+.list__dropdown-content li:last-child {
+    @extend %li-dropdown;
+    padding: 0.8rem settings.$l-size settings.$s-size; 
 }
 
 
