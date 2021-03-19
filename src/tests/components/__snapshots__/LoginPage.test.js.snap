@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render LoginPage correctly 1`] = `
+<section
+  class="login-layout"
+>
+  <div
+    class="login-layout__box"
+  >
+    <h1
+      class="login-layout__title"
+    >
+      Proyect Manager
+    </h1>
+    <p>
+      It is time to get control over your proyects.
+    </p>
+    <div
+      class="btn--google"
+    >
+      <i
+        class="fab fa-google"
+      />
+      <span>
+        Sign in with Google
+      </span>
+    </div>
+    <div
+      class="btn--facebook"
+    >
+      <i
+        class="fab fa-facebook-f"
+      />
+      <span>
+        Sign in with Facebook
+      </span>
+    </div>
+    <div
+      class="btn--twitter"
+    >
+      <i
+        class="fab fa-twitter"
+      />
+      <span>
+        Sign in with Twitter
+      </span>
+    </div>
+    <div
+      class="btn--github"
+    >
+      <i
+        class="fab fa-github"
+      />
+      <span>
+        Sign in with Github
+      </span>
+    </div>
+    <a
+      class="btn--emial"
+      href="/email-login"
+    >
+      <i
+        class="fas fa-envelope"
+      />
+      <span>
+        Sign in with Email
+      </span>
+    </a>
+  </div>
+</section>
+`;

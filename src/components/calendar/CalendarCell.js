@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 
 const CalenderCell = ({ day, monthStart, cellsHeight, cloneDay, formattedDate }) => (
     <div

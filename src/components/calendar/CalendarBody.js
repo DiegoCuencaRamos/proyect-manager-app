@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { v4 as uuidv4 } from 'uuid'
+import moment from 'moment'
 import CalenderCell from './CalendarCell'
 import CalendarWeekItemRow from './CalendarWeekItemRow'
 import CalendarWeekRow from './CalendarWeekRow'
 
-const CellsList = ({ moment, currentMonth }) => {
+const CellsList = ({ currentMonth }) => {
     // State
     // const [ selectedDate , setSelectedDate ] = useState(new Date())
     const proyects = useSelector(state => state.proyects)
@@ -46,7 +46,7 @@ const CellsList = ({ moment, currentMonth }) => {
             const cloneDay = moment(day)
             days.push(
                 <CalenderCell
-                    key={uuidv4()} 
+                    key={i} 
                     day={day}
                     monthStart={monthStart}
                     cellsHeight={cellsHeight}
@@ -78,7 +78,7 @@ const CellsList = ({ moment, currentMonth }) => {
             if(item) {
                 items.push(
                    <CalendarWeekItemRow
-                        key={uuidv4()}
+                        key={index}
                         spaceCountWeekData={spaceCountWeekData}
                         index={index}
                         item={item}
@@ -89,7 +89,7 @@ const CellsList = ({ moment, currentMonth }) => {
 
         rows.push(
             <CalendarWeekRow 
-                key={uuidv4()}
+                key={day}
                 days={days}
                 items={items}
             />

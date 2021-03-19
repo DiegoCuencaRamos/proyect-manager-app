@@ -1,6 +1,8 @@
 import React from 'react'
+import moment from 'moment'
 
-const CalendarWeekDays = ({ moment, currentMonth }) => {
+
+const CalendarWeekDays = ({ currentMonth }) => {
     const dateFormat = 'dddd'
     const days = []
     let startDate = moment(currentMonth).startOf('week')

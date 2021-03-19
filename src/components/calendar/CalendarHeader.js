@@ -1,6 +1,8 @@
 import React from 'react'
+import moment from 'moment'
 
-const CalendarHeader = ({ moment, currentMonth, setCurrentMonth }) => {
+
+const CalendarHeader = ({ currentMonth, setCurrentMonth }) => {
     // Variables
     const dateFormat = 'MMMM YYYY'
 
@@ -12,22 +14,22 @@ const CalendarHeader = ({ moment, currentMonth, setCurrentMonth }) => {
     const nextMoth = () => {
         setCurrentMonth(moment(currentMonth).add(1, 'months'))
     }
-    
+        
     // Render    
     return (
         <div className="calendar__header row flex-middle">
             <div className="col col-start">
-                <div className="icon" onClick={prevMonth}>
+                <div id="prevMonth" className="icon" onClick={prevMonth}>
                     {'<'}
                 </div>
             </div>
             <div className="col col-center">
-                <span>
+                <span id="displayMonth">
                     {moment(currentMonth).format(dateFormat)}
                 </span>
             </div>
-            <div className="col col-end" onClick={nextMoth}>
-                <div className="icon">
+            <div className="col col-end">
+                <div id="nextMonth" className="icon" onClick={nextMoth}>
                     {'>'}
                 </div>
             </div>

@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render KanbanBoard correctly 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "zhw7qw",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "zhw7qw",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <KanbanBoard>
+        <section
+          className="kanban"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="kanban__board--todo"
+              key="0"
+            >
+              <KanbanBoardHeader
+                status="todo"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    todo
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="todo"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--doing"
+              key="1"
+            >
+              <KanbanBoardHeader
+                status="doing"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    doing
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="doing"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--done"
+              key="2"
+            >
+              <KanbanBoardHeader
+                status="done"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    done
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="done"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </div>
+              </KanbanBoardBody>
+            </div>
+          </div>
+        </section>
+      </KanbanBoard>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;

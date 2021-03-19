@@ -34,6 +34,7 @@ const LayoutSelectors = ({ handleLayoutChange }) => {
             <div className="container">
                 <div className="layout-selector__wrapper" onClick={onAddClass}>
                     <div 
+                        id="selectorItem1"
                         className="layout-selector__item" 
                         onClick={onLayoutChange}
                         data-layout="list"
@@ -42,6 +43,7 @@ const LayoutSelectors = ({ handleLayoutChange }) => {
                         <span>List</span>
                     </div>
                     <div 
+                        id="selectorItem2"
                         className="layout-selector__item" 
                         onClick={onLayoutChange}
                         data-layout="calendar"
@@ -50,6 +52,7 @@ const LayoutSelectors = ({ handleLayoutChange }) => {
                         <span>Calendar</span>
                     </div>
                     <div 
+                        id="selectorItem3"
                         className="layout-selector__item" 
                         onClick={onLayoutChange}
                         data-layout="kanban"

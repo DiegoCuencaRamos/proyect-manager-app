@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Dashboard page correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "isProyect": true,
+    }
+  }
+>
+  <section>
+    <Title
+      description="From here you will be able to visualice all your proyects"
+      isDashboard={true}
+      title="Proyect Dashboard"
+    />
+    <LayoutSelectors
+      handleLayoutChange={[Function]}
+    />
+    <ItemsLayout
+      layout=""
+    />
+  </section>
+</ContextProvider>
+`;

@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import moment from 'moment'
+// React dates
 import { DateRangePicker } from 'react-dates'
-import { v4 as uuidv4 } from 'uuid';
-
+import 'react-dates/initialize' // JS
 
 const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
-    // Variables
-    const history = useHistory()
     // State
     const [ name, setName ] = useState(item ? item.name : '')
     const [ status, setStatus ] = useState(item ? item.status : '')
@@ -67,6 +64,8 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
         }
         
         if (name && status && startDate && endDate && color) {
+            setErrorMessage('')
+            
             onParentFormSubmit((
                 isProyect 
                 ? {
@@ -77,23 +76,20 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                     proyectId
                 }
             )) 
-            history.push(isProyect ? '/dashboard' : `/proyect/${proyectId}`)
         } else {
             setErrorMessage('Please provide title, status, dates and color for your proyect')
         }
-
-        console.log(errorMessage)
     }
 
     // Render
     return (
         <div className="container">
-            {errorMessage && <p className="error-massage">{errorMessage}</p>}
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
 
             <form className="form" onSubmit={onChildFromSubmit}>
                 <div className="form__wrapper">
                     <input 
-                        className="form__item--title"
+                        className="form__item--name"
                         type="text"
                         value={name}
                         placeholder="Name"
@@ -124,9 +120,9 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
                     
                     <DateRangePicker 
                         startDate={startDate}
-                        startDateId={uuidv4()}
+                        startDateId={startDate.valueOf().toString()}
                         endDate={endDate}
-                        endDateId={uuidv4()}
+                        endDateId={endDate.valueOf().toString()}
                         onDatesChange={onDatesChange}
                         focusedInput={calendarFocused}
                         onFocusChange={onFocusChange}

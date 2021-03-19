@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import Title from './Title'
 import { startEditTask } from '../actions/task'
 import ItemForm from './Form'
@@ -10,11 +10,13 @@ const EditTaskPage = () => {
     const proyectId = useSelector(state => state.ids.proyectId)
     const { taskId } = useParams()
     const task = tasks.find(task => task.id === taskId)
+    const history = useHistory()
 
     const dispatch = useDispatch()
 
     const onParentFormSubmit = (updates) => {
         dispatch(startEditTask(taskId, updates))
+        history.push(`/proyect/${proyectId}`)
     }
 
     return(

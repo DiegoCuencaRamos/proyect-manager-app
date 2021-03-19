@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Title correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="container page-header__wrapper"
+  >
+    <div>
+      <h1
+        className="page-header__title"
+      >
+        Some title
+      </h1>
+      <p
+        className="page-header__text"
+      >
+        Some description
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Should render Title correctly on Dashboard Proyect page 1`] = `
+<div
+  class="page-header"
+>
+  <div
+    class="container page-header__wrapper"
+  >
+    <div>
+      <h1
+        class="page-header__title"
+      >
+        Some title
+      </h1>
+      <p
+        class="page-header__text"
+      >
+        Some description
+      </p>
+    </div>
+    <a
+      class="button"
+      href="/add-proyect"
+    >
+      AddProyect
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Should render Title correctly on Dashboard Task page 1`] = `
+<div
+  class="page-header"
+>
+  <div
+    class="container page-header__wrapper"
+  >
+    <div>
+      <h1
+        class="page-header__title"
+      >
+        Some title
+      </h1>
+      <p
+        class="page-header__text"
+      >
+        Some description
+      </p>
+    </div>
+    <a
+      class="button"
+      href="/add-task"
+    >
+      AddTask
+    </a>
+  </div>
+</div>
+`;

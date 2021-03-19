@@ -1,6 +1,13 @@
 const {defaults} = require('jest-config');
 
 module.exports = {
+    verbose: true,
+    // collectCoverage: true,
+    // collectCoverageFrom: [
+    //     "**/*.{js,jsx}",
+    //     "!**/node_modules/**",
+    //     "!**/vendor/**"
+    // ],
     setupFilesAfterEnv: [
         "<rootDir>src/tests/setupTests.js"
     ],
@@ -10,7 +17,10 @@ module.exports = {
     ],
     moduleFileExtensions: [
         ...defaults.moduleFileExtensions,
-         'ts',
-          'tsx'
+        'ts',
+        'tsx'
+    ],
+    moduleDirectories: [
+        "node_modules", "bower_components", "shared"
     ],
 };

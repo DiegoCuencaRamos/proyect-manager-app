@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shoud render Header correctly 1`] = `
+<header
+  class="header"
+>
+  <div
+    class="container"
+  >
+    <div
+      class="header__content"
+    >
+      <a
+        href="/dashboard"
+      >
+        <span
+          class="header__title"
+        >
+          Proyect Manager
+        </span>
+      </a>
+      <button
+        class="button--link"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</header>
+`;

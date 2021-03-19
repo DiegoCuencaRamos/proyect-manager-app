@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header'
 import Title from './Title'
 
 const NotFoundPage = () => (
-    <React.Fragment>
+    <Fragment>
         <Header />
         <Title 
             title='Page not found'
@@ -16,7 +16,7 @@ const NotFoundPage = () => (
                 className="link"
             >Go back to home page</Link>
         </div>
-    </React.Fragment>
+    </Fragment>
 )
 
 export default NotFoundPage

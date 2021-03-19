@@ -50,7 +50,7 @@
 }
 // -----------------------
 
-.form__item--title {
+.form__item--name {
     @extend %form__item;
     border-top-left-radius: settings.$border-radius;
     border-top-right-radius: settings.$border-radius;
@@ -115,7 +115,7 @@
 }
 
 // Error message
-.error-massage {
+.error-message {
     background-color: lighten(#b7190e, 52%);
     border-radius: 5px;
     border-left: 5px solid #b7190e;

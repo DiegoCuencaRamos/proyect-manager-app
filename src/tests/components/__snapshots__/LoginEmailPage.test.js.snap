@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render LoginPage correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <LoginEmailPage>
+    <section
+      className="email-login-page"
+    >
+      <div
+        className="container"
+      >
+        <h1>
+          Login with your email
+        </h1>
+        <h5>
+          Please provide email and password
+        </h5>
+        <form
+          className="email-form__wrapper"
+        >
+          <input
+            className="form__item--emial"
+            id="txtEmail"
+            onChange={[Function]}
+            placeholder="Email"
+            type="text"
+            value=""
+          />
+          <input
+            className="form__item--password"
+            id="txtPassword"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+          <div
+            className="form__buttom-wrpper"
+          >
+            <button
+              className="button"
+              onClick={[Function]}
+            >
+              Login
+            </button>
+            <button
+              className="button--remove"
+              onClick={[Function]}
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </LoginEmailPage>
+</Provider>
+`;

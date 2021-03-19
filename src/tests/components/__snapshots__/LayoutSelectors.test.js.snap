@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render LayoutSelectors correctly 1`] = `
+<section
+  className="layout-selector"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="layout-selector__wrapper"
+      onClick={[Function]}
+    >
+      <div
+        className="layout-selector__item"
+        data-layout="list"
+        id="selectorItem1"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-list-ul"
+        />
+        <span>
+          List
+        </span>
+      </div>
+      <div
+        className="layout-selector__item"
+        data-layout="calendar"
+        id="selectorItem2"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-calendar-alt"
+        />
+        <span>
+          Calendar
+        </span>
+      </div>
+      <div
+        className="layout-selector__item"
+        data-layout="kanban"
+        id="selectorItem3"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-columns"
+        />
+        <span>
+          Kanban
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+`;

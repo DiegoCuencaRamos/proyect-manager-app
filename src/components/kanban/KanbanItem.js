@@ -31,7 +31,7 @@ const KanbanItem = ({ id, name, description, invoice = undefined }) => {
         >
             <p className="kanban__item__title">{name}</p>
             <p className="kanban__item__description">{itemDescription}</p>
-            <p className="kanban__item__invoice">{invoice}</p>
+            {isProyect && <p className="kanban__item__invoice">{invoice}</p>}
         </Link>
     )
 }

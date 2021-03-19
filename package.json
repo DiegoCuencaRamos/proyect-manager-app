@@ -8,6 +8,7 @@
     "build:dev": "webpack serve --open --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "test": "cross-env NODE_ENV=test jest",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "heroku-postbuild": "npm run build:prod"
   },
   "keywords": [],

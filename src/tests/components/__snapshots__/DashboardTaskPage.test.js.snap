@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render DashboardTaskPage correctly 1`] = `
+<section>
+  <Title
+    description="From here you will be able to visualize your task with in the chosen proyect"
+    isDashboard={true}
+    title="Task Dashboard"
+  />
+  <LayoutSelectors
+    handleLayoutChange={[Function]}
+  />
+  <ItemsLayout
+    layout=""
+  />
+</section>
+`;

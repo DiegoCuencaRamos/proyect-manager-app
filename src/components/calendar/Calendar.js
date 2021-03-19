@@ -5,23 +5,20 @@ import CalenderWeekDays from './CalendarWeekDays'
 import CalendarBody from './CalendarBody'
 
 const Calendar = () => {
-    const [ currentMonth, setCurrentMonth ] = useState(new Date())
+    const [ currentMonth, setCurrentMonth ] = useState(moment())
 
     return (
         <section>
             <div className="container">
                 <div className="calendar">
                     <CalendarHeader 
-                        moment={moment}
                         currentMonth={currentMonth}
                         setCurrentMonth={setCurrentMonth}
                     /> 
                     <CalenderWeekDays 
-                        moment={moment}
                         currentMonth={currentMonth}
                     />
                     <CalendarBody 
-                        moment={moment}
                         currentMonth={currentMonth} 
                     />
                 </div>

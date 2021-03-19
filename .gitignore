@@ -1,7 +1,7 @@
+coverage/
 node_modules/
 playground/
 public/
-src/tests/
 src/facebookSDK.js
 .env.test
 .env.development

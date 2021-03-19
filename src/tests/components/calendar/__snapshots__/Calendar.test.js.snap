@@ -1,0 +1,1801 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shoul render calendar correctly with some items 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Calendar>
+    <section>
+      <div
+        className="container"
+      >
+        <div
+          className="calendar"
+        >
+          <CalendarHeader
+            currentMonth={"1970-01-01T00:00:00.000Z"}
+            setCurrentMonth={[Function]}
+          >
+            <div
+              className="calendar__header row flex-middle"
+            >
+              <div
+                className="col col-start"
+              >
+                <div
+                  className="icon"
+                  id="prevMonth"
+                  onClick={[Function]}
+                >
+                  &lt;
+                </div>
+              </div>
+              <div
+                className="col col-center"
+              >
+                <span
+                  id="displayMonth"
+                >
+                  January 1970
+                </span>
+              </div>
+              <div
+                className="col col-end"
+              >
+                <div
+                  className="icon"
+                  id="nextMonth"
+                  onClick={[Function]}
+                >
+                  &gt;
+                </div>
+              </div>
+            </div>
+          </CalendarHeader>
+          <CalendarWeekDays
+            currentMonth={"1970-01-01T00:00:00.000Z"}
+          >
+            <div
+              className="calendar__week row"
+            >
+              <div
+                className="col col-center"
+                key="0"
+              >
+                Sunday
+              </div>
+              <div
+                className="col col-center"
+                key="1"
+              >
+                Monday
+              </div>
+              <div
+                className="col col-center"
+                key="2"
+              >
+                Tuesday
+              </div>
+              <div
+                className="col col-center"
+                key="3"
+              >
+                Wednesday
+              </div>
+              <div
+                className="col col-center"
+                key="4"
+              >
+                Thursday
+              </div>
+              <div
+                className="col col-center"
+                key="5"
+              >
+                Friday
+              </div>
+              <div
+                className="col col-center"
+                key="6"
+              >
+                Saturday
+              </div>
+            </div>
+          </CalendarWeekDays>
+          <CellsList
+            currentMonth={"1970-01-01T00:00:00.000Z"}
+          >
+            <div
+              className="calendar__body"
+            >
+              <CalendarWeekRow
+                days={
+                  Array [
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-27T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="28"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-28T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="29"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-29T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="30"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-30T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="31"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-31T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-01T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-02T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                  ]
+                }
+                items={
+                  Array [
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "green",
+                          "description": "This is my proyect fixure 1",
+                          "endDate": 259200000,
+                          "id": "p1",
+                          "invoice": "100",
+                          "name": "Proyect 1",
+                          "startDate": 0,
+                          "status": "todo",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    />,
+                  ]
+                }
+                key="255600000"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="row days-row"
+                  >
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-27T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="28"
+                      key="0"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell--disabled"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          28
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-28T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="29"
+                      key="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell--disabled"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          29
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-29T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="30"
+                      key="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell--disabled"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          30
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-30T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="31"
+                      key="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell--disabled"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          31
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1969-12-31T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="1"
+                      key="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          1
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-01T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="2"
+                      key="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          2
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-02T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="3"
+                      key="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          3
+                        </span>
+                      </div>
+                    </CalenderCell>
+                  </div>
+                  <div
+                    className="row item-list-row"
+                  >
+                    <div
+                      className="row item-row--empty"
+                    />
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "green",
+                          "description": "This is my proyect fixure 1",
+                          "endDate": 259200000,
+                          "id": "p1",
+                          "invoice": "100",
+                          "name": "Proyect 1",
+                          "startDate": 0,
+                          "status": "todo",
+                        }
+                      }
+                      key="0"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 5)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "green",
+                              "flexBasis": "calc((100%/7) * 2)",
+                            }
+                          }
+                        >
+                          Proyect 1
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                  </div>
+                </div>
+              </CalendarWeekRow>
+              <CalendarWeekRow
+                days={
+                  Array [
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-03T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-04T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-05T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-06T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="7"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-07T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="8"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-08T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="9"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-09T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="10"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                  ]
+                }
+                items={
+                  Array [
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "green",
+                          "description": "This is my proyect fixure 1",
+                          "endDate": 259200000,
+                          "id": "p1",
+                          "invoice": "100",
+                          "name": "Proyect 1",
+                          "startDate": 0,
+                          "status": "todo",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    />,
+                    <CalendarWeekItemRow
+                      index={1}
+                      item={
+                        Object {
+                          "color": "red",
+                          "description": "This is my proyect fixure 2",
+                          "endDate": 864000000,
+                          "id": "p2",
+                          "invoice": "200",
+                          "name": "Proyect 2",
+                          "startDate": 604800000,
+                          "status": "doing",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    />,
+                  ]
+                }
+                key="860400000"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="row days-row"
+                  >
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-03T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="4"
+                      key="0"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          4
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-04T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="5"
+                      key="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          5
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-05T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="6"
+                      key="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          6
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-06T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="7"
+                      key="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          7
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-07T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="8"
+                      key="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          8
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-08T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="9"
+                      key="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          9
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-09T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="10"
+                      key="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          10
+                        </span>
+                      </div>
+                    </CalenderCell>
+                  </div>
+                  <div
+                    className="row item-list-row"
+                  >
+                    <div
+                      className="row item-row--empty"
+                    />
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "green",
+                          "description": "This is my proyect fixure 1",
+                          "endDate": 259200000,
+                          "id": "p1",
+                          "invoice": "100",
+                          "name": "Proyect 1",
+                          "startDate": 0,
+                          "status": "todo",
+                        }
+                      }
+                      key="0"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 0)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "green",
+                              "flexBasis": "calc((100%/7) * 1)",
+                            }
+                          }
+                        >
+                          Proyect 1
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                    <CalendarWeekItemRow
+                      index={1}
+                      item={
+                        Object {
+                          "color": "red",
+                          "description": "This is my proyect fixure 2",
+                          "endDate": 864000000,
+                          "id": "p2",
+                          "invoice": "200",
+                          "name": "Proyect 2",
+                          "startDate": 604800000,
+                          "status": "doing",
+                        }
+                      }
+                      key="1"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 5)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "red",
+                              "flexBasis": "calc((100%/7) * 2)",
+                            }
+                          }
+                        >
+                          Proyect 2
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                  </div>
+                </div>
+              </CalendarWeekRow>
+              <CalendarWeekRow
+                days={
+                  Array [
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-10T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="11"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-11T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="12"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-12T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="13"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-13T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="14"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-14T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="15"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-15T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="16"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-16T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="17"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                  ]
+                }
+                items={
+                  Array [
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "red",
+                          "description": "This is my proyect fixure 2",
+                          "endDate": 864000000,
+                          "id": "p2",
+                          "invoice": "200",
+                          "name": "Proyect 2",
+                          "startDate": 604800000,
+                          "status": "doing",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    />,
+                    <CalendarWeekItemRow
+                      index={1}
+                      item={
+                        Object {
+                          "color": "blue",
+                          "description": "This is my proyect fixure 3",
+                          "endDate": 1468800000,
+                          "id": "p3",
+                          "invoice": "300",
+                          "name": "Proyect 3",
+                          "startDate": 1209600000,
+                          "status": "done",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    />,
+                  ]
+                }
+                key="1465200000"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="row days-row"
+                  >
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-10T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="11"
+                      key="0"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          11
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-11T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="12"
+                      key="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          12
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-12T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="13"
+                      key="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          13
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-13T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="14"
+                      key="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          14
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-14T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="15"
+                      key="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          15
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-15T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="16"
+                      key="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          16
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-16T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="17"
+                      key="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          17
+                        </span>
+                      </div>
+                    </CalenderCell>
+                  </div>
+                  <div
+                    className="row item-list-row"
+                  >
+                    <div
+                      className="row item-row--empty"
+                    />
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "red",
+                          "description": "This is my proyect fixure 2",
+                          "endDate": 864000000,
+                          "id": "p2",
+                          "invoice": "200",
+                          "name": "Proyect 2",
+                          "startDate": 604800000,
+                          "status": "doing",
+                        }
+                      }
+                      key="0"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 0)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "red",
+                              "flexBasis": "calc((100%/7) * 1)",
+                            }
+                          }
+                        >
+                          Proyect 2
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                    <CalendarWeekItemRow
+                      index={1}
+                      item={
+                        Object {
+                          "color": "blue",
+                          "description": "This is my proyect fixure 3",
+                          "endDate": 1468800000,
+                          "id": "p3",
+                          "invoice": "300",
+                          "name": "Proyect 3",
+                          "startDate": 1209600000,
+                          "status": "done",
+                        }
+                      }
+                      key="1"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                          Object {
+                            "contentSpaces": 2,
+                            "emptySpaces": 5,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 5)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "blue",
+                              "flexBasis": "calc((100%/7) * 2)",
+                            }
+                          }
+                        >
+                          Proyect 3
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                  </div>
+                </div>
+              </CalendarWeekRow>
+              <CalendarWeekRow
+                days={
+                  Array [
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-17T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="18"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-18T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="19"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-19T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="20"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-20T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="21"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-21T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="22"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-22T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="23"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-23T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="24"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                  ]
+                }
+                items={
+                  Array [
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "blue",
+                          "description": "This is my proyect fixure 3",
+                          "endDate": 1468800000,
+                          "id": "p3",
+                          "invoice": "300",
+                          "name": "Proyect 3",
+                          "startDate": 1209600000,
+                          "status": "done",
+                        }
+                      }
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                        ]
+                      }
+                    />,
+                  ]
+                }
+                key="2070000000"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="row days-row"
+                  >
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-17T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="18"
+                      key="0"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          18
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-18T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="19"
+                      key="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          19
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-19T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="20"
+                      key="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          20
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-20T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="21"
+                      key="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          21
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-21T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="22"
+                      key="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          22
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-22T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="23"
+                      key="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          23
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-23T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="24"
+                      key="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          24
+                        </span>
+                      </div>
+                    </CalenderCell>
+                  </div>
+                  <div
+                    className="row item-list-row"
+                  >
+                    <div
+                      className="row item-row--empty"
+                    />
+                    <CalendarWeekItemRow
+                      index={0}
+                      item={
+                        Object {
+                          "color": "blue",
+                          "description": "This is my proyect fixure 3",
+                          "endDate": 1468800000,
+                          "id": "p3",
+                          "invoice": "300",
+                          "name": "Proyect 3",
+                          "startDate": 1209600000,
+                          "status": "done",
+                        }
+                      }
+                      key="0"
+                      spaceCountWeekData={
+                        Array [
+                          Object {
+                            "contentSpaces": 1,
+                            "emptySpaces": 0,
+                          },
+                        ]
+                      }
+                    >
+                      <div
+                        className="row item-row"
+                      >
+                        <div
+                          className="item-row__empty-space"
+                          style={
+                            Object {
+                              "flexBasis": "calc((100%/7) * 0)",
+                            }
+                          }
+                        />
+                        <div
+                          className="item-row__content-space"
+                          style={
+                            Object {
+                              "backgroundColor": "blue",
+                              "flexBasis": "calc((100%/7) * 1)",
+                            }
+                          }
+                        >
+                          Proyect 3
+                        </div>
+                      </div>
+                    </CalendarWeekItemRow>
+                  </div>
+                </div>
+              </CalendarWeekRow>
+              <CalendarWeekRow
+                days={
+                  Array [
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-24T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="25"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-25T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="26"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-26T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="27"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-27T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="28"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-28T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="29"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-29T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="30"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-30T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="31"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    />,
+                  ]
+                }
+                items={Array []}
+                key="2674800000"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="row days-row"
+                  >
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-24T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="25"
+                      key="0"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          25
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-25T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="26"
+                      key="1"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          26
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-26T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="27"
+                      key="2"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          27
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-27T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="28"
+                      key="3"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          28
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-28T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="29"
+                      key="4"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          29
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-29T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="30"
+                      key="5"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          30
+                        </span>
+                      </div>
+                    </CalenderCell>
+                    <CalenderCell
+                      cellsHeight={96}
+                      cloneDay={"1970-01-30T23:00:00.000Z"}
+                      day={"1970-01-31T23:00:00.000Z"}
+                      formattedDate="31"
+                      key="6"
+                      monthStart={"1969-12-31T23:00:00.000Z"}
+                    >
+                      <div
+                        className="col calendar__cell calendar__cell"
+                        key="2674800000"
+                        style={
+                          Object {
+                            "height": 96,
+                          }
+                        }
+                      >
+                        <span
+                          className="number"
+                        >
+                          31
+                        </span>
+                      </div>
+                    </CalenderCell>
+                  </div>
+                  <div
+                    className="row item-list-row"
+                  >
+                    <div
+                      className="row item-row--empty"
+                    />
+                  </div>
+                </div>
+              </CalendarWeekRow>
+            </div>
+          </CellsList>
+        </div>
+      </div>
+    </section>
+  </Calendar>
+</Provider>
+`;

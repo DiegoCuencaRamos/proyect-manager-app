@@ -4,8 +4,15 @@ import { useDispatch } from 'react-redux'
 import { startLogout } from '../actions/auth'
 
 const Header = () => {
+    // Variables
     const dispatch = useDispatch()
+
+    // Events
+    const onLogoutClicked = () => {
+        dispatch(startLogout())
+    }
     
+    // Render
     return (
         <header className="header">
             <div className="container">
@@ -15,7 +22,7 @@ const Header = () => {
                     </Link>
                     <button
                         className="button--link"
-                        onClick={() => dispatch(startLogout())}
+                        onClick={onLogoutClicked}
                     >Logout</button>
                 </div>
             </div>
