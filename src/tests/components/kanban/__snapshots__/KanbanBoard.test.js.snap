@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render KanbanBoard correctly 1`] = `
-<MemoryRouter>
+exports[`Should render KanbanBoard correctly with no items 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "hash": "",
+        "key": "123qwe",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+    ]
+  }
+>
   <Router
     history={
       Object {
@@ -12,7 +24,7 @@ exports[`Should render KanbanBoard correctly 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "zhw7qw",
+            "key": "123qwe",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -26,7 +38,7 @@ exports[`Should render KanbanBoard correctly 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "zhw7qw",
+          "key": "123qwe",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -204,6 +216,1460 @@ exports[`Should render KanbanBoard correctly 1`] = `
                       </a>
                     </LinkAnchor>
                   </Link>
+                </div>
+              </KanbanBoardBody>
+            </div>
+          </div>
+        </section>
+      </KanbanBoard>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Should render KanbanBoard correctly with proyects 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "hash": "",
+        "key": "123qwe",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "123qwe",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <KanbanBoard>
+        <section
+          className="kanban"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="kanban__board--todo"
+              key="0"
+            >
+              <KanbanBoardHeader
+                status="todo"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    todo
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="todo"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="green"
+                    description="This is my proyect fixure 1"
+                    endDate={259200000}
+                    id="p1"
+                    invoice="100"
+                    key="p1"
+                    name="Proyect 1"
+                    startDate={0}
+                    status="todo"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p1"
+                      onClick={[Function]}
+                      to="/proyect/p1"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p1"
+                        href="/proyect/p1"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p1"
+                          href="/proyect/p1"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 1
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 1
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            100
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--doing"
+              key="1"
+            >
+              <KanbanBoardHeader
+                status="doing"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    doing
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="doing"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="red"
+                    description="This is my proyect fixure 2"
+                    endDate={864000000}
+                    id="p2"
+                    invoice="200"
+                    key="p2"
+                    name="Proyect 2"
+                    startDate={604800000}
+                    status="doing"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p2"
+                      onClick={[Function]}
+                      to="/proyect/p2"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p2"
+                        href="/proyect/p2"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p2"
+                          href="/proyect/p2"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 2
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 2
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            200
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--done"
+              key="2"
+            >
+              <KanbanBoardHeader
+                status="done"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    done
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="done"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="blue"
+                    description="This is my proyect fixure 3"
+                    endDate={1468800000}
+                    id="p3"
+                    invoice="300"
+                    key="p3"
+                    name="Proyect 3"
+                    startDate={1209600000}
+                    status="done"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p3"
+                      onClick={[Function]}
+                      to="/proyect/p3"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p3"
+                        href="/proyect/p3"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p3"
+                          href="/proyect/p3"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 3
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 3
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            300
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+          </div>
+        </section>
+      </KanbanBoard>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Should render KanbanBoard correctly with tasks 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "hash": "",
+        "key": "123qwe",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "123qwe",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <KanbanBoard>
+        <section
+          className="kanban"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="kanban__board--todo"
+              key="0"
+            >
+              <KanbanBoardHeader
+                status="todo"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    todo
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="todo"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="green"
+                    description="This is my task fixure 1"
+                    endDate={1616108400000}
+                    id="t1"
+                    key="t1"
+                    name="Task 1"
+                    proyectId="p1"
+                    startDate={1615762800000}
+                    status="todo"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t1"
+                      to="/task/t1"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t1"
+                        href="/task/t1"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t1"
+                          href="/task/t1"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 1
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 1
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--doing"
+              key="1"
+            >
+              <KanbanBoardHeader
+                status="doing"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    doing
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="doing"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="brown"
+                    description="This is my task fixure 2"
+                    endDate={1616540400000}
+                    id="t2"
+                    key="t2"
+                    name="Task 2"
+                    proyectId="p1"
+                    startDate={1616194800000}
+                    status="doing"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t2"
+                      to="/task/t2"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t2"
+                        href="/task/t2"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t2"
+                          href="/task/t2"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 2
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 2
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--done"
+              key="2"
+            >
+              <KanbanBoardHeader
+                status="done"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    done
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="done"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="purple"
+                    description="This is my task fixure 3"
+                    endDate={1616968800000}
+                    id="t3"
+                    key="t3"
+                    name="Task 3"
+                    proyectId="p3"
+                    startDate={1616626800000}
+                    status="done"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t3"
+                      to="/task/t3"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t3"
+                        href="/task/t3"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t3"
+                          href="/task/t3"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 3
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 3
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+          </div>
+        </section>
+      </KanbanBoard>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Should render KanbanBoard with proyects 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "hash": "",
+        "key": "123qwe",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "123qwe",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <KanbanBoard>
+        <section
+          className="kanban"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="kanban__board--todo"
+              key="0"
+            >
+              <KanbanBoardHeader
+                status="todo"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    todo
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="todo"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="green"
+                    description="This is my proyect fixure 1"
+                    endDate={259200000}
+                    id="p1"
+                    invoice="100"
+                    key="p1"
+                    name="Proyect 1"
+                    startDate={0}
+                    status="todo"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p1"
+                      onClick={[Function]}
+                      to="/proyect/p1"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p1"
+                        href="/proyect/p1"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p1"
+                          href="/proyect/p1"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 1
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 1
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            100
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--doing"
+              key="1"
+            >
+              <KanbanBoardHeader
+                status="doing"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    doing
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="doing"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="red"
+                    description="This is my proyect fixure 2"
+                    endDate={864000000}
+                    id="p2"
+                    invoice="200"
+                    key="p2"
+                    name="Proyect 2"
+                    startDate={604800000}
+                    status="doing"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p2"
+                      onClick={[Function]}
+                      to="/proyect/p2"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p2"
+                        href="/proyect/p2"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p2"
+                          href="/proyect/p2"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 2
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 2
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            200
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--done"
+              key="2"
+            >
+              <KanbanBoardHeader
+                status="done"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    done
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="done"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-proyect"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-proyect"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-proyect"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new proyect here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="blue"
+                    description="This is my proyect fixure 3"
+                    endDate={1468800000}
+                    id="p3"
+                    invoice="300"
+                    key="p3"
+                    name="Proyect 3"
+                    startDate={1209600000}
+                    status="done"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="p3"
+                      onClick={[Function]}
+                      to="/proyect/p3"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="p3"
+                        href="/proyect/p3"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="p3"
+                          href="/proyect/p3"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Proyect 3
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my proyect fixure 3
+                          </p>
+                          <p
+                            className="kanban__item__invoice"
+                          >
+                            300
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+          </div>
+        </section>
+      </KanbanBoard>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Should render KanbanBoard with tasks 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "hash": "",
+        "key": "123qwe",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "123qwe",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <KanbanBoard>
+        <section
+          className="kanban"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="kanban__board--todo"
+              key="0"
+            >
+              <KanbanBoardHeader
+                status="todo"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    todo
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="todo"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="green"
+                    description="This is my task fixure 1"
+                    endDate={1616108400000}
+                    id="t1"
+                    key="t1"
+                    name="Task 1"
+                    proyectId="p1"
+                    startDate={1615762800000}
+                    status="todo"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t1"
+                      to="/task/t1"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t1"
+                        href="/task/t1"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t1"
+                          href="/task/t1"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 1
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 1
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--doing"
+              key="1"
+            >
+              <KanbanBoardHeader
+                status="doing"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    doing
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="doing"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="brown"
+                    description="This is my task fixure 2"
+                    endDate={1616540400000}
+                    id="t2"
+                    key="t2"
+                    name="Task 2"
+                    proyectId="p1"
+                    startDate={1616194800000}
+                    status="doing"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t2"
+                      to="/task/t2"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t2"
+                        href="/task/t2"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t2"
+                          href="/task/t2"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 2
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 2
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
+                </div>
+              </KanbanBoardBody>
+            </div>
+            <div
+              className="kanban__board--done"
+              key="2"
+            >
+              <KanbanBoardHeader
+                status="done"
+              >
+                <div
+                  className="kanban__thead"
+                >
+                  <h3>
+                    done
+                  </h3>
+                </div>
+              </KanbanBoardHeader>
+              <KanbanBoardBody
+                status="done"
+              >
+                <div
+                  className="kanban__tbody"
+                >
+                  <Link
+                    className="kanban__item"
+                    to="/add-task"
+                  >
+                    <LinkAnchor
+                      className="kanban__item"
+                      href="/add-task"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="kanban__item"
+                        href="/add-task"
+                        onClick={[Function]}
+                      >
+                        <p
+                          className="kanban__add-plus"
+                        >
+                          +
+                        </p>
+                        <p
+                          className="kanban__add-text"
+                        >
+                          Create new task here
+                        </p>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                  <KanbanItem
+                    color="purple"
+                    description="This is my task fixure 3"
+                    endDate={1616968800000}
+                    id="t3"
+                    key="t3"
+                    name="Task 3"
+                    proyectId="p3"
+                    startDate={1616626800000}
+                    status="done"
+                  >
+                    <Link
+                      className="kanban__item"
+                      data-id="t3"
+                      to="/task/t3"
+                    >
+                      <LinkAnchor
+                        className="kanban__item"
+                        data-id="t3"
+                        href="/task/t3"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="kanban__item"
+                          data-id="t3"
+                          href="/task/t3"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="kanban__item__title"
+                          >
+                            Task 3
+                          </p>
+                          <p
+                            className="kanban__item__description"
+                          >
+                            This is my task fixure 3
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </KanbanItem>
                 </div>
               </KanbanBoardBody>
             </div>

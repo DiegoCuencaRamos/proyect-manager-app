@@ -10,9 +10,18 @@ import { addProyect } from '../../../actions/proyect'
 import { tasks } from '../../fixures/tasks'
 import { addTask } from '../../../actions/task'
 
-test('Should render KanbanBoard correctly', () => {
+// RENDER
+test('Should render KanbanBoard correctly with no items', () => {
     const wrapper = mount(
-        <MemoryRouter>
+        <MemoryRouter initialEntries={[
+            {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        ]}>
             <Provider store={store}>
                 <KanbanBoard />
             </Provider>
@@ -21,7 +30,7 @@ test('Should render KanbanBoard correctly', () => {
     expect(wrapper).toMatchSnapshot()
 })
 
-test('Should render KanbanBoard with proyects', () => {
+test('Should render KanbanBoard correctly with proyects', () => {
     const isProyect = true
 
     proyects.forEach(proyect => {
@@ -29,7 +38,15 @@ test('Should render KanbanBoard with proyects', () => {
     })
 
     const wrapper = mount(
-        <MemoryRouter>
+        <MemoryRouter initialEntries={[
+            {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        ]}>
             <Provider store={store}>
                 <DashboardContext.Provider value={{ isProyect }}>
                     <KanbanBoard />
@@ -37,5 +54,33 @@ test('Should render KanbanBoard with proyects', () => {
             </Provider>
         </MemoryRouter>
     )
+
+    expect(wrapper).toMatchSnapshot()
 })
+
+test('Should render KanbanBoard correctly with tasks', () => {
+    tasks.forEach(task => {
+        store.dispatch(addTask(task))
+    })
+
+    const wrapper = mount(
+        <MemoryRouter initialEntries={[
+            {
+            "hash": "",
+            "key": "123qwe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        ]}>
+            <Provider store={store}>
+                <KanbanBoard />
+            </Provider>
+        </MemoryRouter>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+})
+
+// EVENTS
 

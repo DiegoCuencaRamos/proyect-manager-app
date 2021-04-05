@@ -5,8 +5,6 @@ import { setProyectId } from '../../actions/id'
 import DashboardContext from '../../contexts/dashboard-context'
 
 const KanbanItem = ({ id, name, description, invoice = undefined }) => {
-
-    console.log(description.length)
     // Variables
     const isProyect = useContext(DashboardContext)
     const itemDescription = description.length <= 55 ? description : description.slice(0, 55) + '...'

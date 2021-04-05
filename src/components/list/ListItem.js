@@ -45,6 +45,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
         }
     }
 
+    // Render
     return (
         <div key={id} className="list__body-item">
             
