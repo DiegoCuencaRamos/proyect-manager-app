@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render NotFoundPage correctly 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "static",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "static",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "static",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <NotFoundPage>
+        <Header>
+          <header
+            className="header"
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="header__content"
+              >
+                <Link
+                  to="/dashboard"
+                >
+                  <LinkAnchor
+                    href="/dashboard"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="header__title"
+                      >
+                        Proyect Manager
+                      </span>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+                <button
+                  className="button--link"
+                  onClick={[Function]}
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </header>
+        </Header>
+        <Title
+          description="The page you are looking for was not found"
+          title="Page not found"
+        >
+          <div
+            className="page-header"
+          >
+            <div
+              className="container page-header__wrapper"
+            >
+              <div>
+                <h1
+                  className="page-header__title"
+                >
+                  Page not found
+                </h1>
+                <p
+                  className="page-header__text"
+                >
+                  The page you are looking for was not found
+                </p>
+              </div>
+            </div>
+          </div>
+        </Title>
+        <div
+          className="container"
+        >
+          <div
+            id="goHomeContainer"
+          >
+            <Link
+              className="link"
+              to="/dashboard"
+            >
+              <LinkAnchor
+                className="link"
+                href="/dashboard"
+                navigate={[Function]}
+              >
+                <a
+                  className="link"
+                  href="/dashboard"
+                  onClick={[Function]}
+                >
+                  Go back to home page
+                </a>
+              </LinkAnchor>
+            </Link>
+          </div>
+        </div>
+      </NotFoundPage>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;

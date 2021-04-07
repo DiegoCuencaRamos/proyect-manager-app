@@ -6,13 +6,13 @@ import DashboardContext from '../../contexts/dashboard-context'
 
 const KanbanItem = ({ id, name, description, invoice = undefined }) => {
     // Variables
+    const dispatch = useDispatch()
     const isProyect = useContext(DashboardContext)
     const itemDescription = description.length <= 55 ? description : description.slice(0, 55) + '...'
-    
+
     // Events
     let onItemClicked
     if (isProyect) {
-        const dispatch = useDispatch()
         onItemClicked = (e) => {
             const id = e.target.dataset.id
             dispatch(setProyectId(id))
@@ -21,16 +21,18 @@ const KanbanItem = ({ id, name, description, invoice = undefined }) => {
 
     // Render
     return (
-        <Link 
-            to={isProyect ? `/proyect/${id}` : `/task/${id}`}
-            className="kanban__item"
-            data-id={id}
-            onClick={onItemClicked}
-        >
-            <p className="kanban__item__title">{name}</p>
-            <p className="kanban__item__description">{itemDescription}</p>
-            {isProyect && <p className="kanban__item__invoice">{invoice}</p>}
-        </Link>
+        <div className="kanban_item">
+            <Link 
+                to={isProyect ? `/proyect/${id}` : `/task/${id}`}
+                className="kanban__item"
+                data-id={id}
+                onClick={onItemClicked}
+            >
+                <p className="kanban__item__title">{name}</p>
+                <p className="kanban__item__description">{itemDescription}</p>
+                {isProyect && <p className="kanban__item__invoice">{invoice}</p>}
+            </Link>
+        </div>
     )
 }
 

@@ -1,0 +1,595 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render List correctly with no items 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "static",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "static",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "static",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <List>
+        <div
+          className="list"
+        >
+          <div
+            className="container"
+          >
+            <ListFilters>
+              <section
+                className="filters"
+              >
+                <div
+                  className="container"
+                >
+                  <div
+                    className="filters__content"
+                  >
+                    <input
+                      className="filters__item"
+                      onChange={[Function]}
+                      placeholder="Search"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </section>
+            </ListFilters>
+            <div
+              className="list__table"
+            >
+              <ListHeader>
+                <div
+                  className="list__header"
+                >
+                  <div
+                    className="list__header-item"
+                  >
+                    <div
+                      className="list__name"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Name
+                      </span>
+                      <i
+                        className="fas fa-sort-down"
+                      />
+                    </div>
+                    <div
+                      className="list__invoice"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Invoice
+                      </span>
+                      <i
+                        className="fas fa-sort-down"
+                      />
+                    </div>
+                    <p
+                      className="list__dropdown"
+                    >
+                      Options
+                    </p>
+                  </div>
+                </div>
+              </ListHeader>
+              <ListBody
+                currentItems={Array []}
+              >
+                <div
+                  className="list__body"
+                />
+              </ListBody>
+              <Pagination
+                onItemsChange={[Function]}
+                onPageLimitChange={[Function]}
+                pageLimit={5}
+                pageNeighbours={1}
+                totalItems={0}
+              >
+                <div
+                  className="pagination"
+                >
+                  <PaginationSelect
+                    onPageLimitChange={[Function]}
+                    pageLimit={5}
+                    totalItems={0}
+                    totalPages={0}
+                  >
+                    <div
+                      className="pagination__limit"
+                    >
+                      <select
+                        className="filters__item"
+                        onChange={[Function]}
+                        value={5}
+                      >
+                        <option
+                          value="2"
+                        >
+                          2 rows
+                        </option>
+                        <option
+                          value="5"
+                        >
+                          5 rows
+                        </option>
+                        <option
+                          value="10"
+                        >
+                          10 rows
+                        </option>
+                        <option
+                          value="all"
+                        >
+                          All rows
+                        </option>
+                      </select>
+                    </div>
+                  </PaginationSelect>
+                  <PaginationPages
+                    currentPage={1}
+                    onItemsChange={[Function]}
+                    pageLimit={5}
+                    pageNeighbours={1}
+                    pages={Array []}
+                    setCurrentPage={[Function]}
+                    totalPages={0}
+                  >
+                    <nav
+                      className="pagination__pages"
+                    >
+                      <ul />
+                    </nav>
+                  </PaginationPages>
+                </div>
+              </Pagination>
+            </div>
+          </div>
+        </div>
+      </List>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Should render List correctly with tasks 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "static",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "static",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "static",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <List>
+        <div
+          className="list"
+        >
+          <div
+            className="container"
+          >
+            <ListFilters>
+              <section
+                className="filters"
+              >
+                <div
+                  className="container"
+                >
+                  <div
+                    className="filters__content"
+                  >
+                    <input
+                      className="filters__item"
+                      onChange={[Function]}
+                      placeholder="Search"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </section>
+            </ListFilters>
+            <div
+              className="list__table"
+            >
+              <ListHeader>
+                <div
+                  className="list__header"
+                >
+                  <div
+                    className="list__header-item"
+                  >
+                    <div
+                      className="list__name"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Name
+                      </span>
+                      <i
+                        className="fas fa-sort-down"
+                      />
+                    </div>
+                    <div
+                      className="list__invoice"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Invoice
+                      </span>
+                      <i
+                        className="fas fa-sort-down"
+                      />
+                    </div>
+                    <p
+                      className="list__dropdown"
+                    >
+                      Options
+                    </p>
+                  </div>
+                </div>
+              </ListHeader>
+              <ListBody
+                currentItems={
+                  Array [
+                    Object {
+                      "color": "green",
+                      "description": "This is my task fixure 1",
+                      "endDate": 1616108400000,
+                      "id": "t1",
+                      "name": "Task 1",
+                      "proyectId": "p1",
+                      "startDate": 1615762800000,
+                      "status": "todo",
+                    },
+                    Object {
+                      "color": "brown",
+                      "description": "This is my task fixure 2",
+                      "endDate": 1616540400000,
+                      "id": "t2",
+                      "name": "Task 2",
+                      "proyectId": "p1",
+                      "startDate": 1616194800000,
+                      "status": "doing",
+                    },
+                  ]
+                }
+              >
+                <div
+                  className="list__body"
+                >
+                  <ListItem
+                    color="green"
+                    description="This is my task fixure 1"
+                    endDate={1616108400000}
+                    id="t1"
+                    key="t1"
+                    name="Task 1"
+                    proyectId="p1"
+                    startDate={1615762800000}
+                    status="todo"
+                  >
+                    <div
+                      className="list__body-item"
+                      key="t1"
+                    >
+                      <Link
+                        className="list__name"
+                        data-id="t1"
+                        to="/task/t1"
+                      >
+                        <LinkAnchor
+                          className="list__name"
+                          data-id="t1"
+                          href="/task/t1"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="list__name"
+                            data-id="t1"
+                            href="/task/t1"
+                            onClick={[Function]}
+                          >
+                            Task 1
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                      <div
+                        className="list__dropdown"
+                      >
+                        <div
+                          className="list__dropdown-button"
+                          onMouseEnter={[Function]}
+                        >
+                          <i
+                            className="fas fa-sliders-h"
+                          />
+                          <i
+                            className="fas fa-sort-down"
+                          />
+                        </div>
+                        <div
+                          className="list__dropdown-content"
+                        >
+                          <ul>
+                            <li
+                              className="editBtn"
+                              data-id="t1"
+                              onClick={[Function]}
+                            >
+                              Edit
+                            </li>
+                            <li
+                              className="removeBtn"
+                              data-id="t1"
+                              onClick={[Function]}
+                            >
+                              Remove
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </ListItem>
+                  <ListItem
+                    color="brown"
+                    description="This is my task fixure 2"
+                    endDate={1616540400000}
+                    id="t2"
+                    key="t2"
+                    name="Task 2"
+                    proyectId="p1"
+                    startDate={1616194800000}
+                    status="doing"
+                  >
+                    <div
+                      className="list__body-item"
+                      key="t2"
+                    >
+                      <Link
+                        className="list__name"
+                        data-id="t2"
+                        to="/task/t2"
+                      >
+                        <LinkAnchor
+                          className="list__name"
+                          data-id="t2"
+                          href="/task/t2"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="list__name"
+                            data-id="t2"
+                            href="/task/t2"
+                            onClick={[Function]}
+                          >
+                            Task 2
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                      <div
+                        className="list__dropdown"
+                      >
+                        <div
+                          className="list__dropdown-button"
+                          onMouseEnter={[Function]}
+                        >
+                          <i
+                            className="fas fa-sliders-h"
+                          />
+                          <i
+                            className="fas fa-sort-down"
+                          />
+                        </div>
+                        <div
+                          className="list__dropdown-content"
+                        >
+                          <ul>
+                            <li
+                              className="editBtn"
+                              data-id="t2"
+                              onClick={[Function]}
+                            >
+                              Edit
+                            </li>
+                            <li
+                              className="removeBtn"
+                              data-id="t2"
+                              onClick={[Function]}
+                            >
+                              Remove
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </ListItem>
+                </div>
+              </ListBody>
+              <Pagination
+                onItemsChange={[Function]}
+                onPageLimitChange={[Function]}
+                pageLimit={5}
+                pageNeighbours={1}
+                totalItems={2}
+              >
+                <div
+                  className="pagination"
+                >
+                  <PaginationSelect
+                    onPageLimitChange={[Function]}
+                    pageLimit={5}
+                    totalItems={2}
+                    totalPages={1}
+                  >
+                    <div
+                      className="pagination__limit"
+                    >
+                      <select
+                        className="filters__item"
+                        onChange={[Function]}
+                        value={5}
+                      >
+                        <option
+                          value="2"
+                        >
+                          2 rows
+                        </option>
+                        <option
+                          value="5"
+                        >
+                          5 rows
+                        </option>
+                        <option
+                          value="10"
+                        >
+                          10 rows
+                        </option>
+                        <option
+                          value="all"
+                        >
+                          All rows
+                        </option>
+                      </select>
+                    </div>
+                  </PaginationSelect>
+                  <PaginationPages
+                    currentPage={1}
+                    onItemsChange={[Function]}
+                    pageLimit={5}
+                    pageNeighbours={1}
+                    pages={
+                      Array [
+                        1,
+                      ]
+                    }
+                    setCurrentPage={[Function]}
+                    totalPages={1}
+                  >
+                    <nav
+                      className="pagination__pages"
+                    >
+                      <ul>
+                        <PaginationPageItem
+                          currentPage={1}
+                          goToPage={[Function]}
+                          key="1"
+                          page={1}
+                          pageNeighbours={1}
+                          totalPages={1}
+                        >
+                          <li>
+                            <a
+                              className="pagination__active-page"
+                              onClick={[Function]}
+                            >
+                              1
+                            </a>
+                          </li>
+                        </PaginationPageItem>
+                      </ul>
+                    </nav>
+                  </PaginationPages>
+                </div>
+              </Pagination>
+            </div>
+          </div>
+        </div>
+      </List>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;

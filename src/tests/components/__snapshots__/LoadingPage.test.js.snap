@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Loading page correctly 1`] = `
+<LoadingPage>
+  <div
+    className="loader"
+  >
+    <img
+      className="loader__image"
+      src=""
+    />
+  </div>
+</LoadingPage>
+`;

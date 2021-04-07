@@ -1,30 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Shoud render Header correctly 1`] = `
-<header
-  class="header"
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "static",
+      },
+    ]
+  }
 >
-  <div
-    class="container"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "static",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "static",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
   >
-    <div
-      class="header__content"
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
     >
-      <a
-        href="/dashboard"
-      >
-        <span
-          class="header__title"
+      <Header>
+        <header
+          className="header"
         >
-          Proyect Manager
-        </span>
-      </a>
-      <button
-        class="button--link"
-      >
-        Logout
-      </button>
-    </div>
-  </div>
-</header>
+          <div
+            className="container"
+          >
+            <div
+              className="header__content"
+            >
+              <Link
+                to="/dashboard"
+              >
+                <LinkAnchor
+                  href="/dashboard"
+                  navigate={[Function]}
+                >
+                  <a
+                    href="/dashboard"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="header__title"
+                    >
+                      Proyect Manager
+                    </span>
+                  </a>
+                </LinkAnchor>
+              </Link>
+              <button
+                className="button--link"
+                onClick={[Function]}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </header>
+      </Header>
+    </Provider>
+  </Router>
+</MemoryRouter>
 `;

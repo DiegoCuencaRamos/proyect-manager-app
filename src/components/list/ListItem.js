@@ -76,7 +76,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
                 <div className="list__dropdown-content">
                     <ul>
                         <li 
-                            className=""
+                            className="editBtn"
                             data-id={id} 
                             onClick={onEditButtonClicked}
                         >
@@ -84,7 +84,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
                         </li>
 
                         <li 
-                            className=""
+                            className="removeBtn"
                             data-id={id}
                             onClick={onRemoveButtonClicked}
                         >

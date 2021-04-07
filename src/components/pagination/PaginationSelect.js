@@ -1,6 +1,7 @@
 import React from 'react'
 
 const PaginationSelect = ({ pageLimit, onPageLimitChange, totalItems }) => {
+    
     // Events
     const onSelectChange = e => {
         const value = e.target.value

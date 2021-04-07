@@ -7,48 +7,41 @@ import Calendar from '../../../components/calendar/Calendar'
 import { proyects } from '../../fixures/proyects'
 import { addProyect } from '../../../actions/proyect'
 
-let wrapper
+const renderWithWrapper = () => mount(
+    <Provider store={store}>
+        <Calendar />
+    </Provider>
+)
 
-beforeEach(() => {
+// Rendering
+test('Shoul render calendar correctly with no items', () => {
+    const wrapper = renderWithWrapper()  
+    expect(wrapper).toMatchSnapshot()
+})
+
+test('Shoul render calendar correctly with some items', () => {
     // Add items to the calendar
     proyects.forEach(item => {
         store.dispatch(addProyect(item))
     })
-    // Render calender
-    wrapper = mount(
-        <Provider store={store}>
-            <Calendar />
-        </Provider>
-    )
-})
-
-// RENDER
-test('Shoul render calendar correctly with some items', () => {
-    const proyect = store.getState().proyects[0]
-    console.log('startDate: ', moment(proyect.startDate).format())
-    console.log('endDate: ', moment(proyect.endDate).format())
-    
+    const wrapper = renderWithWrapper()  
     expect(wrapper).toMatchSnapshot()
 })
 
-// CALENDAR HEADER
+// Events
 test('Should substract one month from current month on prevMonth clicked', () => {
+    const wrapper = renderWithWrapper()  
     const dateFormat = 'MMMM YYYY'
     wrapper.find('#prevMonth').simulate('click')
     expect(wrapper.find('#displayMonth').text()).toBe(moment().subtract(1, 'months').format(dateFormat))
 })
 
 test('Should add one month from current month on nextMonth clicked', () => {
+    const wrapper = renderWithWrapper()
     const dateFormat = 'MMMM YYYY'
     wrapper.find('#nextMonth').simulate('click')
     expect(wrapper.find('#displayMonth').text()).toBe(moment().add(1, 'months').format(dateFormat))
 })
-
-// CALENDAR WEEK DAYS
-// All done
-
-// CALENDAR BODY
-// All done
 
 
 

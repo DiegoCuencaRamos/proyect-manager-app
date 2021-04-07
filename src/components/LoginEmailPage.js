@@ -66,10 +66,12 @@ const LoginEmailPage = () => {
                     />
                     <div className="form__buttom-wrpper">
                         <button 
+                            id={'emailLoginBtn'}
                             className="button"
                             onClick={onEmailLogin}
                         >Login</button>
                         <button 
+                            id={'emailSignUpBtn'}
                             className="button--remove"
                             onClick={onEmailSingUp}
                         >Sign Up</button>

@@ -4,14 +4,18 @@ import { MemoryRouter } from 'react-router'
 import DashboardContext from '../../contexts/dashboard-context'
 import Title from '../../components/Title'
 
-const isProyect = true
-
-test('Should render Title correctly', () => {
-    const wrapper = shallow(<Title title="Some title" description="Some description" />)
+test('Should render Title correctly with no context', () => {
+    const wrapper = shallow(
+        <Title 
+            title="Some title" 
+            description="Some description" 
+        />
+    )
     expect(wrapper).toMatchSnapshot()
 })
 
 test('Should render Title correctly on Dashboard Proyect page', () => {
+    const isProyect = true
     const wrapper = render(
         <MemoryRouter>
             <DashboardContext.Provider value={{ isProyect }}>

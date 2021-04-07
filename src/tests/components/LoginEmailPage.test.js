@@ -4,15 +4,14 @@ import { Provider } from 'react-redux'
 import store from '../../store'
 import LoginEmailPage from '../../components/LoginEmailPage'
 
-const getWrapper = () => mount(
-    <Provider store={store}>
-        <LoginEmailPage />
-    </Provider>
-)
 let wrapper
 
 beforeEach(() => {
-    wrapper = getWrapper()
+    wrapper = mount(
+        <Provider store={store}>
+            <LoginEmailPage />
+        </Provider>
+    )
 })
 
 test('Should render LoginPage correctly', () => {
@@ -35,5 +34,4 @@ test('Should set password on password change', () => {
     expect(wrapper.find('.form__item--password').prop('value')).toBe(value)
 })
 
-// Falta testear la parte de los disatchs.
-
+// Falta testear events: Redux - dispatchs.

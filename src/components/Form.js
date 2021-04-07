@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import moment from 'moment'
 // React dates
 import { DateRangePicker } from 'react-dates'
+import 'react-dates/lib/css/_datepicker.css' // CSS
 import 'react-dates/initialize' // JS
 
 const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {

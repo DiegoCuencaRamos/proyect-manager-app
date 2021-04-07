@@ -119,7 +119,7 @@ describe('Should handle Task Form events:', () => {
 
     test('should submit form on valid form submission', (done) => {
         wrapper = mount(
-            <MemoryRouter>
+            <MemoryRouter initialEntries={[{ key: 'static' }]}>
                 <Form 
                     item={item}
                     onParentFormSubmit={onParentFormSubmit}

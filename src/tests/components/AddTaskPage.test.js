@@ -3,13 +3,13 @@ import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router'
 import { Provider } from 'react-redux'
 import store from '../../store'
-import EditProyectPage from '../../components/EditProyectPage'
+import AddTaskPage from '../../components/AddTaskPage'
 
-test('Should render Edit Proyect Page correctly', () => {
+test('Should render Add Task Page correctly', () => {
     const wrapper = mount(
         <MemoryRouter initialEntries={[{ key: 'static' }]}>
             <Provider store={store}>
-                <EditProyectPage />
+                <AddTaskPage />
             </Provider>
         </MemoryRouter>
     )

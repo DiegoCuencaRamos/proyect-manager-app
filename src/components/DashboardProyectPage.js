@@ -7,7 +7,7 @@ import LayoutSelectors from './LayoutSelectors'
 const DashboardProyectPage = () => {
     // Variables
     const isProyect = true
-    const [ layout, setLayout ] = useState('')
+    const [ layout, setLayout ] = useState('list')
 
     // Events
     const handleLayoutChange = currentLayout => {

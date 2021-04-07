@@ -5,7 +5,7 @@ import ItemsLayout from './ItemsLayout'
 
 const DashboardTasktPage = () => {
     // State
-    const [ layout, setLayout ] = useState('')
+    const [ layout, setLayout ] = useState('list')
 
     // Events
     const handleLayoutChange = currentLayout => {

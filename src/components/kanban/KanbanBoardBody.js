@@ -12,10 +12,12 @@ const KanbanBoardBody = ({ status }) => {
     
     return (
         <div className="kanban__tbody">
-            <Link to={isProyect ? `/add-proyect` : `/add-task`} className="kanban__item">
-                <p className="kanban__add-plus">+</p>
-                <p className="kanban__add-text">{`Create new ${isProyect ? 'proyect' : 'task'} here`}</p>
-            </Link>
+            <div id="kanbanNewItem" className="kanban_item">
+                <Link to={isProyect ? `/add-proyect` : `/add-task`} className="kanban__item">
+                    <p className="kanban__add-plus">+</p>
+                    <p className="kanban__add-text">{`Create new ${isProyect ? 'proyect' : 'task'} here`}</p>
+                </Link>
+            </div>
             {items
                 .filter(item => item.status === status)
                 .map((item) => (

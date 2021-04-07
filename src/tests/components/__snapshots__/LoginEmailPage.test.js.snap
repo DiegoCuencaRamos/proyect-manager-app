@@ -49,12 +49,14 @@ exports[`Should render LoginPage correctly 1`] = `
           >
             <button
               className="button"
+              id="emailLoginBtn"
               onClick={[Function]}
             >
               Login
             </button>
             <button
               className="button--remove"
+              id="emailSignUpBtn"
               onClick={[Function]}
             >
               Sign Up

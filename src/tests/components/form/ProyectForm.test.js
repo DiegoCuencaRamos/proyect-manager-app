@@ -135,14 +135,17 @@ describe('Should handle Proyect Form events:', () => {
 
     test('should submit form on valid form submission', (done) => {
         wrapper = mount(
-            <MemoryRouter>
+            <MemoryRouter initialEntries={[{ key: 'static' }]}>
                 <Form 
-                isProyect={isProyect} 
-                item={item}
-                onParentFormSubmit={onParentFormSubmit}
-            />
+                    isProyect={isProyect} 
+                    item={item}
+                    onParentFormSubmit={onParentFormSubmit}
+                />
             </MemoryRouter>
         ) 
+
+        console.log(moment(item.endDate))
+
         wrapper.find('form').simulate('submit', { preventDefault: jest.fn() })
         expect(onParentFormSubmit).toHaveBeenCalledWith(item)
         done()

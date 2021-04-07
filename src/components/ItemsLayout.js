@@ -5,7 +5,7 @@ import Calendar from './calendar/Calendar'
 
 const ItemsLayout = ({ layout = '' }) => {
     // Variables
-    let itemsLayoutComponent = <List/>
+    let itemsLayoutComponent
 
     if (layout === 'list') {
         itemsLayoutComponent = <List />

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Should render calendar ItemsLayout 1`] = `<Calendar />`;
-
-exports[`Should render default ItemsLayout 1`] = `<List />`;
-
-exports[`Should render kanban ItemsLayout 1`] = `<KanbanBoard />`;
-
-exports[`Should render list ItemsLayout 1`] = `<List />`;

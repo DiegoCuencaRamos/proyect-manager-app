@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Edit Proyect Page correctly 1`] = `
+exports[`Should render Add Task Page correctly 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
@@ -53,11 +53,11 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
         }
       }
     >
-      <EditProyectPage>
+      <AddTaskPage>
         <section>
           <Title
-            description="Edit your current proyect"
-            title="Edit proyect"
+            description="Add new tasks to your current proyect"
+            title="Add task"
           >
             <div
               className="page-header"
@@ -69,20 +69,20 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
                   <h1
                     className="page-header__title"
                   >
-                    Edit proyect
+                    Add task
                   </h1>
                   <p
                     className="page-header__text"
                   >
-                    Edit your current proyect
+                    Add new tasks to your current proyect
                   </p>
                 </div>
               </div>
             </div>
           </Title>
           <ItemForm
-            isProyect={true}
             onParentFormSubmit={[Function]}
+            proyectId=""
           >
             <div
               className="container"
@@ -106,8 +106,8 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
                     onChange={[Function]}
                     style={
                       Object {
-                        "flexBasis": "48%",
-                        "marginRight": "4%",
+                        "flexBasis": "100%",
+                        "marginRight": "0",
                       }
                     }
                     value=""
@@ -134,13 +134,6 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
                       Done
                     </option>
                   </select>
-                  <input
-                    className="form__item--invoice"
-                    onChange={[Function]}
-                    placeholder="Invoice"
-                    type="number"
-                    value=""
-                  />
                   <withStyles(DateRangePicker)
                     anchorDirection="left"
                     appendToBody={false}
@@ -1573,7 +1566,7 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
                   <label
                     className="form__item--color"
                   >
-                    Proyect
+                    Task
                      color:
                     <input
                       onChange={[Function]}
@@ -1590,14 +1583,14 @@ exports[`Should render Edit Proyect Page correctly 1`] = `
                   <input
                     className="form__item--submit button"
                     type="submit"
-                    value="Save proyect"
+                    value="Save task"
                   />
                 </div>
               </form>
             </div>
           </ItemForm>
         </section>
-      </EditProyectPage>
+      </AddTaskPage>
     </Provider>
   </Router>
 </MemoryRouter>

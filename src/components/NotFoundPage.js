@@ -11,10 +11,12 @@ const NotFoundPage = () => (
             description='The page you are looking for was not found'
         />
         <div className="container">
-            <Link 
-                to="/dashboard"
-                className="link"
-            >Go back to home page</Link>
+            <div id="goHomeContainer">
+                <Link 
+                    className="link"
+                    to="/dashboard"
+                >Go back to home page</Link>
+            </div>
         </div>
     </Fragment>
 )
