@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PaginationPages from './PaginationPages'
 import PaginationSelect from './PaginationSelect'
 
-const Pagination = ({ totalItems = null, pageLimit, onPageLimitChange, pageNeighbours = 1, onItemsChange }) => {
+const Pagination = ({ filteredItems, totalItems = null, pageLimit, onPageLimitChange, pageNeighbours = 1, onItemsChange }) => {
     // Variables
     const [currentPage, setCurrentPage] = useState(1)
     
@@ -76,6 +76,7 @@ const Pagination = ({ totalItems = null, pageLimit, onPageLimitChange, pageNeigh
                 totalPages={totalPages}
             />
             <PaginationPages 
+                filteredItems={filteredItems}
                 pages={pages} 
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}

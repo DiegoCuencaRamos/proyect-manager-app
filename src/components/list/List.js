@@ -21,6 +21,12 @@ const List = () => {
     const [ currentItems, setCurrentItems ] = useState([])
     const [ pageLimit, setPageLimit ] = useState(5) // Este puede ir en el calendar también, estoy probando.
 
+    useEffect(() => {
+        setCurrentItems(filteredItems)
+    }, [items])
+
+    console.log('1: ', filteredItems)
+
     // Events
     const onItemsChange = (data) => {
         const { currentPage, pageLimit } = data
@@ -28,17 +34,14 @@ const List = () => {
         const endItem = currentPage * pageLimit
         const currentItems = filteredItems.slice(startItem, endItem)
 
+        console.log('2: ', filteredItems)
+
         setCurrentItems(currentItems)
     }
 
     const onPageLimitChange = (pageLimit) => {
         setPageLimit(pageLimit)
     }
-    
-    // ??
-    /*useEffect(() => {
-        onItemsChange({ currentPage: 1, pageLimit })
-    }, [filteredItems])*/
 
     // Render
     return (
@@ -49,6 +52,7 @@ const List = () => {
                     <ListHeader />
                     <ListBody currentItems={currentItems} />  
                     <Pagination 
+                        filteredItems={filteredItems}
                         totalItems={filteredItems.length} 
                         pageLimit={pageLimit}
                         onPageLimitChange={onPageLimitChange}
