@@ -5,7 +5,7 @@ import { DateRangePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css' // CSS
 import 'react-dates/initialize' // JS
 
-const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
+const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmit }) => {
     // State
     const [ name, setName ] = useState(item ? item.name : '')
     const [ status, setStatus ] = useState(item ? item.status : '')
@@ -21,6 +21,8 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
         flexBasis: isProyect ? '48%' : '100%',
         marginRight: isProyect ? '4%' : '0',
     }
+
+    console.log(proyectId)
 
     // Events
     const onNameChange = (e) => {
@@ -63,20 +65,14 @@ const ItemForm = ({ isProyect, proyectId, item, onParentFormSubmit }) => {
             color,
             description,
         }
+
+        const proyectItem = { ...commonItem, invoice }
+        const taskItem = proyectId ? { ...commonItem, proyectId } : commonItem
         
         if (name && status && startDate && endDate && color) {
             setErrorMessage('')
             
-            onParentFormSubmit((
-                isProyect 
-                ? {
-                    ...commonItem,
-                    invoice
-                } : {
-                    ...commonItem,
-                    proyectId
-                }
-            )) 
+            onParentFormSubmit((isProyect ? proyectItem : taskItem)) 
         } else {
             setErrorMessage('Please provide title, status, dates and color for your proyect')
         }

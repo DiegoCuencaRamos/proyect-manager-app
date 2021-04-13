@@ -6,19 +6,21 @@ import { startEditTask } from '../actions/task'
 import ItemForm from './Form'
 
 const EditTaskPage = () => {
+    // 1. Hooks
+    const history = useHistory()
+    const dispatch = useDispatch()
+    // 2. Data
     const tasks = useSelector(state => state.tasks)
-    const proyectId = useSelector(state => state.ids.proyectId)
     const { taskId } = useParams()
     const task = tasks.find(task => task.id === taskId)
-    const history = useHistory()
 
-    const dispatch = useDispatch()
-
+    // 3. Events
     const onParentFormSubmit = (updates) => {
         dispatch(startEditTask(taskId, updates))
-        history.push(`/proyect/${proyectId}`)
+        history.goBack()
     }
 
+    // 4. Render
     return(
         <section>
             <Title
@@ -27,7 +29,6 @@ const EditTaskPage = () => {
             />
 
             <ItemForm
-                proyectId={proyectId}
                 item={task}
                 onParentFormSubmit={onParentFormSubmit}
             />

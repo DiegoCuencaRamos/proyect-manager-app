@@ -1,16 +1,11 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { searchFilterChanged, sortByFilterChanged } from '../../actions/filter'
 
-const ListFilters = () => {
-    // Variables
-    const { searchText, sortBy } = useSelector(state => state.filters)
-    const dispatch = useDispatch()
+const ListFilters = ({ textFilter, onTextFilterChange }) => {
 
-    // Events
-    const onSerachFilterChange = e => {
-        dispatch(searchFilterChanged(e.target.value))
-    }
+    const onTextChange = (e) => {
+        const text = e.target.value
+        onTextFilterChange(text)
+    } 
 
     // Render
     return (
@@ -21,8 +16,8 @@ const ListFilters = () => {
                         className="filters__item"
                         type="text"
                         placeholder="Search"
-                        value={searchText}
-                        onChange={onSerachFilterChange}
+                        value={textFilter}
+                        onChange={onTextChange}
                     />                       
                 </div>
             </div>

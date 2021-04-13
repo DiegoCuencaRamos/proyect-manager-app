@@ -1,17 +1,12 @@
 import { combineReducers } from 'redux'
-
-import proyectReducer from './slices/proyectSlice'
-import taskReducer from './slices/taskSlice'
-import filterReducer from './slices/filterSlice'
-import authReducer from './slices/authSlice'
-import idReducer from './slices/idSlice'
+import authReducer from './reducers/auth'
+import proyectsReducer from './reducers/proyecs'
+import tasksReducer from './reducers/tasks'
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    filters: filterReducer,
-    proyects: proyectReducer,
-    tasks: taskReducer,
-    ids: idReducer,
+    proyects: proyectsReducer,
+    tasks: tasksReducer,
 })
 
 export default rootReducer

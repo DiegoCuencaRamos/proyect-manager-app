@@ -1,12 +1,12 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useHistory, useParams } from 'react-router-dom'
 import Title from './Title'
 import { startAddTask } from '../actions/task'
 import ItemForm from './Form'
 
 const AddTaskPage = () => {
-    const proyectId = useSelector(state => state.ids.proyectId)
+    const { proyectId } = useParams()
     const dispatch = useDispatch()
     const history = useHistory()
 

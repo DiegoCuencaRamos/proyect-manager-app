@@ -11,12 +11,14 @@ const startAddTask = (taskData = {}) => {
         const uid = getState().auth.uid
         const {
             proyectId = '', 
-            name = '', 
+            name = '',
             status = '',
+            startDate = 0,
+            endDate = 0,
             color = '',
             description = '',
         } = taskData
-        const task = { proyectId, name, status, color, description }
+        const task = { proyectId, name, startDate, endDate, status, color, description }
 
         return database.ref(`/users/${uid}/tasks`).push(task)
             .then(ref => {

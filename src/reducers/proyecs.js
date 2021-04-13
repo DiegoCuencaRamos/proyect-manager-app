@@ -1,6 +1,6 @@
 const inicialState = []
 
-const proyectReducer = (state = inicialState, action) => {
+const proyectsReducer = (state = inicialState, action) => {
     switch (action.type) {
         case 'proyect/addProyect':
             return [
@@ -31,4 +31,4 @@ const proyectReducer = (state = inicialState, action) => {
     } 
 }
 
-export default proyectReducer
+export default proyectsReducer

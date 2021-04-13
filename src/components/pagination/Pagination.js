@@ -1,38 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState} from 'react'
+import { range } from './utils'
+import PaginationFiter from './PaginationFiter'
 import PaginationPages from './PaginationPages'
-import PaginationSelect from './PaginationSelect'
 
-const Pagination = ({ filteredItems, totalItems = null, pageLimit, onPageLimitChange, pageNeighbours = 1, onItemsChange }) => {
-    // Variables
-    const [currentPage, setCurrentPage] = useState(1)
-    
-    // const totalPagesCalc = Math.ceil(totalItems / pageLimit)
-    const [ totalPages, setTotalPages ] = useState(Math.ceil(totalItems / pageLimit))
+const Pagination = ({ totalItems, pageLimit, pageNeighbours, onPageLimitChange, currentPage, onPageChange }) => {
+    const totalPages = Math.ceil(totalItems / pageLimit)
 
-    useEffect(() => {
-        const currentPage = 1
-        const paginationData = {
-            currentPage,
-            // totalPages,
-            pageLimit,
-            // totalRecords
-        }
-        setTotalPages(Math.ceil(totalItems / pageLimit))
-        setCurrentPage(currentPage)
-        onItemsChange(paginationData)
-    }, [pageLimit])
-
-
-    // Functionality
-    const range = (from, to) => {
-        const range = []    
-        for(let i = from; i <= to; i++) {
-            range.push(i)
-        }
-        return range
-    }
-
-    const getPages = () => {
+    // Get pages Array
+    const getArrayPages = () => {
         const totalNumbers = (pageNeighbours * 2) + 3 // pageNeighbours + (currentPage + startPage + endPage)
         const totalBlocks = totalNumbers + 2 // For arrows
 
@@ -64,29 +39,22 @@ const Pagination = ({ filteredItems, totalItems = null, pageLimit, onPageLimitCh
         return range(1, totalPages) // Pages array
     }
 
-    const pages = getPages()
+    const pages = getArrayPages()
 
-    // Render
     return (
         <div className="pagination">
-            <PaginationSelect 
+            <PaginationFiter
                 pageLimit={pageLimit}
                 onPageLimitChange={onPageLimitChange}
-                totalItems={totalItems}
-                totalPages={totalPages}
             />
-            <PaginationPages 
-                filteredItems={filteredItems}
-                pages={pages} 
+            <PaginationPages
+                pages={pages}
                 currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                pageLimit={pageLimit}
-                totalPages={totalPages}
-                pageNeighbours={pageNeighbours}
-                onItemsChange={onItemsChange}
+                totalPages={totalPages} 
+                pageNeighbours={pageNeighbours} 
+                onPageChange={onPageChange}
             />
         </div>
-
     )
 }
 

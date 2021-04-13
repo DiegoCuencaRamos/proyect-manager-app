@@ -5,7 +5,8 @@
     margin-bottom: settings.$m-size;
 }
 
-.list__table {
+.list__proyect-table,
+.list__task-table {
     border-radius: settings.$border-radius;;
     box-shadow: settings.$box-shadow;
 }
@@ -63,8 +64,12 @@
     margin-right: 10px;
 }
 
-.list__name {
+.list__proyect-table .list__name {
     width: 50%;
+}
+
+.list__task-table .list__name {
+    width: 60%;
 }
 
 a.list__name {
@@ -76,8 +81,12 @@ a.list__invoide {
     word-break: break-all;
 }
 
-.list__status {
+.list__proyect-table .list__status {
     width: 20%;
+}
+
+.list__task-table .list__status {
+    width: 25%;
 }
 
 /*.list__status--todo {
@@ -116,6 +125,11 @@ a.list__invoide {
     border-radius: settings.$border-radius;
     box-shadow: settings.$box-shadow;
 }
+
+.list__dropdown-button * {
+    pointer-events: none;
+}
+
 
 .list__dropdown-button svg:nth-child(1) {
     margin-right: 5px;

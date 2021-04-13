@@ -1,20 +1,20 @@
 import React from 'react'
 
-const PaginationPageItem = ({ page, currentPage, totalPages, pageNeighbours, goToPage }) => {
+const PaginationPageItem = ({ page, currentPage, totalPages, pageNeighbours, onPageChange }) => {
     // Events
     const onLenftPageClick = (e) => {
         e.preventDefault()
-        goToPage(Math.max(1, currentPage - (pageNeighbours * 2) - 1))
+        onPageChange(Math.max(1, currentPage - (pageNeighbours * 2) - 1))
     }
 
     const onRightPageClick = (e) => {
         e.preventDefault()
-        goToPage(Math.min(totalPages, currentPage + (pageNeighbours * 2) + 1))
+        onPageChange(Math.min(totalPages, currentPage + (pageNeighbours * 2) + 1))
     }
 
     const onPageClick = (e) => {
         e.preventDefault()
-        goToPage(page)
+        onPageChange(page)
     }
 
     // Render

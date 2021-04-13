@@ -1,20 +1,17 @@
 import React, { useContext } from 'react'
-import { useDispatch } from 'react-redux'
 import DashboardContext from '../../contexts/dashboard-context'
-import { sortByFilterChanged } from '../../actions/filter'
 
-const ListHeader = () => {
+const ListHeader = ({ onSortByChange }) => {
     // Variables
     const isProyect = useContext(DashboardContext)
-    const dispatch = useDispatch()
 
     // Events
     const onSortByName = () => {
-        dispatch(sortByFilterChanged('name'))
+        onSortByChange('name')
     }
 
     const onSortByInvoice = () => {
-        dispatch(sortByFilterChanged('invoice'))
+        onSortByChange('invoice')
     }   
 
     // Render
@@ -25,11 +22,11 @@ const ListHeader = () => {
                     <span>Name</span>
                     <i className="fas fa-sort-down"></i>
                 </div>
-                { isProyect && <p className="list__status">Status</p> }
-                <div className="list__invoice" onClick={onSortByInvoice}>
+                <p className="list__status">Status</p>
+                { isProyect && <div className="list__invoice" onClick={onSortByInvoice}>
                     <span>Invoice</span>
                     <i className="fas fa-sort-down"></i>
-                </div>
+                </div> }
                 <p className="list__dropdown">Options</p>
             </div>   
         </div>   

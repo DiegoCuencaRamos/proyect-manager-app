@@ -1,65 +1,70 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 import DashboardContext from '../../contexts/dashboard-context'
-import getVisibleProyects from '../../selectors/proyects'
-import getVisibleTasks from '../../selectors/tasks'
+import getFilteredItems from '../../selectors/getFilteredItems'
 import ListFilters from './ListFilters'
 import ListHeader from './ListHeader'
 import ListBody from './ListBody'
 import Pagination from '../pagination/Pagination'
 
-
 const List = () => {
-    // Context
+    // 1. Context
     const isProyect = useContext(DashboardContext)
-    // Variables
-    const items = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ]) 
-    const filters = useSelector(state => state.filters)
-    const proyectId = isProyect ? undefined : useSelector(state => state.ids.proyectId)
-    const filteredItems = isProyect ? getVisibleProyects(items, filters) : getVisibleTasks(proyectId, items, filters)
-    // State 
-    const [ currentItems, setCurrentItems ] = useState([])
-    const [ pageLimit, setPageLimit ] = useState(5) // Este puede ir en el calendar también, estoy probando.
+    // 2. ProyectId
+    const proyectId = isProyect ? null : useParams().proyectId
+    // 2. Data
+    const items = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
+    // 3. State    
+    const [currentPage, setCurrentPage] = useState(1)
+    const [pageLimit, setPageLimit] = useState(5)
+    const [textFilter, setTextFilter] = useState('')
+    const [sortBy, setSortBy] = useState('')
 
-    useEffect(() => {
-        setCurrentItems(filteredItems)
-    }, [items])
-
-    console.log('1: ', filteredItems)
+    const filteredItems = getFilteredItems(proyectId, items, currentPage, pageLimit, textFilter, sortBy)
 
     // Events
-    const onItemsChange = (data) => {
-        const { currentPage, pageLimit } = data
-        const startItem = (currentPage - 1) * pageLimit
-        const endItem = currentPage * pageLimit
-        const currentItems = filteredItems.slice(startItem, endItem)
+    const onTextFilterChange = (text) => {
+        setTextFilter(text)
+    }
 
-        console.log('2: ', filteredItems)
-
-        setCurrentItems(currentItems)
+    const onSortByChange = (value) => {
+        setSortBy(value)
     }
 
     const onPageLimitChange = (pageLimit) => {
         setPageLimit(pageLimit)
     }
 
+    const onPageChange = (page) => {
+        setCurrentPage(page)
+    }
+
     // Render
     return (
         <div className="list">
             <div className="container">
-                <ListFilters />
-                <div className="list__table">
-                    <ListHeader />
-                    <ListBody currentItems={currentItems} />  
-                    <Pagination 
-                        filteredItems={filteredItems}
-                        totalItems={filteredItems.length} 
-                        pageLimit={pageLimit}
-                        onPageLimitChange={onPageLimitChange}
-                        onItemsChange={onItemsChange}
-                        pageNeighbours={1}
+                <ListFilters 
+                    textFilter={textFilter}
+                    onTextFilterChange={onTextFilterChange}
+                />
+                <div className={isProyect ? "list__proyect-table" : "list__task-table"}>
+                    <ListHeader
+                        onSortByChange={onSortByChange}
+                    />
+                    <ListBody 
+                        currentItems={filteredItems} 
                     />                  
                 </div>
+                <Pagination 
+                    totalItems={items.length} 
+                    pageLimit={pageLimit}
+                    pageNeighbours={1}
+                    // Filter event
+                    onPageLimitChange={onPageLimitChange}
+                    currentPage={currentPage}
+                    onPageChange={onPageChange}
+                />
             </div>
         </div>
     )

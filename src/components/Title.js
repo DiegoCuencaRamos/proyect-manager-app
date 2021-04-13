@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import DashboardContext from '../contexts/dashboard-context'
 
 const Title = ({ title, description, isDashboard }) => {
-    // Context
+    // Variables
     const isProyect = useContext(DashboardContext)
+    const proyectId = isProyect ? null : useParams().proyectId
 
     // Render
     return (
@@ -17,7 +18,7 @@ const Title = ({ title, description, isDashboard }) => {
                 {
                     isDashboard && (
                         <Link 
-                            to={isProyect ? '/add-proyect' : '/add-task'}
+                            to={isProyect ? '/add-proyect' : `/add-task/${proyectId}`}
                             className="button"
                         >Add{isProyect ? 'Proyect' : 'Task'}</Link>
                     )  

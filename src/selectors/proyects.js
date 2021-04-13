@@ -1,7 +1,7 @@
-const getVisibleProyects = (proyects, { searchText, sortBy }) => {
+const getFilteredProyects = (proyects, textFilter, sortBy) => {
     return proyects
-        // Get filtered proyects by searchText
-        .filter(proyect => proyect.name.toLowerCase().includes(searchText.toLowerCase()))
+        // Get filtered proyects by textFilter
+        .filter(proyect => proyect.name.toLowerCase().includes(textFilter.toLowerCase()))
         // Order proyects by criteria
         .sort((a, b) => {
             if(sortBy === 'name') {
@@ -11,4 +11,4 @@ const getVisibleProyects = (proyects, { searchText, sortBy }) => {
     
 }
 
-export default getVisibleProyects
+export default getFilteredProyects

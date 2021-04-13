@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import moment from 'moment'
+import DashboardContext from '../../contexts/dashboard-context'
 import CalenderCell from './CalendarCell'
 import CalendarWeekItemRow from './CalendarWeekItemRow'
 import CalendarWeekRow from './CalendarWeekRow'
 
 const CellsList = ({ currentMonth }) => {
-    // State
-    // const [ selectedDate , setSelectedDate ] = useState(new Date())
-    const proyects = useSelector(state => state.proyects)
+    // 1. Data
+    const isProyect = useContext(DashboardContext)
+    const items = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
 
-    // Varialbes
+    // console.log(items)
+
+    // 2. Varialbes
     const monthStart = moment(currentMonth).startOf('month')
     const monthEnd = moment(currentMonth).endOf('month')
     const startDate = moment(monthStart).startOf('week')
@@ -21,11 +24,11 @@ const CellsList = ({ currentMonth }) => {
     let days = []
     let day = startDate
     
-    // Render
+    // 3. Render
     while (day <= endDate) {
         const weekStart = moment(day)
         const weekEnd = moment(weekStart).endOf('week')
-        const weekItems = proyects.filter(proyect => 
+        const weekItems = items.filter(proyect => 
             moment(proyect.startDate).isBetween(weekStart, weekEnd)
             || moment(proyect.endDate).isBetween(weekStart, weekEnd)
         )

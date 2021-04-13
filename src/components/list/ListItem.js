@@ -8,7 +8,7 @@ import { setProyectId } from '../../actions/id'
 import DashboardContext from '../../contexts/dashboard-context'
 
 const ListItem = ({ id, name, status, invoice = undefined }) => {
-    // Variavles
+    // Variables
     const isProyect = useContext(DashboardContext)
     const dispatch = useDispatch()
     const history = useHistory()
@@ -25,6 +25,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
         )
 
     const onChangeDropdownVisibility = (e) => {
+        e.stopPropagation()
         const dropdownContent = e.target.nextSibling
         dropdownContent.classList.toggle('visible')
     }
@@ -58,7 +59,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
                 {name}
             </Link>
 
-            { isProyect && <p className={`list__status list__status--${status}`}>{status}</p> }
+            <p className={`list__status list__status--${status}`}>{status}</p>
 
             { isProyect && <p className="list__invoice">{invoice}</p> }
 
@@ -66,8 +67,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
 
                 <div 
                     className="list__dropdown-button" 
-                    onMouseEnter={onChangeDropdownVisibility}
-                    /*onMouseLeave={onChangeDropdownVisibility}*/
+                    onClick={onChangeDropdownVisibility}                    
                 >
                     <i className="fas fa-sliders-h"></i>
                     <i className="fas fa-sort-down"></i>
