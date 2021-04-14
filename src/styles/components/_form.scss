@@ -11,7 +11,7 @@
 }
 
 .form__wrapper {
-    @include settings.flex(wrap, stretch, space-between);
+    @include settings.flex(wrap, baseline, space-between);
     // border-radius: settings.$border-radius;
     // box-shadow: settings.$box-shadow;
     // padding: settings.$s-size settings.$m-size;
@@ -19,7 +19,7 @@
 
 // Elements
 %form__item {
-    border-bottom: 1px solid settings.$light-gray;
+    border-bottom: 1px solid settings.$gray;
     border-left: 0;
     border-right: 0;
     border-top: 0;
@@ -27,6 +27,10 @@
     height: settings.$xl-size;
     margin-bottom: 1.6rem;
     padding: settings.$xs-size 0;
+
+    &::placeholder {
+        color: settings.$dark-gray;
+    }
 }
 
 // Login form ------------
@@ -59,6 +63,7 @@
 
 .form__item--status {
     @extend %form__item;
+    color: settings.$dark-gray;
 }
 
 .form__item--invoice {
@@ -67,25 +72,28 @@
 }
 
 .DateRangePicker {
-    @extend %form__item;
+    border-bottom: 1px solid settings.$gray;
     flex-basis: 48%;
 }
 
-.DateRangePickerInput {
-    border: 0;
-    padding: 0;
+.DateRangePickerInput__withBorder {
+    border: none;
     width: 100%;
 }
 
 .DateInput_input {
     font-size: settings.$text-normal;
-    padding: 0;
-    border-bottom: 0;
+    font-weight: normal;
 }
 
 .form__item--color {
     @extend %form__item;
+    color: settings.$dark-gray;
     flex-basis: 48%;
+
+    input {
+        margin-left: 10px;
+    }
 }
 
 .form__item--description {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import moment from 'moment'
+import { v4 as uuidv4 } from 'uuid'
 // React dates
 import { DateRangePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css' // CSS
@@ -10,9 +11,9 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
     const [ name, setName ] = useState(item ? item.name : '')
     const [ status, setStatus ] = useState(item ? item.status : '')
     const [ invoice, setInvoice ] = useState(item ? item.invoice : '')
-    const [ startDate, setStartDate ] = useState(item ? moment(item.startDate) : moment())
-    const [ endDate, setEndDate ] = useState(item ? moment(item.endDate) : moment())
-    const [ color, setColor ] = useState(item ? item.color : '')
+    const [ startDate, setStartDate ] = useState(item ? moment(item.startDate) : null)
+    const [ endDate, setEndDate ] = useState(item ? moment(item.endDate) : null)
+    const [ color, setColor ] = useState(item ? item.color : '#87cefa')
     const [ description, setDescription ] = useState(item ? item.description : '')
     const [ calendarFocused, setCalendarFocused ] = useState(null)
     const [ errorMessage, setErrorMessage ] = useState('')
@@ -21,8 +22,6 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
         flexBasis: isProyect ? '48%' : '100%',
         marginRight: isProyect ? '4%' : '0',
     }
-
-    console.log(proyectId)
 
     // Events
     const onNameChange = (e) => {
@@ -56,25 +55,23 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
 
     const onChildFromSubmit = (e) => {
         e.preventDefault()
-
-        const commonItem = {
-            name,
-            status,
-            startDate: startDate.startOf('day').valueOf(),
-            endDate: endDate.startOf('day').valueOf(),
-            color,
-            description,
-        }
-
-        const proyectItem = { ...commonItem, invoice }
-        const taskItem = proyectId ? { ...commonItem, proyectId } : commonItem
         
-        if (name && status && startDate && endDate && color) {
+        if (name && status && startDate && endDate) {
+            const commonItem = {
+                name,
+                status,
+                startDate: startDate.startOf('day').valueOf(),
+                endDate: endDate.startOf('day').valueOf(),
+                color,
+                description,
+            }
+            const proyectItem = { ...commonItem, invoice }
+            const taskItem = proyectId ? { ...commonItem, proyectId } : commonItem
+
             setErrorMessage('')
-            
             onParentFormSubmit((isProyect ? proyectItem : taskItem)) 
         } else {
-            setErrorMessage('Please provide title, status, dates and color for your proyect')
+            setErrorMessage('Please provide dates')
         }
     }
 
@@ -91,6 +88,7 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
                         value={name}
                         placeholder="Name"
                         onChange={onNameChange}
+                        required
                     />
 
                     <select 
@@ -98,6 +96,7 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
                         style={statusStyle}
                         value={status}
                         onChange={onStatusChange}
+                        required
                     >
                         <option defaultValue value="">Select status</option>
                         <option value="todo">To do</option>
@@ -117,19 +116,19 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
                     
                     <DateRangePicker 
                         startDate={startDate}
-                        startDateId={startDate.valueOf().toString()}
+                        startDateId={'mock-id-1'}
                         endDate={endDate}
-                        endDateId={endDate.valueOf().toString()}
+                        endDateId={'mock-id-2'}
                         onDatesChange={onDatesChange}
                         focusedInput={calendarFocused}
                         onFocusChange={onFocusChange}
-                        showClearDates={true}
+                        // showClearDates={true}
                         numberOfMonths={1}
                         isOutsideRange={() => false}
                     />
 
                     <label className="form__item--color"> 
-                        {isProyect ? 'Proyect' : 'Task'} color:
+                        Choose {isProyect ? 'proyect' : 'task'} color:
                         <input 
                             type="color" 
                             value={color}
