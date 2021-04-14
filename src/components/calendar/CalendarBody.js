@@ -9,7 +9,7 @@ import CalendarWeekRow from './CalendarWeekRow'
 const CellsList = ({ currentMonth }) => {
     // 1. Data
     const isProyect = useContext(DashboardContext)
-    const items = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
+    const itemsData = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
 
     // console.log(items)
 
@@ -28,7 +28,7 @@ const CellsList = ({ currentMonth }) => {
     while (day <= endDate) {
         const weekStart = moment(day)
         const weekEnd = moment(weekStart).endOf('week')
-        const weekItems = items.filter(proyect => 
+        const weekItems = itemsData.filter(proyect => 
             moment(proyect.startDate).isBetween(weekStart, weekEnd)
             || moment(proyect.endDate).isBetween(weekStart, weekEnd)
         )
