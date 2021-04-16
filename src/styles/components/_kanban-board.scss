@@ -42,6 +42,12 @@
     display: block;
     margin: 12px 16px;
     padding: 12px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
+        transform: translate(0px, -2px);
+    }
 }
 
 .kanban__item__title,

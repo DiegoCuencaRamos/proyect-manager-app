@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setProyectId } from '../../actions/id'
-import DashboardContext from '../../contexts/dashboard-context'
+import { ProjectContext } from '../../contexts/ProjectContext'
 
 const KanbanItem = ({ id, name, description, invoice = undefined }) => {
     // Variables
     const dispatch = useDispatch()
-    const isProyect = useContext(DashboardContext)
+    const isProyect = useContext(ProjectContext)
     const itemDescription = description.length <= 55 ? description : description.slice(0, 55) + '...'
 
     // Events

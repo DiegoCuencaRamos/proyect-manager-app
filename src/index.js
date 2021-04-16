@@ -36,13 +36,13 @@ auth.onAuthStateChanged(firebaseUser => {
     if(firebaseUser) {
         // TODO: check and prevent for same users login with diferent methods
         store.dispatch(login(firebaseUser.uid))
-        store.dispatch(startSetProyects())
-            .then(() => {
-                store.dispatch(startSetTasks())
-            })
-            .then(() => {
-                renderApp()
-            })
+        Promise.all([
+            store.dispatch(startSetProyects()),
+            store.dispatch(startSetTasks())
+        ]).then(() => {
+            renderApp()
+        })
+   
     } else {
         store.dispatch(logout())
         renderApp()

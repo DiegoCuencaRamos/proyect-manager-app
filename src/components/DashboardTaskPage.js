@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Title from './Title'
-import LayoutSelectors from './LayoutSelectors'
+import LayoutSelectors from './LayoutSelectors/LayoutSelectors'
 import ItemsLayout from './ItemsLayout'
 
 const DashboardTasktPage = () => {

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import DashboardContext from '../../contexts/dashboard-context';
+import { ProjectContext } from '../../contexts/ProjectContext'
 import KanbanItem from './KanbanItem'
 
 const KanbanBoardBody = ({ status }) => {
     // Variables
-    const isProyect = useContext(DashboardContext)
+    const isProyect = useContext(ProjectContext)
     const items = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
 
     

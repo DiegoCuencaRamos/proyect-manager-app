@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import DashboardContext from '../contexts/dashboard-context'
+import { ProjectContext } from '../contexts/ProjectContext'
 
 const Title = ({ title, description, isDashboard }) => {
     // Variables
-    const isProyect = useContext(DashboardContext)
+    const isProyect = useContext(ProjectContext)
     const proyectId = isProyect ? null : useParams().proyectId
 
     // Render

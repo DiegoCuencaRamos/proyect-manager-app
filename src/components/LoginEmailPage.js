@@ -46,7 +46,7 @@ const LoginEmailPage = () => {
             <div className="container">
                 <h1>Login with your email</h1>
                 <h5>Please provide email and password</h5>
-                {errorMessage && <p className="error-massage">{errorMessage}</p>}
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <form className="email-form__wrapper">
                     <input
                         id="txtEmail" 

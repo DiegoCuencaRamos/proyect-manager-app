@@ -124,30 +124,31 @@ a.list__invoide {
     padding: 5px 10px;
     border-radius: settings.$border-radius;
     box-shadow: settings.$box-shadow;
-}
+    transition: all 0.2s ease-in-out;
 
-.list__dropdown-button * {
-    pointer-events: none;
-}
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 3px 9px rgb(0 0 0 / 40%);
+    }
 
+    * {
+        pointer-events: none;
+    }
 
-.list__dropdown-button svg:nth-child(1) {
-    margin-right: 5px;
+    svg:nth-child(1) {
+        margin-right: 5px;
+    }
 }
 
 .list__dropdown-content {
-    display: none;
+    background-color: #ffffff;
     border-radius: settings.$border-radius;
     box-shadow: settings.$box-shadow;
-    text-align: left;
-}
-
-.visible {
-    background-color: #fff;
-    color: #000;
+    color: #000000;
     display: block;
     position: absolute;
-    z-index: 1000;  
+    text-align: left;
+    z-index: 1000; 
 }
 
 .list__dropdown-content ul {

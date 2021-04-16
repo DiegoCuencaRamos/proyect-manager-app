@@ -1,19 +1,16 @@
 import React, { useContext } from 'react'
-import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { startRemoveProyect } from '../../actions/proyect'
-import { startRemoveProyectTasks, startRemoveTask } from '../../actions/task'
 import { setProyectId } from '../../actions/id'
-import DashboardContext from '../../contexts/dashboard-context'
+import { ProjectContext } from '../../contexts/ProjectContext'
+import ListDropdown from './ListDropdown'
 
 const ListItem = ({ id, name, status, invoice = undefined }) => {
-    // Variables
-    const isProyect = useContext(DashboardContext)
+    // 1. Variables
+    const isProyect = useContext(ProjectContext)
     const dispatch = useDispatch()
-    const history = useHistory()
 
-    // Events
+    // 2. Events
     const onItemClicked = isProyect 
         ?  (
             (e) => {
@@ -24,32 +21,10 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
             undefined
         )
 
-    const onChangeDropdownVisibility = (e) => {
-        e.stopPropagation()
-        const dropdownContent = e.target.nextSibling
-        dropdownContent.classList.toggle('visible')
-    }
-
-    const onEditButtonClicked = (e) => {
-        const id = e.target.dataset.id
-        history.push(isProyect ? `/edit-proyect/${id}` : `/edit-task/${id}`)
-    }
-
-    const onRemoveButtonClicked = (e) => {
-        const id = e.target.dataset.id
-        
-        if(isProyect) {
-            dispatch(startRemoveProyect(id))
-            dispatch(startRemoveProyectTasks(id))
-        } else {
-            dispatch(startRemoveTask(id))
-        }
-    }
-
-    // Render
+    // 3. Render
     return (
         <div key={id} className="list__body-item">
-            
+
             <Link 
                 className="list__name"
                 to={isProyect ? `/proyect/${id}` : `/task/${id}`}
@@ -63,36 +38,7 @@ const ListItem = ({ id, name, status, invoice = undefined }) => {
 
             { isProyect && <p className="list__invoice">{invoice}</p> }
 
-            <div className="list__dropdown">
-
-                <div 
-                    className="list__dropdown-button" 
-                    onClick={onChangeDropdownVisibility}                    
-                >
-                    <i className="fas fa-sliders-h"></i>
-                    <i className="fas fa-sort-down"></i>
-                </div>    
-
-                <div className="list__dropdown-content">
-                    <ul>
-                        <li 
-                            className="editBtn"
-                            data-id={id} 
-                            onClick={onEditButtonClicked}
-                        >
-                            Edit
-                        </li>
-
-                        <li 
-                            className="removeBtn"
-                            data-id={id}
-                            onClick={onRemoveButtonClicked}
-                        >
-                            Remove
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ListDropdown id={id} />
         </div>
     )
 }

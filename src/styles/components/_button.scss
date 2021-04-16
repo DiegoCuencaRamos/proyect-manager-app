@@ -9,35 +9,36 @@
     font-size: 1.7rem;
     line-height: settings.$xl-size;
     padding: 0 settings.$m-size;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .button {
     @extend %default-button;
     background-color: #000;
-}
 
-.button:hover {
-    background-color: settings.$blue;
+    &:hover {
+        box-shadow: 0 3px 9px rgb(0 0 0 / 40%);
+        transform: translate(0px, -2px);
+    }
 }
 
 .button--link {
     @extend %default-button;
     background-color: initial;
-}
 
-.button--link:hover {
-    background-color: initial;
-    text-decoration: underline;
+    &:hover {
+        background-color: initial;
+        text-decoration: underline;
+    }
 }
 
 .button--remove {
     @extend %default-button;
     background-color: settings.$dark-gray;
-}
 
-.button--remove:hover {
-    background-color: settings.$purple;
+    &:hover {
+        background-color: settings.$purple;
+    }
 }
 
 // Social button
@@ -52,7 +53,13 @@
     margin-bottom: settings.$s-size;
     margin-left: auto;
     margin-right: auto;
+    transition: all 0.2s ease-in;
     width: 270px;
+
+    &:hover {
+        box-shadow: 0 3px 9px rgb(0 0 0 / 40%);;
+        transform: translate(0px, -2px);
+    }
 
     svg {
         font-size: settings.$m-size;

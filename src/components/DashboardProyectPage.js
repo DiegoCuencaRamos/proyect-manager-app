@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
+import ProjectContextProvider from '../contexts/ProjectContext'
 import Title from './Title'
 import ItemsLayout from './ItemsLayout'
-import DashboardContext from '../contexts/dashboard-context'
-import LayoutSelectors from './LayoutSelectors'
+import LayoutSelectors from './LayoutSelectors/LayoutSelectors'
 
 const DashboardProyectPage = () => {
-    // Variables
-    const isProyect = true
+    // State
     const [ layout, setLayout ] = useState('list')
 
     // Events
@@ -16,7 +15,7 @@ const DashboardProyectPage = () => {
 
     // Render
     return (
-        <DashboardContext.Provider value={{ isProyect }}>
+        <ProjectContextProvider>
             <section>
                 <Title 
                     title={'Proyect Dashboard'} 
@@ -26,7 +25,7 @@ const DashboardProyectPage = () => {
                 <LayoutSelectors handleLayoutChange={handleLayoutChange} />
                 <ItemsLayout layout={layout} />
             </section>
-        </DashboardContext.Provider>
+        </ProjectContextProvider>
     )
 }
 

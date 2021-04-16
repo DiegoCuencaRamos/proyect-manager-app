@@ -1,21 +1,18 @@
 import React from 'react'
 import List from './list/List'
-import KanbanBoard from './kanban/KanbanBoard'
 import Calendar from './calendar/Calendar'
+import KanbanBoard from './kanban/KanbanBoard'
+
 
 const ItemsLayout = ({ layout = '' }) => {
-    // Variables
-    let itemsLayoutComponent
-
+    // Render
     if (layout === 'list') {
-        itemsLayoutComponent = <List />
+        return <List />
     } else if (layout === 'calendar') {
-        itemsLayoutComponent = <Calendar />
+        return <Calendar />
     } else if (layout === 'kanban') {
-        itemsLayoutComponent = <KanbanBoard />
+        return <KanbanBoard />
     }
-
-    return itemsLayoutComponent
 }
 
 export default ItemsLayout

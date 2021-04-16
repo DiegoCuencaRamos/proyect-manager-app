@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import moment from 'moment'
-import DashboardContext from '../../contexts/dashboard-context'
+import DashboardContext from '../../contexts/ProjectContext'
 import CalenderCell from './CalendarCell'
 import CalendarWeekItemRow from './CalendarWeekItemRow'
 import CalendarWeekRow from './CalendarWeekRow'

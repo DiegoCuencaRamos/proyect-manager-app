@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import DashboardContext from '../../contexts/dashboard-context'
+import DashboardContext from '../../contexts/ProjectContext'
 
 const ListHeader = ({ onSortByChange }) => {
     // Variables

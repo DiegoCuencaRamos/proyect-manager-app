@@ -32,6 +32,10 @@
         pointer-events: none;
     }
 
+    span {
+        text-transform: capitalize;
+    }
+
     svg {
         margin-right: 10px;
     }
