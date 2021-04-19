@@ -6,7 +6,7 @@
 }
 
 .page-header__wrapper {
-    @include settings.flex(wrap, flex-end, space-between)
+    @include settings.flex(wrap, flex-end, space-between);
 }
 
 .page-header__title {
@@ -15,5 +15,5 @@
 
 .page-header__text {
     font-size: settings.$text-small;
-    margin: 0
+    margin: 0;
 }

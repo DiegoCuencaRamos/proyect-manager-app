@@ -15,11 +15,12 @@
 
 // Items
 .layout-selector__item {
-    border-right: 1px solid settings.$light-gray;
+    border-right: settings.$border;
     cursor: pointer;
     padding: settings.$s-size settings.$m-size;
     transition: 0.2s background ease-in;
     width: 100%;
+    
     @media screen and (min-width: settings.$tablet-breakpoint) {
         width: auto;
     }

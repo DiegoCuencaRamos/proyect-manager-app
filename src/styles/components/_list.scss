@@ -20,6 +20,7 @@
     @extend %gradient-background;
     @extend %list__header ;
 }
+
 .list__task-table .list__header {
     @extend %gradient-task-background;
     @extend %list__header;
@@ -42,18 +43,14 @@
 
 .list__body-item {
     @extend %list__item;
-    color: #000000;
+    border-bottom: 1px solid settings.$light-gray;
+    color: settings.$dark-gray;
     font-size: 14px;
 }
 
 .list__header-item {
     @extend %list__item;
     color: #ffffff;
-}
-
-.list__body-item {
-    border-bottom: 1px solid settings.$light-gray;
-    color: settings.$dark-gray;
 }
 
 // Text
@@ -97,7 +94,7 @@ a.list__invoide {
     width: 25%;
 }
 
-/*.list__status--todo {
+.list__status--todo {
     color: lighten(settings.$red, 0%);
 }
 
@@ -107,7 +104,7 @@ a.list__invoide {
 
 .list__status--done {
     color: lighten(settings.$green, 0%);
-}*/
+}
 
 .list__invoice {
     width: 15%;

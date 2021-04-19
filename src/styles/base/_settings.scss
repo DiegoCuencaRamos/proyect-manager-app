@@ -1,6 +1,8 @@
-// Font sizes
+// Fonts
 $text-normal: 1.6rem;
 $text-small: 1.4rem;
+$text-light: 200;
+
 
 // Spacings
 $xs-size: 1.2rem;
@@ -59,5 +61,6 @@ $light-gray: lighten(black, 90%);
 // Box shadow
 $box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
 
-// Border radius
+// Borders
+$border: 1px solid $light-gray;
 $border-radius: 5px;
