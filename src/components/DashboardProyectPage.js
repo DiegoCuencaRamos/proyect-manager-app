@@ -16,15 +16,13 @@ const DashboardProyectPage = () => {
     // Render
     return (
         <ProjectContextProvider>
-            <section>
-                <Title 
-                    title={'Proyect Dashboard'} 
-                    description={'From here you will be able to visualice all your proyects'}
-                    isDashboard={true}
-                />
-                <LayoutSelectors handleLayoutChange={handleLayoutChange} />
-                <ItemsLayout layout={layout} />
-            </section>
+            <Title 
+                title={'Proyect Dashboard'} 
+                description={'From here you will be able to visualice all your proyects'}
+                isDashboard={true}
+            />
+            <LayoutSelectors handleLayoutChange={handleLayoutChange} />
+            <ItemsLayout layout={layout} />
         </ProjectContextProvider>
     )
 }

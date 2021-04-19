@@ -9,12 +9,12 @@ const Title = ({ title, description, isDashboard }) => {
 
     // Render
     return (
-        <div className="page-header">
+        <section className="page-header">
             <div className="container page-header__wrapper">
-                <div>
+                <article>
                     <h1 className="page-header__title">{title}</h1>
                     <p className="page-header__text">{description}</p>
-                </div>
+                </article>
                 {
                     isDashboard && (
                         <Link 
@@ -24,7 +24,7 @@ const Title = ({ title, description, isDashboard }) => {
                     )  
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

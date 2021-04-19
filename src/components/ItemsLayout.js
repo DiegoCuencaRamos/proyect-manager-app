@@ -4,7 +4,6 @@ import List from './list/List'
 import Calendar from './calendar/Calendar'
 import KanbanBoard from './kanban/KanbanBoard'
 
-
 const ItemsLayout = ({ layout = '' }) => {
     // Render
     if (layout === 'list') {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom'
 import Title from './Title'
@@ -6,10 +6,10 @@ import { startEditTask } from '../actions/task'
 import ItemForm from './Form'
 
 const EditTaskPage = () => {
-    // 1. Hooks
+    // 1. Varaibles
     const history = useHistory()
     const dispatch = useDispatch()
-    // 2. Data
+    // 2. Task data
     const tasks = useSelector(state => state.tasks)
     const { taskId } = useParams()
     const task = tasks.find(task => task.id === taskId)
@@ -22,7 +22,7 @@ const EditTaskPage = () => {
 
     // 4. Render
     return(
-        <section>
+        <Fragment>
             <Title
                 title={'Edit task'}
                 description={'Edit your current task'}
@@ -32,7 +32,7 @@ const EditTaskPage = () => {
                 item={task}
                 onParentFormSubmit={onParentFormSubmit}
             />
-        </section>
+        </Fragment>
     )
 }
 

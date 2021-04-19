@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import Title from './Title'
 import LayoutSelectors from './LayoutSelectors/LayoutSelectors'
 import ItemsLayout from './ItemsLayout'
@@ -14,7 +14,7 @@ const DashboardTasktPage = () => {
 
     // Render
     return (
-        <section>
+        <Fragment>
             <Title 
                 title={'Task Dashboard'} 
                 description={'From here you will be able to visualize your task with in the chosen proyect'}
@@ -22,7 +22,7 @@ const DashboardTasktPage = () => {
             />
             <LayoutSelectors handleLayoutChange={handleLayoutChange} />
             <ItemsLayout layout={layout} />
-        </section>
+        </Fragment>
 )}
 
 export default DashboardTasktPage

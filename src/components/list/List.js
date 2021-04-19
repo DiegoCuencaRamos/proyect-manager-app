@@ -23,7 +23,7 @@ const List = () => {
 
     // 5. Render
     return (
-        <div className="list">
+        <section className="list">
             <div className="container">
                 <ListFilters />
                 <ListTable 
@@ -34,7 +34,7 @@ const List = () => {
                     pageNeighbours={1}
                 />
             </div>
-        </div>
+        </section>
     )
 }
 

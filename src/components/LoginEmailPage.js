@@ -3,17 +3,17 @@ import { useDispatch } from 'react-redux'
 import { startEmailLogin, startEmailSignUp } from '../actions/auth'
 
 const LoginEmailPage = () => {
-    // Variables
-    const dispatch = useDispatch()
+    // 1. State
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ errorMessage, setErrorMessage ] = useState('')
-
+    // 2. Variables
+    const dispatch = useDispatch()
     const emailIsValid = (email) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     }
 
-    // Events
+    // 3. vents
     const onEmailChange = (e) => {
         const value = e.target.value
         setEmail(value)
@@ -41,6 +41,7 @@ const LoginEmailPage = () => {
         }
     }
 
+    // 4. Render
     return (
         <section className="email-login-page">
             <div className="container">

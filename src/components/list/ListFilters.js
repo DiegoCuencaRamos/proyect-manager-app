@@ -11,19 +11,15 @@ const ListFilters = () => {
 
     // Render
     return (
-        <section className="filters">
-            <div className="container">
-                <div className="filters__content">
-                    <input 
-                        className="filters__item"
-                        type="text"
-                        placeholder="Search"
-                        value={textFilter}
-                        onChange={onTextChange}
-                    />                       
-                </div>
-            </div>
-        </section>
+        <div className="filters">
+                <input 
+                    className="filters__item"
+                    type="text"
+                    placeholder="Search"
+                    value={textFilter}
+                    onChange={onTextChange}
+                />                       
+        </div>
     )
 }
 

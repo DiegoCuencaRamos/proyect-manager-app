@@ -12,9 +12,6 @@
 
 .form__wrapper {
     @include settings.flex(wrap, baseline, space-between);
-    // border-radius: settings.$border-radius;
-    // box-shadow: settings.$box-shadow;
-    // padding: settings.$s-size settings.$m-size;
 }
 
 // Elements

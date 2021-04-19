@@ -18,6 +18,7 @@ const ReadTaskPage = () => {
                 <Link to="/dashboard">Go back to home page</Link>
             </div>
         </section>
-)}
+    )
+}
 
 export default ReadTaskPage

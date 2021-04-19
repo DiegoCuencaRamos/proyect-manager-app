@@ -9,10 +9,10 @@ import {
 } from '../actions/auth'
 
 export const LoginPage = () => {
-    // Variables
+    // 1. Dispatch
     const dispatch = useDispatch()
 
-    // Events
+    // 2. Events
     const onGoogleLogin = () => {
         dispatch(startGoogleLogin())
     }
@@ -29,7 +29,7 @@ export const LoginPage = () => {
         dispatch(startGithubLogin())
     }
 
-    // Render
+    // 3. Render
     return (
         <section className="login-layout">
             <div className="login-layout__box">

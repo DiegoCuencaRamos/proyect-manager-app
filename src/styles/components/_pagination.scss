@@ -2,12 +2,7 @@
 
 .pagination {
     @include settings.flex(wrap, center, space-between);
-    padding: settings.$s-size settings.$m-size;
-}
-
-.pagination__limit,
-.pagination__pages {
-    padding: 0 settings.$xs-size;
+    padding: settings.$s-size 0;
 }
 
 .pagination__pages ul {

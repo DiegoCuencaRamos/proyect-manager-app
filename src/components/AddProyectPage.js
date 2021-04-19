@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { startAddProyect } from '../actions/proyect'
@@ -6,19 +6,19 @@ import Title from './Title'
 import ItemForm from './Form'
 
 const AddProyectPage = () => {
-    // Variables
+    // 1. Variables
     const dispatch = useDispatch()
     const history = useHistory()
 
-    // Events
+    // 2. Events
     const onParentFormSubmit = (proyect) => {
         dispatch(startAddProyect(proyect))
         history.push('/dashboard')
     } 
 
-    // Render
+    // 3. Render
     return (
-        <section>
+        <Fragment>
             <Title
                 title={'Add proyect'}
                 description={'Add new proyects to your new proyect manager'}
@@ -27,7 +27,7 @@ const AddProyectPage = () => {
                 isProyect={true}
                 onParentFormSubmit={onParentFormSubmit}
             />
-        </section>
+        </Fragment>
     )
 }
 
