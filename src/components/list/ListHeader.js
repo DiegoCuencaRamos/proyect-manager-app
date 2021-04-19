@@ -3,11 +3,11 @@ import { ProjectContext } from '../../contexts/ProjectContext'
 import { ListContext } from '../../contexts/ListContext'
 
 const ListHeader = () => {
-    // Variables
+    // 1. Variables
     const isProyect = useContext(ProjectContext)
     const { setSortBy } = useContext(ListContext)
 
-    // Events
+    // 2. Events
     const onSortByName = () => {
         setSortBy('name')
     }
@@ -16,7 +16,7 @@ const ListHeader = () => {
         setSortBy('invoice')
     }   
 
-    // Render
+    // 3. Render
     return (
         <div className="list__header">
             <div className="list__header-item">

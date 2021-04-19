@@ -7,7 +7,7 @@ const ListTable = ({ filteredItems }) => {
     // 1. Context
     const isProyect = useContext(DashboardContext)    
     
-    // 3. Render
+    // 2. Render
     return (
         <div className={isProyect ? "list__proyect-table" : "list__task-table"}>
             <ListHeader />
