@@ -3,10 +3,10 @@ import KanbanBoardHeader from './KanbanBoardHeader';
 import KanbanBoardBody from './KanbanBoardBody';
 
 const KanbanBoard = () => {
-    // Variables
+    // 1. Variables
     const statuses =  ['todo', 'doing', 'done']
      
-    // Render
+    // 2. Render
     return (
         <section className="kanban">
             <div className="container">
