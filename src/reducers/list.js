@@ -1,11 +1,4 @@
-const inicialState = {
-    textFilter: '',
-    sortBy: '',
-    currentPage: 1,
-    pageLimit: 5
-}
-
-const listReducer = (state = inicialState, action) => {
+const listReducer = (state, action) => {
     switch (action.type) {
         case 'list/setTextFilter':
             return {

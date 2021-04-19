@@ -8,7 +8,7 @@ const setSortBy = sortBy => ({
     payload: sortBy
 })
 
-const setCurrectPage = currentPage => ({
+const setCurrentPage = currentPage => ({
     type: 'list/setCurrentPage',
     payload: currentPage
 })
@@ -21,6 +21,6 @@ const setPageLimit = pageLimit => ({
 export {
     setTextFilter,
     setSortBy,
-    setCurrectPage,
+    setCurrentPage,
     setPageLimit
 }

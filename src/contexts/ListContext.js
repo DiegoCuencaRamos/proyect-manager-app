@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useReducer } from 'react'
+// Reducer
+import listReducer from '../reducers/list'
 // Actions
 import {
     setTextFilter,
     setSortBy,
-    setCurrectPage,
+    setCurrentPage,
     setPageLimit
 } from '../actions/list'
 
 const ListContext = React.createContext()
 
-const ListContextProvider = ({ state, dispatch, children }) => {
+const inicialState = {
+    textFilter: '',
+    sortBy: '',
+    currentPage: 1,
+    pageLimit: 5
+}
+
+const ListContextProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(listReducer, inicialState)
+    
     // 1. Dispatchs functions
     const setTextFilterFunc = text => {
         dispatch(setTextFilter(text))
@@ -20,7 +31,7 @@ const ListContextProvider = ({ state, dispatch, children }) => {
     }
 
     const setCurrentPageFunc = currentPage => {
-        dispatch(setCurrectPage(currentPage))
+        dispatch(setCurrentPage(currentPage))
     }
 
     const setPageLimitFunc = pageLimit => {
@@ -34,7 +45,7 @@ const ListContextProvider = ({ state, dispatch, children }) => {
         sortBy: state.sortBy,
         setSortBy: setSortByFunc,
         currentPage: state.currentPage,
-        setCurrectPage: setCurrentPageFunc,
+        setCurrentPage: setCurrentPageFunc,
         pageLimit: state.pageLimit,
         setPageLimit: setPageLimitFunc
     }
