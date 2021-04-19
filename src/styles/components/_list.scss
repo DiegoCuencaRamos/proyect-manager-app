@@ -11,10 +11,18 @@
     box-shadow: settings.$box-shadow;
 }
 
-.list__header {
-    @extend %gradient-background;
+%list__header {
     border-top-left-radius: settings.$border-radius;
     border-top-right-radius: settings.$border-radius;
+}
+
+.list__proyect-table .list__header  {
+    @extend %gradient-background;
+    @extend %list__header ;
+}
+.list__task-table .list__header {
+    @extend %gradient-task-background;
+    @extend %list__header;
 }
 
 .list__header,

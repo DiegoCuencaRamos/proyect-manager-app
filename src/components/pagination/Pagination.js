@@ -5,14 +5,11 @@ import PaginationFiter from './PaginationFiter'
 import PaginationPages from './PaginationPages'
 
 const Pagination = ({ totalItems, pageNeighbours}) => {
-    const {
-        pageLimit,
-        currentPage,
-    } = useContext(ListContext)
-
+    // 1. Variables
+    const { pageLimit, currentPage } = useContext(ListContext)
     const totalPages = Math.ceil(totalItems / pageLimit)
 
-    // 1. Get pages Array
+    // 2. Get pages Array
     const getArrayPages = () => {
         const totalNumbers = (pageNeighbours * 2) + 3 // pageNeighbours + (currentPage + startPage + endPage)
         const totalBlocks = totalNumbers + 2 // For arrows
@@ -47,7 +44,7 @@ const Pagination = ({ totalItems, pageNeighbours}) => {
 
     const pages = getArrayPages()
 
-    // 2. Render
+    // 3. Render
     return (
         <div className="pagination">
             <PaginationFiter />

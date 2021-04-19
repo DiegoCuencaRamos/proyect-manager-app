@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import DashboardContext from '../../contexts/ProjectContext'
+import { ProjectContext } from '../../contexts/ProjectContext'
 import ListHeader from './ListHeader'
 import ListBody from './ListBody'
 
 const ListTable = ({ filteredItems }) => {
     // 1. Context
-    const isProyect = useContext(DashboardContext)    
+    const isProyect = useContext(ProjectContext)    
     
     // 2. Render
     return (

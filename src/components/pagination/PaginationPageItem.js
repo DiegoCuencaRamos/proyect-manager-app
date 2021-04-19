@@ -2,11 +2,8 @@ import React, { useContext } from 'react'
 import { ListContext } from '../../contexts/ListContext'
 
 const PaginationPageItem = ({ page, totalPages, pageNeighbours}) => {
-    // 1. Variables
-    const {
-        currentPage,
-        setCurrentPage
-    } = useContext(ListContext)
+    // 1. Context
+    const { currentPage, setCurrentPage } = useContext(ListContext)
     
     // 2.Events
     const onLenftPageClick = (e) => {
