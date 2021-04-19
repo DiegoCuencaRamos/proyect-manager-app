@@ -1,17 +1,19 @@
 import React, { useContext } from 'react'
-import DashboardContext from '../../contexts/ProjectContext'
+import { ProjectContext } from '../../contexts/ProjectContext'
+import { ListContext } from '../../contexts/ListContext'
 
-const ListHeader = ({ onSortByChange }) => {
+const ListHeader = () => {
     // Variables
-    const isProyect = useContext(DashboardContext)
+    const isProyect = useContext(ProjectContext)
+    const { setSortBy } = useContext(ListContext)
 
     // Events
     const onSortByName = () => {
-        onSortByChange('name')
+        setSortBy('name')
     }
 
     const onSortByInvoice = () => {
-        onSortByChange('invoice')
+        setSortBy('invoice')
     }   
 
     // Render

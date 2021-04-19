@@ -1,23 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ListContext } from '../../contexts/ListContext'
 
-const PaginationPageItem = ({ page, currentPage, totalPages, pageNeighbours, onPageChange }) => {
-    // Events
+const PaginationPageItem = ({ page, totalPages, pageNeighbours}) => {
+    // 1. Variables
+    const {
+        currentPage,
+        setCurrentPage
+    } = useContext(ListContext)
+    
+    // 2.Events
     const onLenftPageClick = (e) => {
         e.preventDefault()
-        onPageChange(Math.max(1, currentPage - (pageNeighbours * 2) - 1))
+        setCurrentPage(Math.max(1, currentPage - (pageNeighbours * 2) - 1))
     }
 
     const onRightPageClick = (e) => {
         e.preventDefault()
-        onPageChange(Math.min(totalPages, currentPage + (pageNeighbours * 2) + 1))
+        setCurrentPage(Math.min(totalPages, currentPage + (pageNeighbours * 2) + 1))
     }
 
     const onPageClick = (e) => {
         e.preventDefault()
-        onPageChange(page)
+        setCurrentPage(page)
     }
 
-    // Render
+    // 3.Render
     if(page === 'left') {
         return (
             <li>

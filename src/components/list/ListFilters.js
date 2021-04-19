@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ListContext } from '../../contexts/ListContext'
 
-const ListFilters = ({ textFilter, onTextFilterChange }) => {
+const ListFilters = () => {
+    const { textFilter, setTextFilter } = useContext(ListContext)
 
     const onTextChange = (e) => {
         const text = e.target.value
-        onTextFilterChange(text)
+        setTextFilter(text)
     } 
 
     // Render

@@ -3,10 +3,12 @@ import moment from 'moment'
 
 
 const CalendarWeekDays = ({ currentMonth }) => {
+    // 1. Variables
     const dateFormat = 'dddd'
     const days = []
     let startDate = moment(currentMonth).startOf('week')
 
+    // 2. Render
     for(let i = 0; i < 7; i++) {
         days.push(
             <div className="col col-center" key={i}>

@@ -1,12 +1,18 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import { range } from './utils'
+import { ListContext } from '../../contexts/ListContext'
 import PaginationFiter from './PaginationFiter'
 import PaginationPages from './PaginationPages'
 
-const Pagination = ({ totalItems, pageLimit, pageNeighbours, onPageLimitChange, currentPage, onPageChange }) => {
+const Pagination = ({ totalItems, pageNeighbours}) => {
+    const {
+        pageLimit,
+        currentPage,
+    } = useContext(ListContext)
+
     const totalPages = Math.ceil(totalItems / pageLimit)
 
-    // Get pages Array
+    // 1. Get pages Array
     const getArrayPages = () => {
         const totalNumbers = (pageNeighbours * 2) + 3 // pageNeighbours + (currentPage + startPage + endPage)
         const totalBlocks = totalNumbers + 2 // For arrows
@@ -41,18 +47,14 @@ const Pagination = ({ totalItems, pageLimit, pageNeighbours, onPageLimitChange, 
 
     const pages = getArrayPages()
 
+    // 2. Render
     return (
         <div className="pagination">
-            <PaginationFiter
-                pageLimit={pageLimit}
-                onPageLimitChange={onPageLimitChange}
-            />
+            <PaginationFiter />
             <PaginationPages
                 pages={pages}
-                currentPage={currentPage}
                 totalPages={totalPages} 
                 pageNeighbours={pageNeighbours} 
-                onPageChange={onPageChange}
             />
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CalendarWeekItemRow = ({ spaceCountWeekData, index, item }) => {
-    // Variables
+    // 1. Variables
     const emptySpaceStyle = {
         flexBasis: `calc((100%/7) * ${spaceCountWeekData[index].emptySpaces})`
     }
@@ -11,7 +11,7 @@ const CalendarWeekItemRow = ({ spaceCountWeekData, index, item }) => {
         backgroundColor: item.color,
     }
 
-    // Render
+    // 2. Render
     return (
         <div className="row item-row">
             <div 

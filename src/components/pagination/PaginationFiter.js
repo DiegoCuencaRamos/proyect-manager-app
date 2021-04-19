@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ListContext } from '../../contexts/ListContext'
 
-const PaginationFilter = ({ pageLimit, onPageLimitChange }) => {
-    // Events
+
+const PaginationFilter = () => {
+    // 1. Variables
+    const {
+        pageLimit,
+        setPageLimit,
+    } = useContext(ListContext)
+
+    // 2. Events
     const onSelectChange = e => {
         const value = e.target.value
-        onPageLimitChange(value)
+        setPageLimit(value)
     }
 
-    // Render
+    // 3. Render
     return (
         <div className="pagination__limit">
             <select 

@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import moment from 'moment'
-import DashboardContext from '../../contexts/ProjectContext'
+import { ProjectContext } from '../../contexts/ProjectContext'
 import CalenderCell from './CalendarCell'
 import CalendarWeekItemRow from './CalendarWeekItemRow'
 import CalendarWeekRow from './CalendarWeekRow'
 
 const CellsList = ({ currentMonth }) => {
     // 1. Data
-    const isProyect = useContext(DashboardContext)
+    const isProyect = useContext(ProjectContext)
     const itemsData = useSelector(state => state[ isProyect ? 'proyects' : 'tasks' ])
-
-    // console.log(items)
 
     // 2. Varialbes
     const monthStart = moment(currentMonth).startOf('month')
