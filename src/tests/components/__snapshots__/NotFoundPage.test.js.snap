@@ -97,13 +97,13 @@ exports[`Should render NotFoundPage correctly 1`] = `
           description="The page you are looking for was not found"
           title="Page not found"
         >
-          <div
+          <section
             className="page-header"
           >
             <div
               className="container page-header__wrapper"
             >
-              <div>
+              <article>
                 <h1
                   className="page-header__title"
                 >
@@ -114,9 +114,9 @@ exports[`Should render NotFoundPage correctly 1`] = `
                 >
                   The page you are looking for was not found
                 </p>
-              </div>
+              </article>
             </div>
-          </div>
+          </section>
         </Title>
         <div
           className="container"

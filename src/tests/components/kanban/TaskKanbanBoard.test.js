@@ -1,19 +1,30 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { MemoryRouter } from 'react-router'
+import { MemoryRouter, Route } from 'react-router'
 import { Provider } from 'react-redux'
 import store from '../../../store'
 import KanbanBoard from '../../../components/kanban/KanbanBoard'
 import { tasks } from '../../fixures/tasks'
 import { addTask } from '../../../actions/task'
 
-const renderWithWrapper = () => mount(
-    <MemoryRouter initialEntries={[{ key: 'static' }]}>
-        <Provider store={store}>
-            <KanbanBoard />
-        </Provider>
-    </MemoryRouter>
-)
+const proyectId = 'p1'
+
+const renderWithWrapper = () => {
+    const inicialEntries = [{ 
+        key: 'static',
+        pathname: `/proyect/${proyectId}`
+    }]
+
+    return mount(
+        <MemoryRouter initialEntries={inicialEntries}>
+            <Route path="/proyect/:proyectId">
+                <Provider store={store}>
+                    <KanbanBoard />
+                </Provider>
+            </Route>
+        </MemoryRouter>
+    )
+}
 
 // Render
 test('Should render KanbanBoard correctly with no items', () => {
@@ -35,7 +46,7 @@ test('Should render KanbanBoard correctly with tasks', () => {
 test('Should navigate to Add Proyect Page on add new item clicked', () => {
     const wrapper = renderWithWrapper()
     wrapper.find('.kanban__board--todo #kanbanNewItem Link').simulate('click', { button: 0 })
-    expect(wrapper.find('Router').prop('history').location.pathname).toBe('/add-task')
+    expect(wrapper.find('Router').prop('history').location.pathname).toBe(`/add-task/${proyectId}`)
 })
 
 test('Should navigate to Proyect Page proyect clicked', () => {

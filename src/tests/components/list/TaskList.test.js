@@ -1,6 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router'
+import ListContextProvider from '../../../contexts/ListContext'
 import { Provider } from 'react-redux'
 import store from '../../../store'
 import List from '../../../components/list/List'
@@ -11,9 +12,11 @@ import { setProyectId } from '../../../actions/id'
 
 const renderWithWrapper = () => mount(
     <MemoryRouter initialEntries={[{ key: 'static' }]}>
-        <Provider store={store}>
-            <List />
-        </Provider>
+        <ListContextProvider>
+            <Provider store={store}>
+                <List />
+            </Provider>
+        </ListContextProvider>
     </MemoryRouter>
 )
 
@@ -52,7 +55,10 @@ describe('Should handle Task List events:', () => {
         expect(wrapper.find('Router').prop('history').location.pathname).toBe(`/task/${id}`)
     })
     
-    test('Should navigate to Edit Task Page on edit button clicked', () => {    
+    test('Should navigate to Edit Task Page on edit button clicked', () => {   
+        // Simulate dropdown-button clicked 
+        wrapper.find(`.list__body ListItem#${id} .list__dropdown-button`).simulate('click')
+        // Simulate edit button clicked 
         wrapper.find(`.list__body ListItem#${id} .editBtn`).simulate('click', {
             target: {
                 dataset: { id }

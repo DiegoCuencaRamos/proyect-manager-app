@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router'
 import { Provider } from 'react-redux'
 import store from '../../../store'
-import DashboardContext from '../../../contexts/dashboard-context'
+import ProyectContextProvider from '../../../contexts/ProjectContext'
 import KanbanBoard from '../../../components/kanban/KanbanBoard'
 import { proyects } from '../../fixures/proyects'
 import { addProyect } from '../../../actions/proyect'
@@ -11,9 +11,9 @@ import { addProyect } from '../../../actions/proyect'
 const renderWithWrapper = () => mount(
     <MemoryRouter initialEntries={[{ key: 'static' }]}>
         <Provider store={store}>
-            <DashboardContext.Provider value={{ isProyect: true }}>
+            <ProyectContextProvider>
                 <KanbanBoard />
-            </DashboardContext.Provider>
+            </ProyectContextProvider>
         </Provider>
     </MemoryRouter>
 )

@@ -1,30 +1,31 @@
 import React from 'react'
-import { shallow, render } from 'enzyme'
+import { render } from 'enzyme'
 import { MemoryRouter } from 'react-router'
-import DashboardContext from '../../contexts/dashboard-context'
+import ProyectContextProvider from '../../contexts/ProjectContext'
 import Title from '../../components/Title'
 
 test('Should render Title correctly with no context', () => {
-    const wrapper = shallow(
-        <Title 
-            title="Some title" 
-            description="Some description" 
-        />
+    const wrapper = render(
+        <MemoryRouter>
+            <Title 
+                title="Some title" 
+                description="Some description" 
+            />
+        </MemoryRouter>
     )
     expect(wrapper).toMatchSnapshot()
 })
 
 test('Should render Title correctly on Dashboard Proyect page', () => {
-    const isProyect = true
     const wrapper = render(
         <MemoryRouter>
-            <DashboardContext.Provider value={{ isProyect }}>
+            <ProyectContextProvider>
                 <Title
                     title="Some title" 
                     description="Some description"
                     isDashboard={true}
                 />
-                </DashboardContext.Provider>
+            </ProyectContextProvider>
         </MemoryRouter>
         )
     expect(wrapper).toMatchSnapshot()

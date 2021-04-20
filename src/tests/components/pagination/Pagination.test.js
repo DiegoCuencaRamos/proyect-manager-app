@@ -3,18 +3,21 @@ import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router'
 import { Provider } from 'react-redux'
 import store from '../../../store'
-import DashboardContext from '../../../contexts/dashboard-context'
+import ProyectContextProvider from '../../../contexts/ProjectContext'
+import ListContextProvider from '../../../contexts/ListContext'
 import List from '../../../components/list/List'
 import { paginationProyects } from '../../fixures/proyects'
 import { addProyect } from '../../../actions/proyect'
 
 const renderWithWrapper = () => mount(
     <MemoryRouter initialEntries={[{ key: 'static' }]}>
-        <DashboardContext.Provider value={{ isProyect: true }}>
-            <Provider store={store}>
-                <List />
-            </Provider>
-        </DashboardContext.Provider>
+        <ProyectContextProvider>
+            <ListContextProvider>
+                <Provider store={store}>
+                    <List />
+                </Provider>
+            </ListContextProvider>
+        </ProyectContextProvider>
     </MemoryRouter>
 )
 
@@ -77,7 +80,6 @@ describe('Should handle Pagination events', () => {
             const clickedPage = 2
             wrapper.find(`PaginationPageItem[page=${clickedPage}] a`).simulate('click', { preventDefault: jest.fn() })
 
-            expect(wrapper.find('PaginationPages').prop('currentPage')).toBe(clickedPage)
             expect(wrapper.find('.pagination__active-page').text()).toBe(clickedPage.toString())
             expect(wrapper.find('ListBody').prop('currentItems')).toEqual([ paginationProyects[2], paginationProyects[3] ])
         })
@@ -86,7 +88,6 @@ describe('Should handle Pagination events', () => {
             const currentPage = 1
             wrapper.find('[page="right"] a').simulate('click', { preventDefault: jest.fn() })
 
-            expect(wrapper.find('PaginationPages').prop('currentPage')).toBe(currentPage + 3)
             expect(wrapper.find('.pagination__active-page').text()).toBe((currentPage + 3).toString())
             expect(wrapper.find('ListBody').prop('currentItems')).toEqual([ paginationProyects[6], paginationProyects[7] ])
         })
@@ -96,7 +97,6 @@ describe('Should handle Pagination events', () => {
             wrapper.find('[page="right"] a').simulate('click', { preventDefault: jest.fn() })
             wrapper.find('[page="left"] a').simulate('click', { preventDefault: jest.fn() })
 
-            expect(wrapper.find('PaginationPages').prop('currentPage')).toBe(currentPage + 3 - 3)
             expect(wrapper.find('.pagination__active-page').text()).toBe((currentPage + 3 - 3).toString())
             expect(wrapper.find('ListBody').prop('currentItems')).toEqual([ paginationProyects[0], paginationProyects[1] ])
         })

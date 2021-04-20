@@ -1,4 +1,4 @@
-import proyectReducer from '../../slices/proyectSlice'
+import proyectReducer from '../../reducers/proyecs'
 import { proyects } from '../fixures/proyects'
 
 // SET

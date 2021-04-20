@@ -27,13 +27,13 @@ test('Should set Task list layout', () => {
     const firstLayout = 'calendar'
     const secondLayout = 'list'
 
-    wrapper.find('#calendarSelector').simulate('click', {
+    wrapper.find('[data-layout="calendar"]').simulate('click', {
         target: {
             dataset: { layout: firstLayout }
         }
     })
 
-    wrapper.find('#listSelector').simulate('click', {
+    wrapper.find('[data-layout="list"]').simulate('click', {
         target: {
             dataset: { layout: secondLayout }
         }
@@ -46,7 +46,7 @@ test('Should set Task list layout', () => {
 
 test('Should set Task calendar layout ', () => {
     const layout = 'calendar'
-    wrapper.find('#calendarSelector').simulate('click', {
+    wrapper.find('[data-layout="calendar"]').simulate('click', {
         target: {
             dataset: { layout }
         }
@@ -59,7 +59,7 @@ test('Should set Task calendar layout ', () => {
 
 test('Should set Task kanban layout ', () => {
     const layout = 'kanban'
-    wrapper.find('#kanbanSelector').simulate('click', {
+    wrapper.find('[data-layout="kanban"]').simulate('click', {
         target: {
             dataset: { layout }
         }

@@ -51,6 +51,8 @@ test('Should add a task to database and store', (done) => {
         proyectId: 'asd234',
         name: 'Any name',
         status: 'done',
+        startDate: 0,
+        endDate: 0,
         color: 'gray',
         description: 'Any description'
     }
@@ -80,6 +82,8 @@ test('Should set add task to database and store with default values', (done) => 
         proyectId: '', 
         name: '', 
         status: '',
+        startDate: 0,
+        endDate: 0,
         color: '',
         description: '',
     }
@@ -229,7 +233,7 @@ test('Should fetch tasks from database to the store', (done) => {
                 type: 'task/setTasks',
                 payload: tasks
             })
-
+            
             done()
         })
 })

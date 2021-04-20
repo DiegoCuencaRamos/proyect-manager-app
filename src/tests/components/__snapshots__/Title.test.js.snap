@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render Title correctly on Dashboard Proyect page 1`] = `
-<div
+<section
   class="page-header"
 >
   <div
     class="container page-header__wrapper"
   >
-    <div>
+    <article>
       <h1
         class="page-header__title"
       >
@@ -18,7 +18,7 @@ exports[`Should render Title correctly on Dashboard Proyect page 1`] = `
       >
         Some description
       </p>
-    </div>
+    </article>
     <a
       class="button"
       href="/add-proyect"
@@ -26,17 +26,17 @@ exports[`Should render Title correctly on Dashboard Proyect page 1`] = `
       AddProyect
     </a>
   </div>
-</div>
+</section>
 `;
 
 exports[`Should render Title correctly on Dashboard Task page 1`] = `
-<div
+<section
   class="page-header"
 >
   <div
     class="container page-header__wrapper"
   >
-    <div>
+    <article>
       <h1
         class="page-header__title"
       >
@@ -47,36 +47,36 @@ exports[`Should render Title correctly on Dashboard Task page 1`] = `
       >
         Some description
       </p>
-    </div>
+    </article>
     <a
       class="button"
-      href="/add-task"
+      href="/add-task/undefined"
     >
       AddTask
     </a>
   </div>
-</div>
+</section>
 `;
 
 exports[`Should render Title correctly with no context 1`] = `
-<div
-  className="page-header"
+<section
+  class="page-header"
 >
   <div
-    className="container page-header__wrapper"
+    class="container page-header__wrapper"
   >
-    <div>
+    <article>
       <h1
-        className="page-header__title"
+        class="page-header__title"
       >
         Some title
       </h1>
       <p
-        className="page-header__text"
+        class="page-header__text"
       >
         Some description
       </p>
-    </div>
+    </article>
   </div>
-</div>
+</section>
 `;

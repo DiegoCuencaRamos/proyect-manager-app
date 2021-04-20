@@ -54,36 +54,35 @@ exports[`Should render Add Task Page correctly 1`] = `
       }
     >
       <AddTaskPage>
-        <section>
-          <Title
-            description="Add new tasks to your current proyect"
-            title="Add task"
+        <Title
+          description="Add new tasks to your current proyect"
+          title="Add task"
+        >
+          <section
+            className="page-header"
           >
             <div
-              className="page-header"
+              className="container page-header__wrapper"
             >
-              <div
-                className="container page-header__wrapper"
-              >
-                <div>
-                  <h1
-                    className="page-header__title"
-                  >
-                    Add task
-                  </h1>
-                  <p
-                    className="page-header__text"
-                  >
-                    Add new tasks to your current proyect
-                  </p>
-                </div>
-              </div>
+              <article>
+                <h1
+                  className="page-header__title"
+                >
+                  Add task
+                </h1>
+                <p
+                  className="page-header__text"
+                >
+                  Add new tasks to your current proyect
+                </p>
+              </article>
             </div>
-          </Title>
-          <ItemForm
-            onParentFormSubmit={[Function]}
-            proyectId=""
-          >
+          </section>
+        </Title>
+        <ItemForm
+          onParentFormSubmit={[Function]}
+        >
+          <section>
             <div
               className="container"
             >
@@ -98,12 +97,14 @@ exports[`Should render Add Task Page correctly 1`] = `
                     className="form__item--name"
                     onChange={[Function]}
                     placeholder="Name"
+                    required={true}
                     type="text"
                     value=""
                   />
                   <select
                     className="form__item--status"
                     onChange={[Function]}
+                    required={true}
                     style={
                       Object {
                         "flexBasis": "100%",
@@ -148,8 +149,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                     disabled={false}
                     displayFormat={[Function]}
                     enableOutsideDays={false}
-                    endDate={"1970-01-01T00:00:00.000Z"}
-                    endDateId="0"
+                    endDate={null}
+                    endDateId="mock-id-2"
                     endDatePlaceholderText="End Date"
                     firstDayOfWeek={null}
                     focusedInput={null}
@@ -225,11 +226,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                     reopenPickerOnClearDates={false}
                     required={false}
                     screenReaderInputMessage=""
-                    showClearDates={true}
+                    showClearDates={false}
                     showDefaultInputIcon={false}
                     small={false}
-                    startDate={"1970-01-01T00:00:00.000Z"}
-                    startDateId="0"
+                    startDate={null}
+                    startDateId="mock-id-1"
                     startDatePlaceholderText="Start Date"
                     verticalHeight={null}
                     verticalSpacing={22}
@@ -252,8 +253,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                       disabled={false}
                       displayFormat={[Function]}
                       enableOutsideDays={false}
-                      endDate={"1970-01-01T00:00:00.000Z"}
-                      endDateId="0"
+                      endDate={null}
+                      endDateId="mock-id-2"
                       endDatePlaceholderText="End Date"
                       firstDayOfWeek={null}
                       focusedInput={null}
@@ -329,11 +330,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                       reopenPickerOnClearDates={false}
                       required={false}
                       screenReaderInputMessage=""
-                      showClearDates={true}
+                      showClearDates={false}
                       showDefaultInputIcon={false}
                       small={false}
-                      startDate={"1970-01-01T00:00:00.000Z"}
-                      startDateId="0"
+                      startDate={null}
+                      startDateId="mock-id-1"
                       startDatePlaceholderText="Start Date"
                       styles={
                         Object {
@@ -549,8 +550,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                               customInputIcon={null}
                               disabled={false}
                               displayFormat={[Function]}
-                              endDate={"1970-01-01T00:00:00.000Z"}
-                              endDateId="0"
+                              endDate={null}
+                              endDateId="mock-id-2"
                               endDatePlaceholderText="End Date"
                               inputIconPosition="before"
                               isEndDateFocused={false}
@@ -609,11 +610,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                               required={false}
                               screenReaderMessage=""
                               showCaret={true}
-                              showClearDates={true}
+                              showClearDates={false}
                               showDefaultInputIcon={false}
                               small={false}
-                              startDate={"1970-01-01T00:00:00.000Z"}
-                              startDateId="0"
+                              startDate={null}
+                              startDateId="mock-id-1"
                               startDatePlaceholderText="Start Date"
                               verticalSpacing={22}
                               withFullScreenPortal={false}
@@ -624,8 +625,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                                 customCloseIcon={null}
                                 customInputIcon={null}
                                 disabled={false}
-                                endDate="01/01/1970"
-                                endDateId="0"
+                                endDate={null}
+                                endDateId="mock-id-2"
                                 endDatePlaceholderText="End Date"
                                 inputIconPosition="before"
                                 isEndDateFocused={false}
@@ -684,11 +685,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                                 required={false}
                                 screenReaderMessage=""
                                 showCaret={true}
-                                showClearDates={true}
+                                showClearDates={false}
                                 showDefaultInputIcon={false}
                                 small={false}
-                                startDate="01/01/1970"
-                                startDateId="0"
+                                startDate={null}
+                                startDateId="mock-id-1"
                                 startDatePlaceholderText="Start Date"
                                 verticalSpacing={22}
                               >
@@ -699,8 +700,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                                   customCloseIcon={null}
                                   customInputIcon={null}
                                   disabled={false}
-                                  endDate="01/01/1970"
-                                  endDateId="0"
+                                  endDate={null}
+                                  endDateId="mock-id-2"
                                   endDatePlaceholderText="End Date"
                                   inputIconPosition="before"
                                   isEndDateFocused={false}
@@ -759,11 +760,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                                   required={false}
                                   screenReaderMessage=""
                                   showCaret={true}
-                                  showClearDates={true}
+                                  showClearDates={false}
                                   showDefaultInputIcon={false}
                                   small={false}
-                                  startDate="01/01/1970"
-                                  startDateId="0"
+                                  startDate={null}
+                                  startDateId="mock-id-1"
                                   startDatePlaceholderText="Start Date"
                                   styles={
                                     Object {
@@ -965,14 +966,14 @@ exports[`Should render Add Task Page correctly 1`] = `
                                   verticalSpacing={22}
                                 >
                                   <div
-                                    className="DateRangePickerInput DateRangePickerInput_1 DateRangePickerInput__withBorder DateRangePickerInput__withBorder_2 DateRangePickerInput__showClearDates DateRangePickerInput__showClearDates_3"
+                                    className="DateRangePickerInput DateRangePickerInput_1 DateRangePickerInput__withBorder DateRangePickerInput__withBorder_2"
                                   >
                                     <withStyles(DateInput)
                                       block={false}
                                       disabled={false}
-                                      displayValue="01/01/1970"
+                                      displayValue={null}
                                       focused={false}
-                                      id="0"
+                                      id="mock-id-1"
                                       isFocused={false}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -994,9 +995,9 @@ exports[`Should render Add Task Page correctly 1`] = `
                                         block={false}
                                         css={[Function]}
                                         disabled={false}
-                                        displayValue="01/01/1970"
+                                        displayValue={null}
                                         focused={false}
-                                        id="0"
+                                        id="mock-id-1"
                                         isFocused={false}
                                         onChange={[Function]}
                                         onFocus={[Function]}
@@ -1213,13 +1214,13 @@ exports[`Should render Add Task Page correctly 1`] = `
                                           className="DateInput DateInput_1"
                                         >
                                           <input
-                                            aria-describedby="DateInput__screen-reader-message-0"
+                                            aria-describedby="DateInput__screen-reader-message-mock-id-1"
                                             aria-label="Start Date"
                                             autoComplete="off"
                                             className="DateInput_input DateInput_input_1"
                                             disabled={false}
-                                            id="0"
-                                            name="0"
+                                            id="mock-id-1"
+                                            name="mock-id-1"
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
@@ -1227,11 +1228,11 @@ exports[`Should render Add Task Page correctly 1`] = `
                                             readOnly={false}
                                             required={false}
                                             type="text"
-                                            value="01/01/1970"
+                                            value=""
                                           />
                                           <p
                                             className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
-                                            id="DateInput__screen-reader-message-0"
+                                            id="DateInput__screen-reader-message-mock-id-1"
                                           >
                                             Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
                                           </p>
@@ -1262,9 +1263,9 @@ exports[`Should render Add Task Page correctly 1`] = `
                                     <withStyles(DateInput)
                                       block={false}
                                       disabled={false}
-                                      displayValue="01/01/1970"
+                                      displayValue={null}
                                       focused={false}
-                                      id="0"
+                                      id="mock-id-2"
                                       isFocused={false}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -1286,9 +1287,9 @@ exports[`Should render Add Task Page correctly 1`] = `
                                         block={false}
                                         css={[Function]}
                                         disabled={false}
-                                        displayValue="01/01/1970"
+                                        displayValue={null}
                                         focused={false}
-                                        id="0"
+                                        id="mock-id-2"
                                         isFocused={false}
                                         onChange={[Function]}
                                         onFocus={[Function]}
@@ -1505,13 +1506,13 @@ exports[`Should render Add Task Page correctly 1`] = `
                                           className="DateInput DateInput_1"
                                         >
                                           <input
-                                            aria-describedby="DateInput__screen-reader-message-0"
+                                            aria-describedby="DateInput__screen-reader-message-mock-id-2"
                                             aria-label="End Date"
                                             autoComplete="off"
                                             className="DateInput_input DateInput_input_1"
                                             disabled={false}
-                                            id="0"
-                                            name="0"
+                                            id="mock-id-2"
+                                            name="mock-id-2"
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
@@ -1519,41 +1520,17 @@ exports[`Should render Add Task Page correctly 1`] = `
                                             readOnly={false}
                                             required={false}
                                             type="text"
-                                            value="01/01/1970"
+                                            value=""
                                           />
                                           <p
                                             className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
-                                            id="DateInput__screen-reader-message-0"
+                                            id="DateInput__screen-reader-message-mock-id-2"
                                           >
                                             Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
                                           </p>
                                         </div>
                                       </DateInput>
                                     </withStyles(DateInput)>
-                                    <button
-                                      aria-label="Clear Dates"
-                                      className="DateRangePickerInput_clearDates DateRangePickerInput_clearDates_1 DateRangePickerInput_clearDates_default DateRangePickerInput_clearDates_default_2"
-                                      disabled={false}
-                                      onClick={[Function]}
-                                      type="button"
-                                    >
-                                      <CloseButton
-                                        className="DateRangePickerInput_clearDates_svg DateRangePickerInput_clearDates_svg_1"
-                                        focusable="false"
-                                        viewBox="0 0 12 12"
-                                      >
-                                        <svg
-                                          className="DateRangePickerInput_clearDates_svg DateRangePickerInput_clearDates_svg_1"
-                                          focusable="false"
-                                          viewBox="0 0 12 12"
-                                        >
-                                          <path
-                                            d="M11.53.47a.75.75 0 0 0-1.061 0l-4.47 4.47L1.529.47A.75.75 0 1 0 .468 1.531l4.47 4.47-4.47 4.47a.75.75 0 1 0 1.061 1.061l4.47-4.47 4.47 4.47a.75.75 0 1 0 1.061-1.061l-4.47-4.47 4.47-4.47a.75.75 0 0 0 0-1.061z"
-                                            fillRule="evenodd"
-                                          />
-                                        </svg>
-                                      </CloseButton>
-                                    </button>
                                   </div>
                                 </DateRangePickerInput>
                               </withStyles(DateRangePickerInput)>
@@ -1566,12 +1543,13 @@ exports[`Should render Add Task Page correctly 1`] = `
                   <label
                     className="form__item--color"
                   >
-                    Task
+                    Choose 
+                    task
                      color:
                     <input
                       onChange={[Function]}
                       type="color"
-                      value=""
+                      value="#87cefa"
                     />
                   </label>
                   <textarea
@@ -1588,8 +1566,8 @@ exports[`Should render Add Task Page correctly 1`] = `
                 </div>
               </form>
             </div>
-          </ItemForm>
-        </section>
+          </section>
+        </ItemForm>
       </AddTaskPage>
     </Provider>
   </Router>

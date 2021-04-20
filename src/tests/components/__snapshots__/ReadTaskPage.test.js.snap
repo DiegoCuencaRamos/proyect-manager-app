@@ -79,6 +79,24 @@ exports[`Should render ReadTaskPage correctly with task data 1`] = `
               >
                 This is my task fixure 1
               </p>
+              <Link
+                className="read-page__link"
+                to="/dashboard"
+              >
+                <LinkAnchor
+                  className="read-page__link"
+                  href="/dashboard"
+                  navigate={[Function]}
+                >
+                  <a
+                    className="read-page__link"
+                    href="/dashboard"
+                    onClick={[Function]}
+                  >
+                    Go back to home page
+                  </a>
+                </LinkAnchor>
+              </Link>
             </div>
           </section>
         </ReadTaskPage>

@@ -1,5 +1,3 @@
-import getFilteredProyects from "./proyects"
-
 const getFilteredItems = (
     // 1. Data
     proyectId = null,

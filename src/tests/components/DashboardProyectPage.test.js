@@ -3,21 +3,19 @@ import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router'
 import { Provider } from 'react-redux'
 import store from '../../store'
-import DashboardContext from '../../contexts/dashboard-context'
+import ProyectContextProvider from '../../contexts/ProjectContext'
 import DashboardProyectPage from '../../components/DashboardProyectPage'
 
 let wrapper
 
 beforeEach(() => {
-    const isProyect = true
-
     wrapper = mount(
         <MemoryRouter initialEntries={[{ key: '123qwe' }]}>
-            <DashboardContext.Provider value={{ isProyect }}>
+            <ProyectContextProvider>
                 <Provider store={store}>
                     <DashboardProyectPage />
                 </Provider>
-            </DashboardContext.Provider>
+            </ProyectContextProvider>
         </MemoryRouter>
     )
 })
@@ -32,13 +30,13 @@ test('Should set Proyect list layout ', () => {
     const firstLayout = 'calendar'
     const secondLayout = 'list'
 
-    wrapper.find('#calendarSelector').simulate('click', {
+    wrapper.find('[data-layout="calendar"]').simulate('click', {
         target: {
             dataset: { layout: firstLayout }
         }
     })
 
-    wrapper.find('#listSelector').simulate('click', {
+    wrapper.find('[data-layout="list"]').simulate('click', {
         target: {
             dataset: { layout: secondLayout }
         }
@@ -51,7 +49,7 @@ test('Should set Proyect list layout ', () => {
 
 test('Should set Proyect calendar layout ', () => {
     const layout = 'calendar'
-    wrapper.find('#calendarSelector').simulate('click', {
+    wrapper.find('[data-layout="calendar"]').simulate('click', {
         target: {
             dataset: { layout }
         }
@@ -64,7 +62,7 @@ test('Should set Proyect calendar layout ', () => {
 
 test('Should set Proyect kanban layout ', () => {
     const layout = 'kanban'
-    wrapper.find('#kanbanSelector').simulate('click', {
+    wrapper.find('[data-layout="kanban"]').simulate('click', {
         target: {
             dataset: { layout }
         }

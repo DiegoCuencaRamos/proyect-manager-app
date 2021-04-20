@@ -1,4 +1,4 @@
-import taskReducer from '../../slices/taskSlice'
+import taskReducer from '../../reducers/tasks'
 import { tasks } from '../fixures/tasks'
 
 //SET

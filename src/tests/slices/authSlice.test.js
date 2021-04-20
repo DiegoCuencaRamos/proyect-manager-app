@@ -1,4 +1,4 @@
-import authReducer from "../../slices/authSlice"
+import authReducer from "../../reducers/auth"
 
 test('Should set up default auth values', () => {
     const state = authReducer(undefined, { type: '@@INIT' })

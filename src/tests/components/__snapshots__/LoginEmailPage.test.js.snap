@@ -19,7 +19,9 @@ exports[`Should render LoginPage correctly 1`] = `
       <div
         className="container"
       >
-        <h1>
+        <h1
+          className="email-login-page__title"
+        >
           Login with your email
         </h1>
         <h5>

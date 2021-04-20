@@ -4,8 +4,9 @@ import PaginationPageItem from './PaginationPageItem'
 const PaginationPages = ({ pages, totalPages, pageNeighbours }) => (
     <nav className="pagination__pages">
         <ul>
-            {pages.map(page => (
+            {pages.map((page, index) => (
                 <PaginationPageItem
+                    key={index}
                     page={page}
                     totalPages={totalPages} 
                     pageNeighbours={pageNeighbours} 

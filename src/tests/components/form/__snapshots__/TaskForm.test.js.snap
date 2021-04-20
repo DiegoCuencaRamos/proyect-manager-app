@@ -1,363 +1,373 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Task Form with empty values 1`] = `
-<div
-  className="container"
->
-  <form
-    className="form"
-    onSubmit={[Function]}
+<section>
+  <div
+    className="container"
   >
-    <div
-      className="form__wrapper"
+    <form
+      className="form"
+      onSubmit={[Function]}
     >
-      <input
-        className="form__item--name"
-        onChange={[Function]}
-        placeholder="Name"
-        type="text"
-        value=""
-      />
-      <select
-        className="form__item--status"
-        onChange={[Function]}
-        style={
-          Object {
-            "flexBasis": "100%",
-            "marginRight": "0",
-          }
-        }
-        value=""
+      <div
+        className="form__wrapper"
       >
-        <option
-          defaultValue={true}
-          value=""
-        >
-          Select status
-        </option>
-        <option
-          value="todo"
-        >
-          To do
-        </option>
-        <option
-          value="doing"
-        >
-          Doing
-        </option>
-        <option
-          value="done"
-        >
-          Done
-        </option>
-      </select>
-      <withStyles(DateRangePicker)
-        anchorDirection="left"
-        appendToBody={false}
-        block={false}
-        calendarInfoPosition="bottom"
-        customArrowIcon={null}
-        customCloseIcon={null}
-        customInputIcon={null}
-        dayPickerNavigationInlineStyles={null}
-        daySize={39}
-        disableScroll={false}
-        disabled={false}
-        displayFormat={[Function]}
-        enableOutsideDays={false}
-        endDate={"1970-01-01T00:00:00.000Z"}
-        endDateId="0"
-        endDatePlaceholderText="End Date"
-        firstDayOfWeek={null}
-        focusedInput={null}
-        hideKeyboardShortcutsPanel={false}
-        horizontalMargin={0}
-        initialVisibleMonth={null}
-        inputIconPosition="before"
-        isDayBlocked={[Function]}
-        isDayHighlighted={[Function]}
-        isOutsideRange={[Function]}
-        isRTL={false}
-        keepFocusOnInput={false}
-        keepOpenOnDateSelect={false}
-        minimumNights={1}
-        monthFormat="MMMM YYYY"
-        navNext={null}
-        navPosition="navPositionTop"
-        navPrev={null}
-        noBorder={false}
-        numberOfMonths={1}
-        onClose={[Function]}
-        onDatesChange={[Function]}
-        onFocusChange={[Function]}
-        onNextMonthClick={[Function]}
-        onPrevMonthClick={[Function]}
-        openDirection="down"
-        orientation="horizontal"
-        phrases={
-          Object {
-            "calendarLabel": "Calendar",
-            "chooseAvailableEndDate": [Function],
-            "chooseAvailableStartDate": [Function],
-            "clearDates": "Clear Dates",
-            "closeDatePicker": "Close",
-            "dateIsSelected": [Function],
-            "dateIsSelectedAsEndDate": [Function],
-            "dateIsSelectedAsStartDate": [Function],
-            "dateIsUnavailable": [Function],
-            "enterKey": "Enter key",
-            "escape": "Escape key",
-            "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
-            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-            "homeEnd": "Home and end keys",
-            "jumpToNextMonth": "Move forward to switch to the next month.",
-            "jumpToPrevMonth": "Move backward to switch to the previous month.",
-            "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-            "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-            "keyboardShortcuts": "Keyboard Shortcuts",
-            "leftArrowRightArrow": "Right and left arrow keys",
-            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-            "moveFocusByOneMonth": "Switch months.",
-            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-            "openThisPanel": "Open this panel.",
-            "pageUpPageDown": "page up and page down keys",
-            "questionMark": "Question mark",
-            "returnFocusToInput": "Return to the date input field.",
-            "roleDescription": "datepicker",
-            "selectFocusedDate": "Select the date in focus.",
-            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-            "upArrowDownArrow": "up and down arrow keys",
-          }
-        }
-        readOnly={false}
-        regular={false}
-        renderCalendarInfo={null}
-        renderDayContents={null}
-        renderMonthElement={null}
-        renderMonthText={null}
-        renderNavNextButton={null}
-        renderNavPrevButton={null}
-        renderWeekHeaderElement={null}
-        reopenPickerOnClearDates={false}
-        required={false}
-        screenReaderInputMessage=""
-        showClearDates={true}
-        showDefaultInputIcon={false}
-        small={false}
-        startDate={"1970-01-01T00:00:00.000Z"}
-        startDateId="0"
-        startDatePlaceholderText="Start Date"
-        verticalHeight={null}
-        verticalSpacing={22}
-        weekDayFormat="dd"
-        withFullScreenPortal={false}
-        withPortal={false}
-      />
-      <label
-        className="form__item--color"
-      >
-        Task
-         color:
         <input
+          className="form__item--name"
           onChange={[Function]}
-          type="color"
+          placeholder="Name"
+          required={true}
+          type="text"
           value=""
         />
-      </label>
-      <textarea
-        className="form__item--description"
-        onChange={[Function]}
-        placeholder="Description"
-        value=""
-      />
-      <input
-        className="form__item--submit button"
-        type="submit"
-        value="Save task"
-      />
-    </div>
-  </form>
-</div>
+        <select
+          className="form__item--status"
+          onChange={[Function]}
+          required={true}
+          style={
+            Object {
+              "flexBasis": "100%",
+              "marginRight": "0",
+            }
+          }
+          value=""
+        >
+          <option
+            defaultValue={true}
+            value=""
+          >
+            Select status
+          </option>
+          <option
+            value="todo"
+          >
+            To do
+          </option>
+          <option
+            value="doing"
+          >
+            Doing
+          </option>
+          <option
+            value="done"
+          >
+            Done
+          </option>
+        </select>
+        <withStyles(DateRangePicker)
+          anchorDirection="left"
+          appendToBody={false}
+          block={false}
+          calendarInfoPosition="bottom"
+          customArrowIcon={null}
+          customCloseIcon={null}
+          customInputIcon={null}
+          dayPickerNavigationInlineStyles={null}
+          daySize={39}
+          disableScroll={false}
+          disabled={false}
+          displayFormat={[Function]}
+          enableOutsideDays={false}
+          endDate={null}
+          endDateId="mock-id-2"
+          endDatePlaceholderText="End Date"
+          firstDayOfWeek={null}
+          focusedInput={null}
+          hideKeyboardShortcutsPanel={false}
+          horizontalMargin={0}
+          initialVisibleMonth={null}
+          inputIconPosition="before"
+          isDayBlocked={[Function]}
+          isDayHighlighted={[Function]}
+          isOutsideRange={[Function]}
+          isRTL={false}
+          keepFocusOnInput={false}
+          keepOpenOnDateSelect={false}
+          minimumNights={1}
+          monthFormat="MMMM YYYY"
+          navNext={null}
+          navPosition="navPositionTop"
+          navPrev={null}
+          noBorder={false}
+          numberOfMonths={1}
+          onClose={[Function]}
+          onDatesChange={[Function]}
+          onFocusChange={[Function]}
+          onNextMonthClick={[Function]}
+          onPrevMonthClick={[Function]}
+          openDirection="down"
+          orientation="horizontal"
+          phrases={
+            Object {
+              "calendarLabel": "Calendar",
+              "chooseAvailableEndDate": [Function],
+              "chooseAvailableStartDate": [Function],
+              "clearDates": "Clear Dates",
+              "closeDatePicker": "Close",
+              "dateIsSelected": [Function],
+              "dateIsSelectedAsEndDate": [Function],
+              "dateIsSelectedAsStartDate": [Function],
+              "dateIsUnavailable": [Function],
+              "enterKey": "Enter key",
+              "escape": "Escape key",
+              "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+              "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+              "homeEnd": "Home and end keys",
+              "jumpToNextMonth": "Move forward to switch to the next month.",
+              "jumpToPrevMonth": "Move backward to switch to the previous month.",
+              "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardShortcuts": "Keyboard Shortcuts",
+              "leftArrowRightArrow": "Right and left arrow keys",
+              "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+              "moveFocusByOneMonth": "Switch months.",
+              "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+              "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+              "openThisPanel": "Open this panel.",
+              "pageUpPageDown": "page up and page down keys",
+              "questionMark": "Question mark",
+              "returnFocusToInput": "Return to the date input field.",
+              "roleDescription": "datepicker",
+              "selectFocusedDate": "Select the date in focus.",
+              "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+              "upArrowDownArrow": "up and down arrow keys",
+            }
+          }
+          readOnly={false}
+          regular={false}
+          renderCalendarInfo={null}
+          renderDayContents={null}
+          renderMonthElement={null}
+          renderMonthText={null}
+          renderNavNextButton={null}
+          renderNavPrevButton={null}
+          renderWeekHeaderElement={null}
+          reopenPickerOnClearDates={false}
+          required={false}
+          screenReaderInputMessage=""
+          showClearDates={false}
+          showDefaultInputIcon={false}
+          small={false}
+          startDate={null}
+          startDateId="mock-id-1"
+          startDatePlaceholderText="Start Date"
+          verticalHeight={null}
+          verticalSpacing={22}
+          weekDayFormat="dd"
+          withFullScreenPortal={false}
+          withPortal={false}
+        />
+        <label
+          className="form__item--color"
+        >
+          Choose 
+          task
+           color:
+          <input
+            onChange={[Function]}
+            type="color"
+            value="#87cefa"
+          />
+        </label>
+        <textarea
+          className="form__item--description"
+          onChange={[Function]}
+          placeholder="Description"
+          value=""
+        />
+        <input
+          className="form__item--submit button"
+          type="submit"
+          value="Save task"
+        />
+      </div>
+    </form>
+  </div>
+</section>
 `;
 
 exports[`should render Task Form with task data: should match snapshot 1`] = `
-<div
-  className="container"
->
-  <form
-    className="form"
-    onSubmit={[Function]}
+<section>
+  <div
+    className="container"
   >
-    <div
-      className="form__wrapper"
+    <form
+      className="form"
+      onSubmit={[Function]}
     >
-      <input
-        className="form__item--name"
-        onChange={[Function]}
-        placeholder="Name"
-        type="text"
-        value="Task 1"
-      />
-      <select
-        className="form__item--status"
-        onChange={[Function]}
-        style={
-          Object {
-            "flexBasis": "100%",
-            "marginRight": "0",
-          }
-        }
-        value="todo"
+      <div
+        className="form__wrapper"
       >
-        <option
-          defaultValue={true}
-          value=""
-        >
-          Select status
-        </option>
-        <option
+        <input
+          className="form__item--name"
+          onChange={[Function]}
+          placeholder="Name"
+          required={true}
+          type="text"
+          value="Task 1"
+        />
+        <select
+          className="form__item--status"
+          onChange={[Function]}
+          required={true}
+          style={
+            Object {
+              "flexBasis": "100%",
+              "marginRight": "0",
+            }
+          }
           value="todo"
         >
-          To do
-        </option>
-        <option
-          value="doing"
-        >
-          Doing
-        </option>
-        <option
-          value="done"
-        >
-          Done
-        </option>
-      </select>
-      <withStyles(DateRangePicker)
-        anchorDirection="left"
-        appendToBody={false}
-        block={false}
-        calendarInfoPosition="bottom"
-        customArrowIcon={null}
-        customCloseIcon={null}
-        customInputIcon={null}
-        dayPickerNavigationInlineStyles={null}
-        daySize={39}
-        disableScroll={false}
-        disabled={false}
-        displayFormat={[Function]}
-        enableOutsideDays={false}
-        endDate={"2021-03-18T23:00:00.000Z"}
-        endDateId="1616108400000"
-        endDatePlaceholderText="End Date"
-        firstDayOfWeek={null}
-        focusedInput={null}
-        hideKeyboardShortcutsPanel={false}
-        horizontalMargin={0}
-        initialVisibleMonth={null}
-        inputIconPosition="before"
-        isDayBlocked={[Function]}
-        isDayHighlighted={[Function]}
-        isOutsideRange={[Function]}
-        isRTL={false}
-        keepFocusOnInput={false}
-        keepOpenOnDateSelect={false}
-        minimumNights={1}
-        monthFormat="MMMM YYYY"
-        navNext={null}
-        navPosition="navPositionTop"
-        navPrev={null}
-        noBorder={false}
-        numberOfMonths={1}
-        onClose={[Function]}
-        onDatesChange={[Function]}
-        onFocusChange={[Function]}
-        onNextMonthClick={[Function]}
-        onPrevMonthClick={[Function]}
-        openDirection="down"
-        orientation="horizontal"
-        phrases={
-          Object {
-            "calendarLabel": "Calendar",
-            "chooseAvailableEndDate": [Function],
-            "chooseAvailableStartDate": [Function],
-            "clearDates": "Clear Dates",
-            "closeDatePicker": "Close",
-            "dateIsSelected": [Function],
-            "dateIsSelectedAsEndDate": [Function],
-            "dateIsSelectedAsStartDate": [Function],
-            "dateIsUnavailable": [Function],
-            "enterKey": "Enter key",
-            "escape": "Escape key",
-            "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
-            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-            "homeEnd": "Home and end keys",
-            "jumpToNextMonth": "Move forward to switch to the next month.",
-            "jumpToPrevMonth": "Move backward to switch to the previous month.",
-            "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-            "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-            "keyboardShortcuts": "Keyboard Shortcuts",
-            "leftArrowRightArrow": "Right and left arrow keys",
-            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-            "moveFocusByOneMonth": "Switch months.",
-            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-            "openThisPanel": "Open this panel.",
-            "pageUpPageDown": "page up and page down keys",
-            "questionMark": "Question mark",
-            "returnFocusToInput": "Return to the date input field.",
-            "roleDescription": "datepicker",
-            "selectFocusedDate": "Select the date in focus.",
-            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-            "upArrowDownArrow": "up and down arrow keys",
+          <option
+            defaultValue={true}
+            value=""
+          >
+            Select status
+          </option>
+          <option
+            value="todo"
+          >
+            To do
+          </option>
+          <option
+            value="doing"
+          >
+            Doing
+          </option>
+          <option
+            value="done"
+          >
+            Done
+          </option>
+        </select>
+        <withStyles(DateRangePicker)
+          anchorDirection="left"
+          appendToBody={false}
+          block={false}
+          calendarInfoPosition="bottom"
+          customArrowIcon={null}
+          customCloseIcon={null}
+          customInputIcon={null}
+          dayPickerNavigationInlineStyles={null}
+          daySize={39}
+          disableScroll={false}
+          disabled={false}
+          displayFormat={[Function]}
+          enableOutsideDays={false}
+          endDate={"2021-03-18T23:00:00.000Z"}
+          endDateId="mock-id-2"
+          endDatePlaceholderText="End Date"
+          firstDayOfWeek={null}
+          focusedInput={null}
+          hideKeyboardShortcutsPanel={false}
+          horizontalMargin={0}
+          initialVisibleMonth={null}
+          inputIconPosition="before"
+          isDayBlocked={[Function]}
+          isDayHighlighted={[Function]}
+          isOutsideRange={[Function]}
+          isRTL={false}
+          keepFocusOnInput={false}
+          keepOpenOnDateSelect={false}
+          minimumNights={1}
+          monthFormat="MMMM YYYY"
+          navNext={null}
+          navPosition="navPositionTop"
+          navPrev={null}
+          noBorder={false}
+          numberOfMonths={1}
+          onClose={[Function]}
+          onDatesChange={[Function]}
+          onFocusChange={[Function]}
+          onNextMonthClick={[Function]}
+          onPrevMonthClick={[Function]}
+          openDirection="down"
+          orientation="horizontal"
+          phrases={
+            Object {
+              "calendarLabel": "Calendar",
+              "chooseAvailableEndDate": [Function],
+              "chooseAvailableStartDate": [Function],
+              "clearDates": "Clear Dates",
+              "closeDatePicker": "Close",
+              "dateIsSelected": [Function],
+              "dateIsSelectedAsEndDate": [Function],
+              "dateIsSelectedAsStartDate": [Function],
+              "dateIsUnavailable": [Function],
+              "enterKey": "Enter key",
+              "escape": "Escape key",
+              "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+              "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+              "homeEnd": "Home and end keys",
+              "jumpToNextMonth": "Move forward to switch to the next month.",
+              "jumpToPrevMonth": "Move backward to switch to the previous month.",
+              "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardShortcuts": "Keyboard Shortcuts",
+              "leftArrowRightArrow": "Right and left arrow keys",
+              "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+              "moveFocusByOneMonth": "Switch months.",
+              "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+              "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+              "openThisPanel": "Open this panel.",
+              "pageUpPageDown": "page up and page down keys",
+              "questionMark": "Question mark",
+              "returnFocusToInput": "Return to the date input field.",
+              "roleDescription": "datepicker",
+              "selectFocusedDate": "Select the date in focus.",
+              "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+              "upArrowDownArrow": "up and down arrow keys",
+            }
           }
-        }
-        readOnly={false}
-        regular={false}
-        renderCalendarInfo={null}
-        renderDayContents={null}
-        renderMonthElement={null}
-        renderMonthText={null}
-        renderNavNextButton={null}
-        renderNavPrevButton={null}
-        renderWeekHeaderElement={null}
-        reopenPickerOnClearDates={false}
-        required={false}
-        screenReaderInputMessage=""
-        showClearDates={true}
-        showDefaultInputIcon={false}
-        small={false}
-        startDate={"2021-03-14T23:00:00.000Z"}
-        startDateId="1615762800000"
-        startDatePlaceholderText="Start Date"
-        verticalHeight={null}
-        verticalSpacing={22}
-        weekDayFormat="dd"
-        withFullScreenPortal={false}
-        withPortal={false}
-      />
-      <label
-        className="form__item--color"
-      >
-        Task
-         color:
-        <input
-          onChange={[Function]}
-          type="color"
-          value="green"
+          readOnly={false}
+          regular={false}
+          renderCalendarInfo={null}
+          renderDayContents={null}
+          renderMonthElement={null}
+          renderMonthText={null}
+          renderNavNextButton={null}
+          renderNavPrevButton={null}
+          renderWeekHeaderElement={null}
+          reopenPickerOnClearDates={false}
+          required={false}
+          screenReaderInputMessage=""
+          showClearDates={false}
+          showDefaultInputIcon={false}
+          small={false}
+          startDate={"2021-03-14T23:00:00.000Z"}
+          startDateId="mock-id-1"
+          startDatePlaceholderText="Start Date"
+          verticalHeight={null}
+          verticalSpacing={22}
+          weekDayFormat="dd"
+          withFullScreenPortal={false}
+          withPortal={false}
         />
-      </label>
-      <textarea
-        className="form__item--description"
-        onChange={[Function]}
-        placeholder="Description"
-        value="This is my task fixure 1"
-      />
-      <input
-        className="form__item--submit button"
-        type="submit"
-        value="Save task"
-      />
-    </div>
-  </form>
-</div>
+        <label
+          className="form__item--color"
+        >
+          Choose 
+          task
+           color:
+          <input
+            onChange={[Function]}
+            type="color"
+            value="green"
+          />
+        </label>
+        <textarea
+          className="form__item--description"
+          onChange={[Function]}
+          placeholder="Description"
+          value="This is my task fixure 1"
+        />
+        <input
+          className="form__item--submit button"
+          type="submit"
+          value="Save task"
+        />
+      </div>
+    </form>
+  </div>
+</section>
 `;
