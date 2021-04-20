@@ -82,8 +82,16 @@ a.list__name {
 }
 
 a.list__name,
-a.list__invoide {
+a.list__invoice {
     word-break: break-all;
+}
+
+.list__invoice {
+    display: none;
+
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        display: block;
+    }
 }
 
 .list__proyect-table .list__status {
@@ -112,8 +120,13 @@ a.list__invoide {
 }
 
 .list__dropdown {
-    width: 15%;
-    text-align: center;
+    width: 30%;
+    text-align: right;
+
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        width: 15%;
+        text-align: center;
+    }
 }
 
 .list__body .list__name:hover {

@@ -15,7 +15,10 @@ const ReadTaskPage = () => {
                 <h1 className="read-page__title">{task.name}</h1>
                 <p className="read-page__status">{task.status}</p>
                 <p className="read-page__text">{task.description}</p>
-                <Link to="/dashboard">Go back to home page</Link>
+                <Link
+                    to="/dashboard"
+                    className="read-page__link"
+                >Go back to home page</Link>
             </div>
         </section>
     )

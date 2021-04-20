@@ -20,3 +20,8 @@
 .read-page__text {
     font-size: settings.$text-small;
 }
+
+.read-page__link {
+    display: block;
+    margin-bottom: settings.$m-size;
+}

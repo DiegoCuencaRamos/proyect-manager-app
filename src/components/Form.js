@@ -16,10 +16,11 @@ const ItemForm = ({ isProyect = false, proyectId = null, item, onParentFormSubmi
     const [ description, setDescription ] = useState(item ? item.description : '')
     const [ calendarFocused, setCalendarFocused ] = useState(null)
     const [ errorMessage, setErrorMessage ] = useState('')
-    // 2. Varaibles
+    // 2. Style varaibles
+    const width = window.innerWidth
     const statusStyle = { 
-        flexBasis: isProyect ? '48%' : '100%',
-        marginRight: isProyect ? '4%' : '0',
+        flexBasis: (isProyect && width > 600) ? '48%' : '100%',
+        marginRight: (isProyect && width > 600) ? '4%' : '0',
     }
 
     // 3. Events

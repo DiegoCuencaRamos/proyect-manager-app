@@ -4,7 +4,8 @@ import moment from 'moment'
 
 const CalendarWeekDays = ({ currentMonth }) => {
     // 1. Variables
-    const dateFormat = 'dddd'
+    const width = window.innerWidth
+    const dateFormat = width > 600 ? 'dddd' : 'dd'
     const days = []
     let startDate = moment(currentMonth).startOf('week')
 

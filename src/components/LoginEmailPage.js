@@ -45,7 +45,7 @@ const LoginEmailPage = () => {
     return (
         <section className="email-login-page">
             <div className="container">
-                <h1>Login with your email</h1>
+                <h1 className="email-login-page__title">Login with your email</h1>
                 <h5>Please provide email and password</h5>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <form className="email-form__wrapper">

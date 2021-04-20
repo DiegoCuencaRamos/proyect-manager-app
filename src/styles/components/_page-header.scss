@@ -10,10 +10,15 @@
 }
 
 .page-header__title {
+    line-height: 3.6rem;
     margin-bottom: settings.$xs-size;
 }
 
 .page-header__text {
     font-size: settings.$text-small;
-    margin: 0;
+    margin-bottom: settings.$xs-size;
+
+    @media screen and (min-width: settings.$tablet-breakpoint) {
+        margin-bottom: 0;
+    }
 }

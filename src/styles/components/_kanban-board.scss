@@ -1,15 +1,22 @@
 @use '../base/settings';
 
 .kanban .container {
-    @include settings.flex(wrap, stretch, space-between)
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        @include settings.flex(wrap, stretch, space-between)
+    }
 }
 
 %kanban__board {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
+    flex-basis: 100;
+    padding-bottom: settings.$xs-size;
+    margin-bottom: settings.$m-size;
     text-align: center;
-    width: 31.1%;
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        flex-basis: 31.1%;
+    }
 }
 
 .kanban__board--todo {

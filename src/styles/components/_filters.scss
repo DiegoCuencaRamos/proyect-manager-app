@@ -23,14 +23,8 @@
     display: inline-block;
     height: settings.$xl-size;
     line-height: settings.$xl-size;
-    margin-bottom: settings.$s-size;
     transition: all 0.2s ease-in-out;
-    width: 100%;
-
-    @media screen and (min-width: settings.$tablet-breakpoint) {
-        margin-bottom: 0;
-        width: auto;
-    }
+    width: auto;
 
     &:focus {
         border-bottom: 1px solid black;

@@ -12,9 +12,13 @@
     background-color: #ffffff;
     border-radius: settings.$border-radius;
     box-shadow: settings.$box-shadow;
-    padding: settings.$l-size settings.$m-size;
+    padding: settings.$l-size settings.$xs-size;
     text-align: center;
     width: 35rem;
+
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        padding: settings.$l-size settings.$m-size;
+    }
 }
 
 .login-layout__title {
@@ -22,7 +26,10 @@
 }
 
 // Email login page
-
 .email-login-page {
     margin-top: settings.$xl-size;
+}
+
+.email-login-page__title {
+    line-height: settings.$l-size;
 }

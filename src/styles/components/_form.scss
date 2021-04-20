@@ -35,6 +35,17 @@
     }
 }
 
+%form__item--full-width {
+    flex-basis: 100%;
+}
+
+%form__item--half-width {
+    flex-basis: 100%;
+    @media only screen and (min-width: settings.$tablet-breakpoint) {
+        flex-basis: 48%;
+    }
+}
+
 // Login form ------------
 .email-form__wrapper {
     @include settings.flex(wrap, stretch, space-between);
@@ -43,7 +54,7 @@
 .form__item--emial, 
 .form__item--password {
     @extend %form__item;
-    flex-basis: 100%;
+    @extend %form__item--full-width;
     margin-right: 4%;
 }
 
@@ -58,9 +69,9 @@
 
 .form__item--name {
     @extend %form__item;
+    @extend %form__item--full-width;
     border-top-left-radius: settings.$border-radius;
     border-top-right-radius: settings.$border-radius;
-    flex-basis: 100%;
 }
 
 .form__item--status {
@@ -70,12 +81,13 @@
 
 .form__item--invoice {
     @extend %form__item;
-    flex-basis: 48%;
+    @extend %form__item--half-width;
 }
 
 .DateRangePicker {
+    @extend %form__item--half-width;
     border-bottom: 1px solid settings.$gray;
-    flex-basis: 48%;
+    margin-bottom: settings.$s-size;
 }
 
 .DateRangePickerInput__withBorder {
@@ -90,8 +102,8 @@
 
 .form__item--color {
     @extend %form__item;
+    @extend %form__item--half-width;
     color: settings.$dark-gray;
-    flex-basis: 48%;
 
     input {
         margin-left: 10px;
@@ -100,7 +112,7 @@
 
 .form__item--description {
     @extend %form__item;
-    flex-basis: 100%;
+    @extend %form__item--full-width;
 }
 
 .form__item--normal {
